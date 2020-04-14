@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 12 Mar, 2020 1:06:11 PM by Hibernate Tools 4.0.1.Final -->
+<hibernate-mapping>
+    <class name="beans.QciCoachLoweringTrans" table="qci_coach_lowering_trans">
+        <id name="furnishingAssetId" type="int">
+            <column name="furnishing_asset_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="testingObservationRemark" type="string">
+            <column name="testing_observation_remark" length="500" />
+        </property>
+        <property name="entryBy" type="string">
+            <column name="entry_by" length="15" />
+        </property>
+        <property name="entryTime" type="timestamp">
+            <column name="entry_time" length="35" />
+        </property>
+    </class>
+</hibernate-mapping>

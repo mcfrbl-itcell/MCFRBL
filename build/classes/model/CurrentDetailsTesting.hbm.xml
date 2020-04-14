@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 19 Feb, 2020 5:26:00 PM by Hibernate Tools 4.0.1.Final -->
+<hibernate-mapping>
+    <class name="beans.CurrentDetailsTesting" table="elect_current_details_test">
+        <id name="furnishingAssetId" type="java.lang.Integer">
+            <column name="furnishing_asset_id"  />
+            <generator class="assigned" /> 
+        </id>
+        <property name="acUnitMake" type="string">
+            <column name="ac_unit_make" length="30" />
+        </property>
+        <property name="acUnit1" type="string">
+            <column name="ac_unit_1" length="30" />
+        </property>
+        <property name="acUnit2" type="string">
+            <column name="ac_unit_2" length="30" />
+        </property>
+        <property name="cpuSlNo" type="string">
+            <column name="cpu_sl_no" length="30" />
+        </property>
+        <property name="cpuMake" type="string">
+            <column name="cpu_make" length="30" />
+        </property>
+        <property name="blrR" type="string">
+            <column name="blr_r" length="30" />
+        </property>
+        <property name="blrY" type="string">
+            <column name="blr_y" length="30" />
+        </property>
+        <property name="blrB" type="string">
+            <column name="blr_b" length="30" />
+        </property>
+        <property name="cd1R" type="string">
+            <column name="cd_1_r" length="30" />
+        </property>
+        <property name="cd1Y" type="string">
+            <column name="cd_1_y" length="30" />
+        </property>
+        <property name="cd1B" type="string">
+            <column name="cd_1_b" length="30" />
+        </property>
+        <property name="cd2R" type="string">
+            <column name="cd_2_r" length="30" />
+        </property>
+        <property name="cd2Y" type="string">
+            <column name="cd_2_y" length="30" />
+        </property>
+        <property name="cd2B" type="string">
+            <column name="cd_2_b" length="30" />
+        </property>
+        <property name="cp1R" type="string">
+            <column name="cp_1_r" length="30" />
+        </property>
+        <property name="cp1Y" type="string">
+            <column name="cp_1_y" length="30" />
+        </property>
+        <property name="cp1B" type="string">
+            <column name="cp_1_b" length="30" />
+        </property>
+        <property name="cp2R" type="string">
+            <column name="cp_2_r" length="30" />
+        </property>
+        <property name="cp2Y" type="string">
+            <column name="cp_2_y" length="30" />
+        </property>
+        <property name="cp2B" type="string">
+            <column name="cp_2_b" length="30" />
+        </property>
+        <property name="htr1R" type="string">
+            <column name="htr_1_r" length="30" />
+        </property>
+        <property name="htr1Y" type="string">
+            <column name="htr_1_y" length="30" />
+        </property>
+        <property name="htr1B" type="string">
+            <column name="htr_1_b" length="30" />
+        </property>
+        <property name="monoBlockPump1" type="string">
+            <column name="mono_block_pump_1" length="30" />
+        </property>
+        <property name="kalsi1" type="string">
+            <column name="kalsi_1" length="30" />
+        </property>
+        <property name="drAuto1" type="string">
+            <column name="dr_auto_1" length="30" />
+        </property>
+        <property name="actualR1" type="string">
+            <column name="r_actual_1" length="30" />
+        </property>
+         <property name="actualY1" type="string">
+            <column name="y_actual_1" length="30" />
+        </property>
+         <property name="actualB1" type="string">
+            <column name="b_actual_1" length="30" />
+        </property>
+        <property name="monoBlockPump2" type="string">
+            <column name="mono_block_pump_2" length="30" />
+        </property>
+        <property name="kalsi2" type="string">
+            <column name="kalsi_2" length="30" />
+        </property>
+        <property name="drAuto2" type="string">
+            <column name="dr_auto_2" length="30" />
+        </property>
+        <property name="actualR2" type="string">
+            <column name="r_actual_2" length="30" />
+        </property>
+         <property name="actualY2" type="string">
+            <column name="y_actual_2" length="30" />
+        </property>
+         <property name="actualB2" type="string">
+            <column name="b_actual_2" length="30" />
+        </property>
+</class>
+</hibernate-mapping>

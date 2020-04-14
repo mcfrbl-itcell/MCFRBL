@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 29 Jan, 2020 4:21:51 PM by Hibernate Tools 4.0.1.Final -->
+<hibernate-mapping>
+    <class name="beans.ElectTestParaM" table="elect_test_para_m">
+        <composite-id name="id" class="beans.ElectTestParaMId">
+            <key-property name="coachType" type="string">
+                <column name="coach_type" length="10" />
+            </key-property>
+            <key-property name="testingType" type="string">
+                <column name="testing_type" length="30" />
+            </key-property>
+            <key-property name="paraName" type="string">
+                <column name="para_name" length="150" />
+            </key-property>
+        </composite-id>
+        <property name="seqNo" type="java.lang.Integer">
+            <column name="seq_no" />
+        </property>
+        <property name="srNo" type="string">
+            <column name="sr_no" length="10" />
+        </property>
+        <property name="specifiedDesc" type="string">
+            <column name="specified_desc" length="100" />
+        </property>
+        <property name="listValueObserved" type="string">
+            <column name="list_value_observed" length="100" />
+        </property>
+        <property name="listValueRemark" type="string">
+            <column name="list_value_remark" length="100"/>
+        </property>
+        <property name="defaultValueObserved" type="string">
+            <column name="default_value_observed" length="30"/>
+        </property>
+        <property name="defaultValueRemark" type="string">
+            <column name="default_value_remark" length="100"/>
+        </property>
+        <property name="headingFlag" type="string">
+            <column name="heading_flag" length="3" />
+        </property>
+        <property name="validationRule" type="string">
+            <column name="validation_rule" length="100" />
+        </property>
+        <property name="subPara" type="string">
+            <column name="sub_para" length="100" />
+        </property>
+    </class>
+</hibernate-mapping>

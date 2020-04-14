@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 19 Feb, 2020 5:26:00 PM by Hibernate Tools 4.0.1.Final -->
+<hibernate-mapping>
+    <class name="beans.ElectBatteryTestTrans" table="elect_battery_test_trans">
+        <id name="furnishingAssetId" type="java.lang.Integer">
+            <column name="furnishing_asset_id"  />
+            <generator class="assigned" /> 
+        </id>
+        <property name="batteryBoxMake" type="string">
+            <column name="battery_box_make" length="30" />
+        </property>
+        <property name="batteryBoxMakeActual" type="string">
+            <column name="battery_box_make_actual" length="15" />
+        </property>
+        <property name="mountingBatteryBoxActual" type="string">
+            <column name="mounting_battery_box_actual" length="15" />
+        </property>
+        <property name="batteryCommisionedActual" type="string">
+            <column name="battery_commisioned_actual" length="15" />
+        </property>
+        <property name="battery1" type="string">
+            <column name="battery_1" length="15" />
+        </property>
+        <property name="battery2" type="string">
+            <column name="battery_2" length="15" />
+        </property>
+        <property name="battery3" type="string">
+            <column name="battery_3" length="15" />
+        </property>
+        <property name="battery4" type="string">
+            <column name="battery_4" length="15" />
+        </property>
+        <property name="battery5" type="string">
+            <column name="battery_5" length="15" />
+        </property>
+        <property name="battery6" type="string">
+            <column name="battery_6" length="15" />
+        </property>
+        <property name="battery7" type="string">
+            <column name="battery_7" length="15" />
+        </property>
+        <property name="battery8" type="string">
+            <column name="battery_8" length="15" />
+        </property>
+        <property name="battery9" type="string">
+            <column name="battery_9" length="15" />
+        </property>
+        <property name="lugDate1" type="date">
+            <column name="lug_date_1"/>
+        </property>
+        <property name="lugDate2" type="date">
+            <column name="lug_date_2"/>
+        </property>
+        <property name="lugDate3" type="date">
+            <column name="lug_date_3"/>
+        </property>
+        <property name="lugDate4" type="date">
+            <column name="lug_date_4"/>
+        </property>
+        <property name="lugDate5" type="date">
+            <column name="lug_date_5"/>
+        </property>
+        <property name="lugDate6" type="date">
+            <column name="lug_date_6"/>
+        </property>
+        <property name="lugDate7" type="date">
+            <column name="lug_date_7"/>
+        </property>
+        <property name="lugDate8" type="date">
+            <column name="lug_date_8"/>
+        </property>
+        <property name="lugDate9" type="date">
+            <column name="lug_date_9"/>
+        </property>
+        <property name="leadAcidBatteryMake" type="string">
+            <column name="lead_acid_battery_make" length="30" />
+        </property>
+        <property name="leadAcidBatteryMake1" type="string">
+            <column name="lead_acid_battery_make_1" length="30" />
+        </property>
+        <property name="leadAcidBatteryMake2" type="string">
+            <column name="lead_acid_battery_make_2" length="30" />
+        </property>
+        <property name="leadAcidBatteryMake3" type="string">
+            <column name="lead_acid_battery_make_3" length="30" />
+        </property>
+        <property name="leadAcidBatteryLugDate1" type="date">
+            <column name="lead_acid_battery_lug_date_1"/>
+        </property>
+        <property name="leadAcidBatteryLugDate2" type="date">
+            <column name="lead_acid_battery_lug_date_2"/>
+        </property>
+        <property name="leadAcidBatteryLugDate3" type="date">
+            <column name="lead_acid_battery_lug_date_3"/>
+        </property>
+        <property name="leadAcidBatteryActual" type="string">
+            <column name="lead_acid_battery_actual" length="30" />
+        </property>
+        
+        <property name="batteryCommisionedMake" type="string">
+            <column name="battery_commisioned_make" length="30" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 12 Mar, 2020 1:06:11 PM by Hibernate Tools 4.0.1.Final -->
+<hibernate-mapping>
+    <class name="beans.QciCoachCleaningTrans" table="qci_coach_cleaning_trans">
+        <id name="furnishingAssetId" type="int">
+            <column name="furnishing_asset_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="floorDirty" type="string">
+            <column name="floor_dirty" length="20" />
+        </property>
+        <property name="lavatoryDirty" type="string">
+            <column name="lavatory_dirty" length="20" />
+        </property>
+        <property name="ceilingDirty" type="string">
+            <column name="ceiling_dirty" length="20" />
+        </property>
+        <property name="seatBerthDirty" type="string">
+            <column name="seat_berth_dirty" length="20" />
+        </property>
+        <property name="panelDirty" type="string">
+            <column name="panel_dirty" length="20" />
+        </property>
+        <property name="storeroomPantryLinenDirty" type="string">
+            <column name="storeroom_pantry_linen_dirty" length="20" />
+        </property>
+        <property name="railsSlidingDoorDirty" type="string">
+            <column name="rails_sliding_door_dirty" length="20" />
+        </property>
+        <property name="windowGlassDirty" type="string">
+            <column name="window_glass_dirty" length="20" />
+        </property>
+        <property name="plasticFilmRemoved" type="string">
+            <column name="plastic_film_removed" length="20" />
+        </property>
+        <property name="doorDirty" type="string">
+            <column name="door_dirty" length="20" />
+        </property>
+        <property name="testingObservationRemark" type="string">
+            <column name="testing_observation_remark" length="500" />
+        </property>
+        <property name="entryBy" type="string">
+            <column name="entry_by" length="15" />
+        </property>
+        <property name="entryTime" type="timestamp">
+            <column name="entry_time" length="29" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="beans.ElectSafetyTestTrans" table="elect_safety_test_trans" >
+		
+		<id name="furnishingAssetId" type="integer">
+			<column name="furnishing_asset_id"></column>
+		</id>
+		
+		<property name="safetyEngine" type="string">
+			<column name="safety_engine" length="30"></column>
+		</property>
+		<property name="safetyAlternator" type="string">
+			<column name="safety_alternator" length="30"></column>
+		</property>
+		<property name="safetyEngineSlno" type="string">
+			<column name="safety_engine_slno" length="30"></column>
+		</property>
+		<property name="safetyAlternatorSlno" type="string">
+			<column name="safety_alternator_slno" length="30"></column>
+		</property>
+		<property name="lowOilPressure" type="string">
+			<column name="low_oil_pressure" length="30"></column>
+		</property>
+		<property name="highWaterEngine" type="string">
+			<column name="high_water_engine" length="30"></column>
+		</property>
+		<property name="lowWaterCoolLevel" type="string">
+			<column name="low_water_cool_level" length="30"></column>
+		</property>
+		<property name="airFilterChoke" type="string">
+			<column name="air_filter_choke" length="30"></column>
+		</property>
+		<property name="altEarthLeak" type="string">
+			<column name="alt_earth_leak" length="30"></column>
+		</property>
+		<property name="feederEarthLeak" type="string">
+			<column name="feeder_earth_leak" length="30"></column>
+		</property>
+		<property name="feederOverLoad" type="string">
+			<column name="feeder_over_load" length="30"></column>
+		</property>
+		<property name="busCouplerPerformance" type="string">
+			<column name="bus_coupler_performance" length="30"></column>
+		</property>
+		<property name="safetyHooter" type="string">
+			<column name="safety_hooter" length="30"></column>
+		</property>
+		<property name="safetyUvrFunction" type="string">
+			<column name="safety_uvr_function" length="30"></column>
+		</property>
+		<property name="safetyOvrFunction" type="string">
+			<column name="safety_ovr_function" length="30"></column>
+		</property>
+		<property name="safetyAvrFunction" type="string">
+			<column name="safety_avr_function" length="30"></column>
+		</property>
+		<property name="safetyEmergencyStop" type="string">
+			<column name="safety_emergency_stop" length="30"></column>
+		</property>
+		<property name="phaseSequenceTest" type="string">
+			<column name="phase_sequence_test" length="30"></column>
+		</property>
+		<property name="starterBatteryCharger" type="string">
+			<column name="starter_battery_charger" length="30"></column>
+		</property>
+		<property name="radControlPannel" type="string">
+			<column name="rad_control_pannel" length="30"></column>
+		</property>
+		<property name="radFanMotors" type="string">
+			<column name="rad_fan_motors" length="30"></column>
+		</property>
+		<property name="cacMotors" type="string">
+			<column name="cac_motors" length="30"></column>
+		</property>
+		<property name="cacControlPannel" type="string">
+			<column name="cac_control_pannel" length="30"></column>
+		</property>
+		<property name="electronicGovernor" type="string">
+			<column name="electronic_governor" length="30"></column>
+		</property>
+		<property name="safetyDcOn" type="string">
+			<column name="safety_dc_on" length="30"></column>
+		</property>
+		<property name="safetyAel" type="string">
+			<column name="safety_ael" length="30"></column>
+		</property>
+		<property name="safetyFel" type="string">
+			<column name="safety_fel" length="30"></column>
+		</property>
+		<property name="safetyFol" type="string">
+			<column name="safety_fol" length="30"></column>
+		</property>
+		<property name="safetyUvr" type="string">
+			<column name="safety_uvr" length="30"></column>
+		</property>
+		<property name="safetyFault" type="string">
+			<column name="safety_fault" length="30"></column>
+		</property>
+		<property name="safetyAltOn" type="string">
+			<column name="safety_alt_on" length="30"></column>
+		</property>
+		<property name="safetyTfrAOn" type="string">
+			<column name="safety_tfr_a_on" length="30"></column>
+		</property>
+		<property name="safetyLoopAOn" type="string">
+			<column name="safety_loop_a_on" length="30"></column>
+		</property>
+		<property name="safetyLoopBOn" type="string">
+			<column name="safety_loop_b_on" length="30"></column>
+		</property>
+		<property name="safetyFeederAOn" type="string">
+			<column name="safety_feeder_a_on" length="30"></column>
+		</property>
+		<property name="safetyFeederBOn" type="string">
+			<column name="safety_feeder_b_on" length="30"></column>
+		</property>
+		<property name="safetyBusCouplerOn" type="string">
+			<column name="safety_bus_coupler_on" length="30"></column>
+		</property>
+		<property name="safety24vDc" type="string">
+			<column name="safety_24v_dc" length="30"></column>
+		</property>
+		<property name="battChargerDefect" type="string">
+			<column name="batt_charger_defect" length="30"></column>
+		</property>
+		<property name="nonWorkingContractorA" type="string">
+			<column name="non_working_contractor_a" length="30"></column>
+		</property>
+		<property name="acbAOn" type="string">
+			<column name="acb_a_on" length="30"></column>
+		</property>
+		<property name="testLampIndicationOn" type="string">
+			<column name="test_lamp_indication_on" length="30"></column>
+		</property>
+		
+		
+	</class>
+</hibernate-mapping>   

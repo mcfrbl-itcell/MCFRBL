@@ -1,0 +1,204 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 6 Mar, 2020 3:41:43 PM by Hibernate Tools 4.0.1.Final -->
+<hibernate-mapping>
+    <class name="beans.QciSeatBerthTrans" table="qci_seat_berth_trans">
+        <id name="furnishingAssetId" type="int">
+            <column name="furnishing_asset_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="protectionWallHardwareLoose" type="string">
+            <column name="protection_wall_hardware_loose" length="20" />
+        </property>
+        <property name="protectionWallHardwareMissing" type="string">
+            <column name="protection_wall_hardware_missing" length="20" />
+        </property>
+        <property name="luggageRackLoose" type="string">
+            <column name="luggage_rack_loose" length="20" />
+        </property>
+        <property name="luggageRackTaper" type="string">
+            <column name="luggage_rack_taper" length="20" />
+        </property>
+        <property name="luggageRackMissing" type="string">
+            <column name="luggage_rack_missing" length="20" />
+        </property>
+        <property name="mirrorNotPasted" type="string">
+            <column name="mirror_not_pasted" length="20" />
+        </property>
+        <property name="mirrorRubberUprooted" type="string">
+            <column name="mirror_rubber_uprooted" length="20" />
+        </property>
+        <property name="coatHookLoose" type="string">
+            <column name="coat_hook_loose" length="20" />
+        </property>
+        <property name="coatHookMissing" type="string">
+            <column name="coat_hook_missing" length="20" />
+        </property>
+        <property name="coatHookApdDone" type="string">
+            <column name="coat_hook_apd_done" length="20" />
+        </property>
+        <property name="coatHookApdRoughly" type="string">
+            <column name="coat_hook_apd_roughly" length="20" />
+        </property>
+        <property name="curtainMovementSmooth" type="string">
+            <column name="curtain_movement_smooth" length="20" />
+        </property>
+        <property name="curtainRunnerCameOut" type="string">
+            <column name="curtain_runner_came_out" length="20" />
+        </property>
+        <property name="curtainRunnerStopperFitted" type="string">
+            <column name="curtain_runner_stopper_fitted" length="20" />
+        </property>
+        <property name="snackTableLoose" type="string">
+            <column name="snack_table_loose" length="20" />
+        </property>
+        <property name="snackTableTapper" type="string">
+            <column name="snack_table_tapper" length="20" />
+        </property>
+        <property name="snackTableScrewMissing" type="string">
+            <column name="snack_table_screw_missing" length="20" />
+        </property>
+        <property name="safetyRailTaper" type="string">
+            <column name="safety_rail_taper" length="20" />
+        </property>
+        <property name="safetyRailLoose" type="string">
+            <column name="safety_rail_loose" length="20" />
+        </property>
+        <property name="safetyRailBktLoose" type="string">
+            <column name="safety_rail_bkt_loose" length="20" />
+        </property>
+        <property name="safetyRailBktTighten" type="string">
+            <column name="safety_rail_bkt_tighten" length="20" />
+        </property>
+        <property name="safetyRailBktTaper" type="string">
+            <column name="safety_rail_bkt_taper" length="20" />
+        </property>
+        <property name="berthChainLoose" type="string">
+            <column name="berth_chain_loose" length="20" />
+        </property>
+        <property name="berthChainHardwareLoose" type="string">
+            <column name="berth_chain_hardware_loose" length="20" />
+        </property>
+        <property name="berthChainHardwareMissing" type="string">
+            <column name="berth_chain_hardware_missing" length="20" />
+        </property>
+        <property name="bottleHolderLoose" type="string">
+            <column name="bottle_holder_loose" length="20" />
+        </property>
+        <property name="bottleHolderTaper" type="string">
+            <column name="bottle_holder_taper" length="20" />
+        </property>
+        <property name="bottoleHolderScrewMissing" type="string">
+            <column name="bottole_holder_screw_missing" length="20" />
+        </property>
+        <property name="bottoleHolderScrewDamage" type="string">
+            <column name="bottole_holder_screw_damage" length="20" />
+        </property>
+        <property name="berthMountingHardwareSidewallLoose" type="string">
+            <column name="berth_mounting_hardware_sidewall_loose" length="20" />
+        </property>
+        <property name="berthMountingHardwareSidewallTaper" type="string">
+            <column name="berth_mounting_hardware_sidewall_taper" length="20" />
+        </property>
+        <property name="berthMountingHardwareSidewallMissing" type="string">
+            <column name="berth_mounting_hardware_sidewall_missing" length="20" />
+        </property>
+        <property name="berthMountingHardwarePillarLoose" type="string">
+            <column name="berth_mounting_hardware_pillar_loose" length="20" />
+        </property>
+        <property name="berthMountingHardwarePillarTaper" type="string">
+            <column name="berth_mounting_hardware_pillar_taper" length="20" />
+        </property>
+        <property name="berthMountingHardwarePillarMissing" type="string">
+            <column name="berth_mounting_hardware_pillar_missing" length="20" />
+        </property>
+        <property name="berthTapper" type="string">
+            <column name="berth_tapper" length="20" />
+        </property>
+        <property name="berthFlapLoose" type="string">
+            <column name="berth_flap_loose" length="20" />
+        </property>
+        <property name="berthFlapBulge" type="string">
+            <column name="berth_flap_bulge" length="20" />
+        </property>
+        <property name="flapAlStripExcessLength" type="string">
+            <column name="flap_al_strip_excess_length" length="20" />
+        </property>
+        <property name="flapAlHardwareExcessLength" type="string">
+            <column name="flap_al_hardware_excess_length" length="20" />
+        </property>
+        <property name="transverseBerthLevel" type="string">
+            <column name="transverse_berth_level" length="20" />
+        </property>
+        <property name="gapBackrestBerth" type="string">
+            <column name="gap_backrest_berth" length="20" />
+        </property>
+        <property name="backrestMovement" type="string">
+            <column name="backrest_movement" length="20" />
+        </property>
+        <property name="backrestGrazingLadder" type="string">
+            <column name="backrest_grazing_ladder" length="20" />
+        </property>
+        <property name="backrestGrazingPanelseat" type="string">
+            <column name="backrest_grazing_panelseat" length="20" />
+        </property>
+        <property name="latchCatchMissmatch" type="string">
+            <column name="latch_catch_missmatch" length="20" />
+        </property>
+        <property name="burrLatchSeat" type="string">
+            <column name="burr_latch_seat" length="20" />
+        </property>
+        <property name="burrCatchSeat" type="string">
+            <column name="burr_catch_seat" length="20" />
+        </property>
+        <property name="holePartitionLatchSeat" type="string">
+            <column name="hole_partition_latch_seat" length="20" />
+        </property>
+        <property name="rexineTornBackrestSeat" type="string">
+            <column name="rexine_torn_backrest_seat" length="20" />
+        </property>
+        <property name="rexineTornBerth" type="string">
+            <column name="rexine_torn_berth" length="20" />
+        </property>
+        <property name="almirahHardwareLoose" type="string">
+            <column name="almirah_hardware_loose" length="20" />
+        </property>
+        <property name="almirahHardwareMissing" type="string">
+            <column name="almirah_hardware_missing" length="20" />
+        </property>
+        <property name="towerWorking" type="string">
+            <column name="tower_working" length="20" />
+        </property>
+        <property name="almirahWorking" type="string">
+            <column name="almirah_working" length="20" />
+        </property>
+        <property name="almirahHole" type="string">
+            <column name="almirah_hole" length="20" />
+        </property>
+        <property name="holeNearBottleHolder" type="string">
+            <column name="hole_near_bottle_holder" length="20" />
+        </property>
+        <property name="holeNearLatchSeat" type="string">
+            <column name="hole_near_latch_seat" length="20" />
+        </property>
+        <property name="holeNearCatchSeat" type="string">
+            <column name="hole_near_catch_seat" length="20" />
+        </property>
+        <property name="rexineTornBerthArmrest" type="string">
+            <column name="rexine_torn_berth_armrest" length="20" />
+        </property>
+        <property name="builderPlateScrewMissing" type="string">
+            <column name="builder_plate_screw_missing" length="20" />
+        </property>
+        <property name="builderPlateScrewMissmatch" type="string">
+            <column name="builder_plate_screw_missmatch" length="20" />
+        </property>
+        <property name="rexenePastedBacksideBerth" type="string">
+            <column name="rexene_pasted_backside_berth" length="20" />
+        </property>
+        <property name="testingObservationRemark" type="string">
+            <column name="testing_observation_remark" length="500" />
+        </property>
+    </class>
+</hibernate-mapping>

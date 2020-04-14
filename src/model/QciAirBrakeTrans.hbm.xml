@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 12 Mar, 2020 1:13:51 PM by Hibernate Tools 4.0.1.Final -->
+<hibernate-mapping>
+    <class name="beans.QciAirBrakeTrans" table="qci_air_brake_trans">
+        <id name="furnishingAssetId" type="int">
+            <column name="furnishing_asset_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="releasingDeviceChuckLoose" type="string">
+            <column name="releasing_device_chuck_loose" length="20" />
+        </property>
+        <property name="releasingDeviceRodFitted" type="string">
+            <column name="releasing_device_rod_fitted" length="20" />
+        </property>
+        <property name="brakeIndicatorFitted" type="string">
+            <column name="brake_indicator_fitted" length="20" />
+        </property>
+        <property name="airHosepipeAngleCookLoose" type="string">
+            <column name="air_hosepipe_angle_cook_loose" length="20" />
+        </property>
+        <property name="emergencyPullboxCoverFitted" type="string">
+            <column name="emergency_pullbox_cover_fitted" length="20" />
+        </property>
+        <property name="lavatoryAirPipeClampFitted" type="string">
+            <column name="lavatory_air_pipe_clamp_fitted" length="20" />
+        </property>
+        <property name="alarmPipeClampFitted" type="string">
+            <column name="alarm_pipe_clamp_fitted" length="20" />
+        </property>
+        <property name="testingObservationRemark" type="string">
+            <column name="testing_observation_remark" length="500" />
+        </property>
+        <property name="entryBy" type="string">
+            <column name="entry_by" length="15" />
+        </property>
+        <property name="entryTime" type="timestamp">
+            <column name="entry_time" length="29" />
+        </property>
+    </class>
+</hibernate-mapping>

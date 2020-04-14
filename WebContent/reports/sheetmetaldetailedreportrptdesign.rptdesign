@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.6.0.v201606072122</property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <parameters>
+        <scalar-parameter name="Financial_year" id="6">
+            <property name="valueType">static</property>
+            <property name="isRequired">true</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+    </parameters>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="Data Source" id="4">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>metadataBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledMetadataBidiFormatStr</name>
+                </ex-property>
+                <ex-property>
+                    <name>contentBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledContentBidiFormatStr</name>
+                </ex-property>
+            </list-property>
+            <property name="odaDriverClass">org.postgresql.Driver</property>
+            <property name="odaURL">jdbc:postgresql://localhost:5432/MCFRBL</property>
+            <property name="odaUser">postgres</property>
+            <encrypted-property name="odaPassword" encryptionID="base64">cG9zdGdyZXNz</encrypted-property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="sheetmetal Data Set" id="5">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">fnyr</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">fnyr</text-property>
+                    <text-property name="heading">fnyr</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">month_seq</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">month_seq</text-property>
+                    <text-property name="heading">month_seq</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">month_code</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">month_code</text-property>
+                    <text-property name="heading">month_code</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">sheetmetaldate</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">sheetmetaldate</text-property>
+                    <text-property name="heading">sheetmetaldate</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">qty_produced</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">qty_produced</text-property>
+                    <text-property name="heading">qty_produced</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">drawing_no</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">drawing_no</text-property>
+                    <text-property name="heading">drawing_no</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters">
+                <structure>
+                    <property name="name">param_1</property>
+                    <property name="paramName">Financial_year</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                    <property name="position">1</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">fnyr</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">month_seq</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">month_code</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">sheetmetaldate</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">qty_produced</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">drawing_no</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">fnyr</property>
+                    <property name="nativeName">fnyr</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">month_seq</property>
+                    <property name="nativeName">month_seq</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">5</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">month_code</property>
+                    <property name="nativeName">month_code</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">sheetmetaldate</property>
+                    <property name="nativeName">sheetmetaldate</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">qty_produced</property>
+                    <property name="nativeName">qty_produced</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">5</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">drawing_no</property>
+                    <property name="nativeName">drawing_no</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select A.fnyr,A.month_seq,A.month_code,
+to_char(B.production_date,'dd-mm-yyyy')as sheetmetaldate
+,B.qty_produced,B.drawing_no
+from public.fnyr_mon_start_end_date_v as A join sheetmetal_transaction as B on 1=1
+where B.production_date between A.first_month_date and A.end_month_date 
+and A.fnyr=?;]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <DataSetParameters>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name></design:name>
+            <design:position>1</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+          <design:precision>0</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Unknown</design:nullability>
+        </design:attributes>
+      </design:ParameterDefinition>
+    </parameter>
+  </DataSetParameters>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>fnyr</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>15</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>fnyr</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>fnyr</design:label>
+            <design:formattingHints>
+              <design:displaySize>15</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>month_seq</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>5</design:nativeDataTypeCode>
+            <design:precision>5</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>month_seq</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>month_seq</design:label>
+            <design:formattingHints>
+              <design:displaySize>6</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>month_code</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>3</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>month_code</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>month_code</design:label>
+            <design:formattingHints>
+              <design:displaySize>3</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>sheetmetaldate</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>2147483647</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>sheetmetaldate</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>sheetmetaldate</design:label>
+            <design:formattingHints>
+              <design:displaySize>2147483647</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>qty_produced</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>5</design:nativeDataTypeCode>
+            <design:precision>5</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>qty_produced</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>qty_produced</design:label>
+            <design:formattingHints>
+              <design:displaySize>6</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>drawing_no</design:name>
+              <design:position>6</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>20</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>drawing_no</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>drawing_no</design:label>
+            <design:formattingHints>
+              <design:displaySize>20</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <cubes>
+        <tabular-cube name="Data Cube" id="11">
+            <property name="dimensions">
+                <tabular-dimension name="Group" id="12">
+                    <property name="defaultHierarchy">NewTabularHierarchy</property>
+                    <property name="hierarchies">
+                        <tabular-hierarchy name="NewTabularHierarchy" id="13">
+                            <property name="levels">
+                                <tabular-level name="month_code" id="14">
+                                    <property name="dataType">string</property>
+                                    <property name="columnName">month_code</property>
+                                </tabular-level>
+                                <tabular-level name="sheetmetaldate" id="15">
+                                    <property name="dataType">string</property>
+                                    <property name="columnName">sheetmetaldate</property>
+                                </tabular-level>
+                                <tabular-level name="drawing_no" id="16">
+                                    <property name="dataType">string</property>
+                                    <property name="columnName">drawing_no</property>
+                                </tabular-level>
+                                <tabular-level name="qty_produced" id="17">
+                                    <property name="dataType">integer</property>
+                                    <property name="columnName">qty_produced</property>
+                                </tabular-level>
+                            </property>
+                        </tabular-hierarchy>
+                    </property>
+                </tabular-dimension>
+            </property>
+            <property name="dataSet">sheetmetal Data Set</property>
+        </tabular-cube>
+    </cubes>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <label id="7"/>
+        <label id="8">
+            <property name="fontSize">12pt</property>
+            <property name="fontWeight">bold</property>
+            <property name="fontStyle">italic</property>
+            <property name="textAlign">center</property>
+            <text-property name="text">DETAILED DISPLAY OF WORKING DAYS AND TRANSACTION SHEETMETAL SHOP</text-property>
+        </label>
+        <label id="9"/>
+        <label id="10">
+            <property name="fontSize">12pt</property>
+            <property name="fontWeight">bold</property>
+            <property name="textAlign">center</property>
+            <text-property name="text">SHEETMETAL TRANSACTION</text-property>
+        </label>
+        <extended-item extensionName="Crosstab" extensionVersion="3.7.0" id="18">
+            <property name="cube">Data Cube</property>
+            <property name="rows">
+                <extended-item extensionName="CrosstabView" id="20">
+                    <property name="views">
+                        <extended-item extensionName="DimensionView" id="21">
+                            <property name="dimension">Group</property>
+                            <property name="levels">
+                                <extended-item extensionName="LevelView" name="NewLevel View" id="22">
+                                    <property name="level">Group/month_code</property>
+                                    <property name="member">
+                                        <extended-item extensionName="CrosstabCell" id="23">
+                                            <property name="content">
+                                                <data name="month_code" id="24">
+                                                    <property name="textAlign">center</property>
+                                                    <property name="resultSetColumn">month_code</property>
+                                                </data>
+                                            </property>
+                                            <property name="borderTopStyle">solid</property>
+                                            <property name="borderTopWidth">1px</property>
+                                            <property name="borderLeftStyle">solid</property>
+                                            <property name="borderLeftWidth">1px</property>
+                                            <property name="borderBottomStyle">solid</property>
+                                            <property name="borderBottomWidth">1px</property>
+                                            <property name="borderRightStyle">solid</property>
+                                            <property name="borderRightWidth">1px</property>
+                                        </extended-item>
+                                    </property>
+                                </extended-item>
+                                <extended-item extensionName="LevelView" name="NewLevel View1" id="25">
+                                    <property name="level">Group/sheetmetaldate</property>
+                                    <property name="member">
+                                        <extended-item extensionName="CrosstabCell" id="26">
+                                            <property name="content">
+                                                <data name="sheetmetaldate" id="28">
+                                                    <property name="textAlign">center</property>
+                                                    <property name="resultSetColumn">sheetmetaldate</property>
+                                                </data>
+                                            </property>
+                                            <property name="borderTopStyle">solid</property>
+                                            <property name="borderTopWidth">1px</property>
+                                            <property name="borderLeftStyle">solid</property>
+                                            <property name="borderLeftWidth">1px</property>
+                                            <property name="borderBottomStyle">solid</property>
+                                            <property name="borderBottomWidth">1px</property>
+                                            <property name="borderRightStyle">solid</property>
+                                            <property name="borderRightWidth">1px</property>
+                                        </extended-item>
+                                    </property>
+                                </extended-item>
+                                <extended-item extensionName="LevelView" name="NewLevel View2" id="29">
+                                    <property name="level">Group/drawing_no</property>
+                                    <property name="member">
+                                        <extended-item extensionName="CrosstabCell" id="30">
+                                            <property name="content">
+                                                <data name="drawing_no" id="32">
+                                                    <property name="textAlign">center</property>
+                                                    <property name="resultSetColumn">drawing_no</property>
+                                                </data>
+                                            </property>
+                                            <property name="borderTopStyle">solid</property>
+                                            <property name="borderTopWidth">1px</property>
+                                            <property name="borderLeftStyle">solid</property>
+                                            <property name="borderLeftWidth">1px</property>
+                                            <property name="borderBottomStyle">solid</property>
+                                            <property name="borderBottomWidth">1px</property>
+                                            <property name="borderRightStyle">solid</property>
+                                            <property name="borderRightWidth">1px</property>
+                                        </extended-item>
+                                    </property>
+                                </extended-item>
+                                <extended-item extensionName="LevelView" name="NewLevel View3" id="33">
+                                    <property name="level">Group/qty_produced</property>
+                                    <property name="member">
+                                        <extended-item extensionName="CrosstabCell" id="34">
+                                            <property name="content">
+                                                <data name="qty_produced" id="36">
+                                                    <property name="textAlign">center</property>
+                                                    <property name="resultSetColumn">qty_produced</property>
+                                                </data>
+                                            </property>
+                                            <property name="borderTopStyle">solid</property>
+                                            <property name="borderTopWidth">1px</property>
+                                            <property name="borderLeftStyle">solid</property>
+                                            <property name="borderLeftWidth">1px</property>
+                                            <property name="borderBottomStyle">solid</property>
+                                            <property name="borderBottomWidth">1px</property>
+                                            <property name="borderRightStyle">solid</property>
+                                            <property name="borderRightWidth">1px</property>
+                                        </extended-item>
+                                    </property>
+                                </extended-item>
+                            </property>
+                        </extended-item>
+                    </property>
+                </extended-item>
+            </property>
+            <property name="header">
+                <extended-item extensionName="CrosstabCell" id="19">
+                    <property name="content">
+                        <label id="37">
+                            <property name="fontWeight">bold</property>
+                            <property name="textAlign">center</property>
+                            <text-property name="text">MONTH</text-property>
+                        </label>
+                    </property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">1px</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">1px</property>
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">1px</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">1px</property>
+                </extended-item>
+                <extended-item extensionName="CrosstabCell" id="27">
+                    <property name="content">
+                        <label id="38">
+                            <property name="fontWeight">bold</property>
+                            <property name="textAlign">center</property>
+                            <text-property name="text">S/M DATE</text-property>
+                        </label>
+                    </property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">1px</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">1px</property>
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">1px</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">1px</property>
+                </extended-item>
+                <extended-item extensionName="CrosstabCell" id="31">
+                    <property name="content">
+                        <label id="39">
+                            <property name="fontWeight">bold</property>
+                            <property name="textAlign">center</property>
+                            <text-property name="text">DRAWING NO.</text-property>
+                        </label>
+                    </property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">1px</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">1px</property>
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">1px</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">1px</property>
+                </extended-item>
+                <extended-item extensionName="CrosstabCell" id="35">
+                    <property name="content">
+                        <label id="40">
+                            <property name="fontWeight">bold</property>
+                            <property name="textAlign">center</property>
+                            <text-property name="text">QTY_PRODUCED</text-property>
+                        </label>
+                    </property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">1px</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">1px</property>
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">1px</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">1px</property>
+                </extended-item>
+            </property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">month_code</property>
+                    <expression name="expression">dimension["Group"]["month_code"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">sheetmetaldate</property>
+                    <expression name="expression">dimension["Group"]["sheetmetaldate"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">drawing_no</property>
+                    <expression name="expression">dimension["Group"]["drawing_no"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">qty_produced</property>
+                    <expression name="expression">dimension["Group"]["qty_produced"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+            </list-property>
+        </extended-item>
+    </body>
+</report>

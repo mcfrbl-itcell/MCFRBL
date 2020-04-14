@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="beans.ElectTestTransaction" table="elect_test_transaction" >
+	<composite-id name="id" class="beans.ElectTestTransactionId">
+	
+            <key-property name="furnishingAssetId" type="integer">
+                <column name="furnishing_asset_id"/>
+            </key-property>
+            
+            <key-property name="coachType" type="string">
+                <column name="coach_type" length="10"/>
+            </key-property>
+            
+            <key-property name="testingType" type="string">
+                <column name="testing_type" length="50" />
+            </key-property>
+            
+            <key-property name="paraName" type="string">
+                <column name="para_name" length="150" />
+            </key-property>
+            
+             <key-property name="subPara" type="string">
+                <column name="sub_para" length="100" />
+            </key-property>
+        </composite-id>
+	
+		<property name="observedValue" type="string">
+			<column name="observed_value" length="30"></column>
+		</property>
+		
+		<property name="remarks" type="string">
+			<column name="remarks" length="50"></column>
+		</property>
+		
+		
+		</class>
+</hibernate-mapping>

@@ -1,0 +1,190 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 6 Mar, 2020 3:38:58 PM by Hibernate Tools 4.0.1.Final -->
+<hibernate-mapping>
+    <class name="beans.QciMouldingTrans" table="qci_moulding_trans">
+        <id name="furnishingAssetId" type="int">
+            <column name="furnishing_asset_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="endwallDoorCoverLoose" type="string">
+            <column name="endwall_door_cover_loose" length="20" />
+        </property>
+        <property name="endwallDoorCoverMissing" type="string">
+            <column name="endwall_door_cover_missing" length="20" />
+        </property>
+        <property name="endwallDoorCoverTighten" type="string">
+            <column name="endwall_door_cover_tighten" length="20" />
+        </property>
+        <property name="endwallDoorSliding" type="string">
+            <column name="endwall_door_sliding" length="20" />
+        </property>
+        <property name="endwallRailscrewMissing" type="string">
+            <column name="endwall_railscrew_missing" length="20" />
+        </property>
+        
+        <property name="endwallLoose" type="string">
+            <column name="endwall_loose" length="20" />
+        </property>
+        <property name="endwallDoorlockAlign" type="string">
+            <column name="endwall_doorlock_align" length="20" />
+        </property>
+        <property name="endwallDoorlockBracketLoose" type="string">
+            <column name="endwall_doorlock_bracket_loose" length="20" />
+        </property>
+        <property name="manualHandleMovementHard" type="string">
+            <column name="manual_handle_movement_hard" length="20" />
+        </property>
+        <property name="manualHandleMovementLoose" type="string">
+            <column name="manual_handle_movement_loose" length="20" />
+        </property>
+        <property name="manualHandleRusted" type="string">
+            <column name="manual_handle_rusted" length="20" />
+        </property>
+        <property name="entranceDoorMovement" type="string">
+            <column name="entrance_door_movement" length="20" />
+        </property>
+        <property name="entranceDoorPivotLoose" type="string">
+            <column name="entrance_door_pivot_loose" length="20" />
+        </property>
+        <property name="entranceDoorPivotScrewSited" type="string">
+            <column name="entrance_door_pivot_screw_sited" length="20" />
+        </property>
+        <property name="entranceDoorLockWorking" type="string">
+            <column name="entrance_door_lock_working" length="20" />
+        </property>
+        <property name="entranceDoorLatchMismatch" type="string">
+            <column name="entrance_door_latch_mismatch" length="20" />
+        </property>
+        <property name="entranceDoorBottomExcessLength" type="string">
+            <column name="entrance_door_bottom_excess_length" length="20" />
+        </property>
+        <property name="entranceDoorGrazingChequerSheet" type="string">
+            <column name="entrance_door_grazing_chequer_sheet" length="20" />
+        </property>
+        <property name="entranceDoorGrazingRubber" type="string">
+            <column name="entrance_door_grazing_rubber" length="20" />
+        </property>
+        <property name="excessPlayEntranceDoorPivot" type="string">
+            <column name="excess_play_entrance_door_pivot" length="20" />
+        </property>
+        <property name="horizontalSteelStripScrewTighten" type="string">
+            <column name="horizontal_steel_strip_screw_tighten" length="20" />
+        </property>
+        <property name="horizontalSteelStripScrewMissing" type="string">
+            <column name="horizontal_steel_strip_screw_missing" length="20" />
+        </property>
+        <property name="horizontalSteelStripScrewHole" type="string">
+            <column name="horizontal_steel_strip_screw_hole" length="20" />
+        </property>
+        <property name="verticalSteelStripScrewTighten" type="string">
+            <column name="vertical_steel_strip_screw_tighten" length="20" />
+        </property>
+        <property name="verticalSteelStripScrewMissing" type="string">
+            <column name="vertical_steel_strip_screw_missing" length="20" />
+        </property>
+        <property name="verticalSteelStripScrewHole" type="string">
+            <column name="vertical_steel_strip_screw_hole" length="20" />
+        </property>
+        <property name="horizontalVerticalRubberPasted" type="string">
+            <column name="horizontal_vertical_rubber_pasted" length="20" />
+        </property>
+        <property name="tilliPanelLooseFitted" type="string">
+            <column name="tilli_panel_loose_fitted" length="20" />
+        </property>
+        <property name="tilliPanelBulge" type="string">
+            <column name="tilli_panel_bulge" length="20" />
+        </property>
+        <property name="tilliPanelHole" type="string">
+            <column name="tilli_panel_hole" length="20" />
+        </property>
+        <property name="verticalFrpLooseFitted" type="string">
+            <column name="vertical_frp_loose_fitted" length="20" />
+        </property>
+        <property name="verticalFrpScrewMissing" type="string">
+            <column name="vertical_frp_screw_missing" length="20" />
+        </property>
+        <property name="verticalFrpHole" type="string">
+            <column name="vertical_frp_hole" length="20" />
+        </property>
+        <property name="verticalFrpScrewTighten" type="string">
+            <column name="vertical_frp_screw_tighten" length="20" />
+        </property>
+        <property name="horizontalFrpLooseFitted" type="string">
+            <column name="horizontal_frp_loose_fitted" length="20" />
+        </property>
+        <property name="horizontalFrpScrewMissing" type="string">
+            <column name="horizontal_frp_screw_missing" length="20" />
+        </property>
+        <property name="horizontalFrpHole" type="string">
+            <column name="horizontal_frp_hole" length="20" />
+        </property>
+        <property name="horizontalFrpScrewTighten" type="string">
+            <column name="horizontal_frp_screw_tighten" length="20" />
+        </property>
+        <property name="verticalfrpHorizontalfrpJointMismatch" type="string">
+            <column name="verticalfrp_horizontalfrp_joint_mismatch" length="20" />
+        </property>
+        <property name="horizontalVerticalFrpEdgeUneven" type="string">
+            <column name="horizontal_vertical_frp_edge_uneven" length="20" />
+        </property>
+        <property name="horizontalVerticalFrpPutty" type="string">
+            <column name="horizontal_vertical_frp_putty" length="20" />
+        </property>
+        <property name="gapSelfPartition" type="string">
+            <column name="gap_self_partition" length="20" />
+        </property>
+        <property name="flapDoorMovementHard" type="string">
+            <column name="flap_door_movement_hard" length="20" />
+        </property>
+        <property name="ZMemberHardwareMissing" type="string">
+            <column name="z_member_hardware_missing" length="20" />
+        </property>
+        <property name="ZMemberHardwareBurr" type="string">
+            <column name="z_member_hardware_burr" length="20" />
+        </property>
+        <property name="linenRoomDoorScrewLoose" type="string">
+            <column name="linen_room_door_screw_loose" length="20" />
+        </property>
+        <property name="linenRoomBinjoScrewMissing" type="string">
+            <column name="linen_room_binjo_screw_missing" length="20" />
+        </property>
+        <property name="linenRoomBinjoScrewLoose" type="string">
+            <column name="linen_room_binjo_screw_loose" length="20" />
+        </property>
+        <property name="linenRoomHaspStapleMissing" type="string">
+            <column name="linen_room_hasp_staple_missing" length="20" />
+        </property>
+        <property name="compartmentDoorframeSited" type="string">
+            <column name="compartment_doorframe_sited" length="20" />
+        </property>
+        <property name="compartmentDoorhingeScrewLoose" type="string">
+            <column name="compartment_doorhinge_screw_loose" length="20" />
+        </property>
+        <property name="compartmentDoorhingeScrewMissing" type="string">
+            <column name="compartment_doorhinge_screw_missing" length="20" />
+        </property>
+        <property name="compartmentDoorbrushMissing" type="string">
+            <column name="compartment_doorbrush_missing" length="20" />
+        </property>
+        <property name="compartmentDoorstopperWorking" type="string">
+            <column name="compartment_doorstopper_working" length="20" />
+        </property>
+        <property name="compartmentDoorgrazing" type="string">
+            <column name="compartment_doorgrazing" length="20" />
+        </property>
+        <property name="properFitmentEndwallSaloondoor" type="string">
+            <column name="proper_fitment_endwall_saloondoor" length="20" />
+        </property>
+        <property name="maxOpeningForceEndwallSaloondoor" type="string">
+            <column name="max_opening_force_endwall_saloondoor" length="20" />
+        </property>
+        <property name="movementSlidingdoor" type="string">
+            <column name="movement_slidingdoor" length="20" />
+        </property>
+        <property name="testingObservationRemark" type="string">
+            <column name="testing_observation_remark" length="500" />
+        </property>
+    </class>
+</hibernate-mapping>

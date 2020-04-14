@@ -1,0 +1,180 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 6 Mar, 2020 3:38:58 PM by Hibernate Tools 4.0.1.Final -->
+<hibernate-mapping>
+    <class name="beans.QciFPvcTrans" table="qci_f_pvc_trans">
+        <id name="furnishingAssetId" type="int">
+            <column name="furnishing_asset_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="docNo" type="string">
+            <column name="doc_no" length="20"/>
+        </property>
+        <property name="docRevNo" type="string">
+            <column name="doc_rev_no" length="3" />
+        </property>
+        <property name="docDate" type="date">
+            <column name="doc_date" length="13" />
+        </property>
+        <property name="dateOfTesting" type="date">
+            <column name="date_of_testing" length="13" />
+        </property>
+        <property name="shiftOfTesting" type="string">
+            <column name="shift_of_testing" length="10" />
+        </property> 
+        <property name="footPlateJam" type="string">
+            <column name="foot_plate_jam" length="20" />
+        </property>
+        <property name="movementHard" type="string">
+            <column name="movement_hard" length="20" />
+        </property>
+        <property name="footPlateSpringHardware" type="string">
+            <column name="foot_plate_spring_hardware" length="20" />
+        </property>
+        <property name="footPlateSideRubberLoose" type="string">
+            <column name="foot_plate_side_rubber_loose" length="20" />
+        </property>
+        <property name="footPlateSideRubberMissing" type="string">
+            <column name="foot_plate_side_rubber_missing" length="20" />
+        </property>
+        <property name="tailLampFitted" type="string">
+            <column name="tail_lamp_fitted" length="20" />
+        </property>
+        <property name="tailLampHardwareMissing" type="string">
+            <column name="tail_lamp_hardware_missing" length="20" />
+        </property>
+        <property name="tailLampWelding" type="string">
+            <column name="tail_lamp_welding" length="20" />
+        </property>
+        <property name="footStepLoose" type="string">
+            <column name="foot_step_loose" length="20" />
+        </property>
+        <property name="footStepHardware" type="string">
+            <column name="foot_step_hardware" length="20" />
+        </property>
+        <property name="fitmentEntranceHandRail" type="string">
+            <column name="fitment_entrance_hand_rail" length="20" />
+        </property>
+        <property name="footStepRusted" type="string">
+            <column name="foot_step_rusted" length="20" />
+        </property>
+        <property name="footStepTaperFitted" type="string">
+            <column name="foot_step_taper_fitted" length="20" />
+        </property>
+        <property name="stepRailScrewSited" type="string">
+            <column name="step_rail_screw_sited" length="20" />
+        </property>
+        <property name="stepRailScrewMissing" type="string">
+            <column name="step_rail_screw_missing" length="20" />
+        </property>
+        <property name="chequerSheetNotSealed" type="string">
+            <column name="chequer_sheet_not_sealed" length="20" />
+        </property>
+        <property name="chequerSheetRouglySealed" type="string">
+            <column name="chequer_sheet_rougly_sealed" length="20" />
+        </property>
+        <property name="roughlyCuttingChequerSheet" type="string">
+            <column name="roughly_cutting_chequer_sheet" length="20" />
+        </property>
+        <property name="chequerSheetNotSitedCorner" type="string">
+            <column name="chequer_sheet_not_sited_corner" length="20" />
+        </property>
+        <property name="chequerSheetScrewSited" type="string">
+            <column name="chequer_sheet_screw_sited" length="20" />
+        </property>
+        <property name="chequerSheetScrewMissing" type="string">
+            <column name="chequer_sheet_screw_missing" length="20" />
+        </property>
+        <property name="chequerSheetScrewLoose" type="string">
+            <column name="chequer_sheet_screw_loose" length="20" />
+        </property>
+        <property name="doorStopperNotFitted" type="string">
+            <column name="door_stopper_not_fitted" length="20" />
+        </property>
+        <property name="endwallSafetyHandleFitted" type="string">
+            <column name="endwall_safety_handle_fitted" length="20" />
+        </property>
+        <property name="endwallSafetyHandleLoose" type="string">
+            <column name="endwall_safety_handle_loose" length="20" />
+        </property>
+        <property name="endwallSafetyHandleMissing" type="string">
+            <column name="endwall_safety_handle_missing" length="20" />
+        </property>
+        <property name="pvcCuttingPastingEndwalldoor" type="string">
+            <column name="pvc_cutting_pasting_endwalldoor" length="20" />
+        </property>
+        <property name="pvcCuttingPastingLavatorydoor" type="string">
+            <column name="pvc_cutting_pasting_lavatorydoor" length="20" />
+        </property>
+        <property name="pvcJointWeldingCabinSide" type="string">
+            <column name="pvc_joint_welding_cabin_side" length="20" />
+        </property>
+        <property name="pvcJointWeldingNonCabinSide" type="string">
+            <column name="pvc_joint_welding_non_cabin_side" length="20" />
+        </property>
+        <property name="airBubblePvc" type="string">
+            <column name="air_bubble_pvc" length="20" />
+        </property>
+        <property name="floorLevelCorridorArea" type="string">
+            <column name="floor_level_corridor_area" length="20" />
+        </property>
+        <property name="uicVestibuleSited" type="string">
+            <column name="uic_vestibule_sited" length="20" />
+        </property>
+        <property name="uicVestibuleTaper" type="string">
+            <column name="uic_vestibule_taper" length="20" />
+        </property>
+        <property name="uicVestibuleCracked" type="string">
+            <column name="uic_vestibule_cracked" length="20" />
+        </property>
+        <property name="foamFamSealingNotDone" type="string">
+            <column name="foam_fam_sealing_not_done" length="20" />
+        </property>
+        <property name="foamFamSealingRoughlyDone" type="string">
+            <column name="foam_fam_sealing_roughly_done" length="20" />
+        </property>
+        <property name="fitmentDoorHandle" type="string">
+            <column name="fitment_door_handle" length="20" />
+        </property>
+        <property name="testingObservationRemark" type="string">
+            <column name="testing_observation_remark" length="500" />
+        </property>
+        <property name="qcifpvcflag" type="integer">
+               <column name="qci_fpvc_flag"/> 
+        </property>
+        <property name="qciPartitionFrameFlag" type="integer">
+               <column name="qci_partition_frame_flag"/> 
+        </property>
+        <property name="qciPanelFlag" type="integer">
+               <column name="qci_panel_flag"/> 
+        </property>
+        <property name="qciWindowCellingFlag" type="integer">
+               <column name="qci_window_celling_flag"/> 
+        </property>
+        <property name="qciMouldingFlag" type="integer">
+               <column name="qci_moulding_flag"/> 
+        </property>
+        <property name="qciSeatBerthFlag" type="integer">
+               <column name="qci_seat_berth_flag"/> 
+        </property>
+        <property name="qciLavatoryFlag" type="integer">
+               <column name="qci_lavatory_flag"/> 
+        </property>
+        <property name="qciPlumbingFlag" type="integer">
+               <column name="qci_plumbing_flag"/> 
+        </property>
+        <property name="qciAirBrakeFlag" type="integer">
+               <column name="qci_air_brake_flag"/> 
+        </property>
+        <property name="qciCoachLoweringFlag" type="integer">
+               <column name="qci_coach_lowering_flag"/> 
+        </property>
+        <property name="qciPaintFlag" type="integer">
+               <column name="qci_paint_flag"/> 
+        </property>
+        <property name="qciCoachCleaningFlag" type="integer">
+               <column name="qci_coach_cleaning_flag"/> 
+        </property>
+    </class>
+</hibernate-mapping>

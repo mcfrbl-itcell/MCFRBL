@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+
+<hibernate-mapping>
+	<class name="beans.CoachWarrantySplFeatures" table="coach_warranty_spl_features" >
+		<id name="coachType" type="string">
+			<column name="coach_type"></column>
+		</id>
+		<property name="specialFeatures" type="text">
+			<column name="special_features"></column>
+		</property>
+		<property name="warranty" type="text">
+			<column name="warranty"></column>
+		</property>		
+		
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 6 Mar, 2020 3:38:58 PM by Hibernate Tools 4.0.1.Final -->
+<hibernate-mapping>
+    <class name="beans.QciWindowCeilingTrans" table="qci_window_ceiling_trans">
+        <id name="furnishingAssetId" type="int">
+            <column name="furnishing_asset_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="screwMissingLtypeCeiling" type="string">
+            <column name="screw_missing_ltype_ceiling" length="20" />
+        </property>
+        <property name="screwMissingChipUp" type="string">
+            <column name="screw_missing_chip_up" length="20" />
+        </property>
+        <property name="doorwayGangwayCeilingAlign" type="string">
+            <column name="doorway_gangway_ceiling_align" length="20" />
+        </property>
+        <property name="doorwayGangwayCeilingDent" type="string">
+            <column name="doorway_gangway_ceiling_dent" length="20" />
+        </property>
+        <property name="chipupDoorwayGangwayCeiling" type="string">
+            <column name="chipup_doorway_gangway_ceiling" length="20" />
+        </property>
+        <property name="excessGapDoorwayLinenroomCeiling" type="string">
+            <column name="excess_gap_doorway_linenroom_ceiling" length="20" />
+        </property>
+        <property name="taperGapCorridorPartition" type="string">
+            <column name="taper_gap_corridor_partition" length="20" />
+        </property>
+        <property name="nylonRopeDoorwayCeiling" type="string">
+            <column name="nylon_rope_doorway_ceiling" length="20" />
+        </property>
+        <property name="nylonRopeDoorwayCeilingUnlock" type="string">
+            <column name="nylon_rope_doorway_ceiling_unlock" length="20" />
+        </property>
+        <property name="doorwayGangwayCeilingKnotted" type="string">
+            <column name="doorway_gangway_ceiling_knotted" length="20" />
+        </property>
+        <property name="gapWallceilingPartition" type="string">
+            <column name="gap_wallceiling_partition" length="20" />
+        </property>
+        <property name="dentWallceilingPartition" type="string">
+            <column name="dent_wallceiling_partition" length="20" />
+        </property>
+        <property name="epSheetWallceilingPartition" type="string">
+            <column name="ep_sheet_wallceiling_partition" length="20" />
+        </property>
+        <property name="excessCutCeiling" type="string">
+            <column name="excess_cut_ceiling" length="20" />
+        </property>
+        <property name="dentMarkNearB" type="string">
+            <column name="dent_mark_near_b" length="20" />
+        </property>
+        <property name="screwMissingCeiling" type="string">
+            <column name="screw_missing_ceiling" length="20" />
+        </property>
+        <property name="screwMissingSideCeiling" type="string">
+            <column name="screw_missing_side_ceiling" length="20" />
+        </property>
+        <property name="screwLooseSideCeiling" type="string">
+            <column name="screw_loose_side_ceiling" length="20" />
+        </property>
+        <property name="screwUnwantedHole" type="string">
+            <column name="screw_unwanted_hole" length="20" />
+        </property>
+        <property name="screwCeilingLevel" type="string">
+            <column name="screw_ceiling_level" length="20" />
+        </property>
+        <property name="centreDiffuserLevelMismatch" type="string">
+            <column name="centre_diffuser_level_mismatch" length="20" />
+        </property>
+        <property name="centreDiffuserLevelBulge" type="string">
+            <column name="centre_diffuser_level_bulge" length="20" />
+        </property>
+        <property name="centreDiffuserLockedPrperly" type="string">
+            <column name="centre_diffuser_locked_prperly" length="20" />
+        </property>
+        <property name="centreDiffuserLockedMissing" type="string">
+            <column name="centre_diffuser_locked_missing" length="20" />
+        </property>
+        <property name="emergencyPullhandlerubbberSited" type="string">
+            <column name="emergency_pullhandlerubbber_sited" length="20" />
+        </property>
+        <property name="windowGlassCracked" type="string">
+            <column name="window_glass_cracked" length="20" />
+        </property>
+        <property name="gapCentreDiffuserSideceiling" type="string">
+            <column name="gap_centre_diffuser_sideceiling" length="20" />
+        </property>
+        <property name="gapSidewalceilingCentrediffuser" type="string">
+            <column name="gap_sidewalceiling_centrediffuser" length="20" />
+        </property>
+        <property name="testingObservationRemark" type="string">
+            <column name="testing_observation_remark" length="20" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="beans.ElecTestTransactionPrimaryData" table="elect_test_transaction_primary_data" >
+	<composite-id name="key" class="beans.ElecTestTransactionPrimaryDataId">
+	
+            <key-property name="electricalAssetid" type="integer">
+                <column name="asset_id"/>
+            </key-property>
+            
+            <key-property name="electricalTestingType" type="string">
+                <column name="electrical_testing_type" length="30"/>
+            </key-property>
+          
+        </composite-id>
+	
+		<property name="electricalDocNo" type="string">
+			<column name="electrical_doc_no" length="30"></column>
+		</property>
+		
+		<property name="testingShift" type="string">
+			<column name="shift_of_testing" length="15"></column>
+		</property>
+		
+		<property name="testingDate" type="date">
+			<column name="testing_date" ></column>
+		</property>
+		
+		<property name="testingStatus" type="string">
+			<column name="testing_status" length="30" ></column>
+		</property>
+		<property name="formHeading" type="string">
+			<column name="form_heading" length="150" ></column>
+		</property>
+		<property name="docDate" type="string">
+			<column name="doc_date" length="15" ></column>
+		</property>
+		
+		</class>
+</hibernate-mapping>

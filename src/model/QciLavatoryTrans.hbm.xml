@@ -1,0 +1,317 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 12 Mar, 2020 1:06:11 PM by Hibernate Tools 4.0.1.Final -->
+<hibernate-mapping>
+    <class name="beans.QciLavatoryTrans" table="qci_lavatory_trans">
+        <id name="furnishingAssetId" type="int">
+            <column name="furnishing_asset_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="loroPipeLoose" type="string">
+            <column name="loro_pipe_loose" length="20" />
+        </property>
+        <property name="loroPipeMissing" type="string">
+            <column name="loro_pipe_missing" length="20" />
+        </property>
+        <property name="attachmentWailHingeLoose" type="string">
+            <column name="attachment_wail_hinge_loose" length="20" />
+        </property>
+        <property name="attachmentWailHingeMissing" type="string">
+            <column name="attachment_wail_hinge_missing" length="20" />
+        </property>
+        <property name="attachmentWailHingeDent" type="string">
+            <column name="attachment_wail_hinge_dent" length="20" />
+        </property>
+        <property name="attachmentWallTowerScrewMissing" type="string">
+            <column name="attachment_wall_tower_screw_missing" length="20" />
+        </property>
+        <property name="attachmentWallTowerBoltDamage" type="string">
+            <column name="attachment_wall_tower_bolt_damage" length="20" />
+        </property>
+        
+        <property name="towerBoltFitted" type="string">
+            <column name="tower_bolt_fitted" length="20" />
+        </property>
+        <property name="towerBoltHole" type="string">
+            <column name="tower_bolt_hole" length="20" />
+        </property>
+        <property name="soapCaseScrewMissing" type="string">
+            <column name="soap_case_screw_missing" length="20" />
+        </property>
+        <property name="soapCaseScrewLoose" type="string">
+            <column name="soap_case_screw_loose" length="20" />
+        </property>
+        <property name="soapCaseScrewTaper" type="string">
+            <column name="soap_case_screw_taper" length="20" />
+        </property>
+        <property name="lavWashBasinSealed" type="string">
+            <column name="lav_wash_basin_sealed" length="20" />
+        </property>
+        <property name="lavWashBasinOutside" type="string">
+            <column name="lav_wash_basin_outside" length="20" />
+        </property>
+        <property name="avWashBasinInside" type="string">
+            <column name="av_wash_basin_inside" length="20" />
+        </property>
+        <property name="lavWashBasinRoughlySealed" type="string">
+            <column name="lav_wash_basin_roughly_sealed" length="20" />
+        </property>
+        <property name="lavWashBasinRoughlyOutside" type="string">
+            <column name="lav_wash_basin_roughly_outside" length="20" />
+        </property>
+        <property name="lavWashBasinRoughlyInside" type="string">
+            <column name="lav_wash_basin_roughly_inside" length="20" />
+        </property>
+        <property name="dustbinBoxProvided" type="string">
+            <column name="dustbin_box_provided" length="20" />
+        </property>
+        <property name="dustbinBoxUnlocked" type="string">
+            <column name="dustbin_box_unlocked" length="20" />
+        </property>
+        <property name="dustbinBktLoose" type="string">
+            <column name="dustbin_bkt_loose" length="20" />
+        </property>
+        <property name="dustbikBktScrewMissing" type="string">
+            <column name="dustbik_bkt_screw_missing" length="20" />
+        </property>
+        <property name="steelDustbinBktLoose" type="string">
+            <column name="steel_dustbin_bkt_loose" length="20" />
+        </property>
+        <property name="wasteBinLoose" type="string">
+            <column name="waste_bin_loose" length="20" />
+        </property>
+        <property name="wasteBinScrewMissing" type="string">
+            <column name="waste_bin_screw_missing" length="20" />
+        </property>
+        <property name="wasteBinScrewDent" type="string">
+            <column name="waste_bin_screw_dent" length="20" />
+        </property>
+        <property name="wasteBinCoverPlateRusted" type="string">
+            <column name="waste_bin_cover_plate_rusted" length="20" />
+        </property>
+        <property name="wasteBinCoverMagnet" type="string">
+            <column name="waste_bin_cover_magnet" length="20" />
+        </property>
+        <property name="lessScrewWasteBinCover" type="string">
+            <column name="less_screw_waste_bin_cover" length="20" />
+        </property>
+        <property name="lessScrewWasteBinCoverGrazing" type="string">
+            <column name="less_screw_waste_bin_cover_grazing" length="20" />
+        </property>
+        <property name="outsideWasteBinLoose" type="string">
+            <column name="outside_waste_bin_loose" length="20" />
+        </property>
+        <property name="outsideWasteBinNotTighten" type="string">
+            <column name="outside_waste_bin_not_tighten" length="20" />
+        </property>
+        <property name="sleeveScrewMissing" type="string">
+            <column name="sleeve_screw_missing" length="20" />
+        </property>
+        <property name="sleeveScrewLevel" type="string">
+            <column name="sleeve_screw_level" length="20" />
+        </property>
+        <property name="sleeveScrewSited" type="string">
+            <column name="sleeve_screw_sited" length="20" />
+        </property>
+        <property name="drainPipeLeakage" type="string">
+            <column name="drain_pipe_leakage" length="20" />
+        </property>
+        <property name="drainPipeSealed" type="string">
+            <column name="drain_pipe_sealed" length="20" />
+        </property>
+        <property name="outsideDrainPipeSleeveSited" type="string">
+            <column name="outside_drain_pipe_sleeve_sited" length="20" />
+        </property>
+        <property name="loroPipehardwareLoose" type="string">
+            <column name="loro_pipehardware_loose" length="20" />
+        </property>
+        <property name="lavatoryDoorPivotLoose" type="string">
+            <column name="lavatory_door_pivot_loose" length="20" />
+        </property>
+        <property name="lavatoryDoorScrewMissing" type="string">
+            <column name="lavatory_door_screw_missing" length="20" />
+        </property>
+        <property name="lavatoryDoorScrewSited" type="string">
+            <column name="lavatory_door_screw_sited" length="20" />
+        </property>
+        
+        <property name="lavatoryDoorTaperFitted" type="string">
+            <column name="lavatory_door_taper_fitted" length="20" />
+        </property>
+        <property name="lavatoryDoorTaperSound" type="string">
+            <column name="lavatory_door_taper_sound" length="20" />
+        </property>
+        <property name="lavatoryDoorFrameCornerSited" type="string">
+            <column name="lavatory_door_frame_corner_sited" length="20" />
+        </property>
+        <property name="lavatoryDoorFrameCornerGap" type="string">
+            <column name="lavatory_door_frame_corner_gap" length="20" />
+        </property>
+        <property name="lavatoryDoorHandleLoose" type="string">
+            <column name="lavatory_door_handle_loose" length="20" />
+        </property>
+        <property name="lavatoryDoorHandleMissing" type="string">
+            <column name="lavatory_door_handle_missing" length="20" />
+        </property>
+        <property name="coathookLavatoryLoose" type="string">
+            <column name="coathook_lavatory_loose" length="20" />
+        </property>
+        <property name="coathookLavatoryMissing" type="string">
+            <column name="coathook_lavatory_missing" length="20" />
+        </property>
+        <property name="engageVacantLockWorking" type="string">
+            <column name="engage_vacant_lock_working" length="20" />
+        </property>
+        <property name="engageVacantLockMaleFemaleMismatch" type="string">
+            <column name="engage_vacant_lock_male_female_mismatch" length="20" />
+        </property>
+        <property name="engageVacantLockFemaleLoose" type="string">
+            <column name="engage_vacant_lock_female_loose" length="20" />
+        </property>
+        <property name="engageVacantLockFemaleMissing" type="string">
+            <column name="engage_vacant_lock_female_missing" length="20" />
+        </property>
+        <property name="engageVacantLockMaleLoose" type="string">
+            <column name="engage_vacant_lock_male_loose" length="20" />
+        </property>
+        <property name="engageVacantLockMaleMissing" type="string">
+            <column name="engage_vacant_lock_male_missing" length="20" />
+        </property>
+        <property name="swingLockCatchLoose" type="string">
+            <column name="swing_lock_catch_loose" length="20" />
+        </property>
+        <property name="swingLockCatchLatch" type="string">
+            <column name="swing_lock_catch_latch" length="20" />
+        </property>
+        <property name="swingLockCatchHardwareExcessLength" type="string">
+            <column name="swing_lock_catch_hardware_excess_length" length="20" />
+        </property>
+        <property name="swingLockCatchHardwareBurr" type="string">
+            <column name="swing_lock_catch_hardware_burr" length="20" />
+        </property>
+        <property name="lavatoryDoorCloserScrewTighten" type="string">
+            <column name="lavatory_door_closer_screw_tighten" length="20" />
+        </property>
+        <property name="lavatoryDoorCloserScrewRusted" type="string">
+            <column name="lavatory_door_closer_screw_rusted" length="20" />
+        </property>
+        <property name="lavatoryDoorCloserScrewMovement" type="string">
+            <column name="lavatory_door_closer_screw_movement" length="20" />
+        </property>
+        <property name="soapDispenserLoose" type="string">
+            <column name="soap_dispenser_loose" length="20" />
+        </property>
+        <property name="soapDispenserTaper" type="string">
+            <column name="soap_dispenser_taper" length="20" />
+        </property>
+        <property name="soapDispenserMissing" type="string">
+            <column name="soap_dispenser_missing" length="20" />
+        </property>
+        <property name="bracketSoapDispenser" type="string">
+            <column name="bracket_soap_dispenser" length="20" />
+        </property>
+        <property name="lotahTapStrainerLevel" type="string">
+            <column name="lotah_tap_strainer_level" length="20" />
+        </property>
+        <property name="lotahTapStrainerSealed" type="string">
+            <column name="lotah_tap_strainer_sealed" length="20" />
+        </property>
+        <property name="lotahTapStrainerRoughlySealed" type="string">
+            <column name="lotah_tap_strainer_roughly_sealed" length="20" />
+        </property>
+        <property name="lotahTapStrainerScrewMissing" type="string">
+            <column name="lotah_tap_strainer_screw_missing" length="20" />
+        </property>
+        <property name="wallHandleCapPasted" type="string">
+            <column name="wall_handle_cap_pasted" length="20" />
+        </property>
+        <property name="wallHandleScrewLoose" type="string">
+            <column name="wall_handle_screw_loose" length="20" />
+        </property>
+        <property name="panLevelFloorLevel" type="string">
+            <column name="pan_level_floor_level" length="20" />
+        </property>
+        <property name="panLevelFloorLevelRoughlySealed" type="string">
+            <column name="pan_level_floor_level_roughly_sealed" length="20" />
+        </property>
+        <property name="washBasinHardwareMissing" type="string">
+            <column name="wash_basin_hardware_missing" length="20" />
+        </property>
+        <property name="washBasinHardwareTighten" type="string">
+            <column name="wash_basin_hardware_tighten" length="20" />
+        </property>
+        <property name="washBasinHardwareLoose" type="string">
+            <column name="wash_basin_hardware_loose" length="20" />
+        </property>
+        <property name="dentOnModule" type="string">
+            <column name="dent_on_module" length="20" />
+        </property>
+        <property name="dentOnHplSheet" type="string">
+            <column name="dent_on_hpl_sheet" length="20" />
+        </property>
+        <property name="moduleJointNotSealed" type="string">
+            <column name="module_joint_not_sealed" length="20" />
+        </property>
+        <property name="moduleJointRoughlySealed" type="string">
+            <column name="module_joint_roughly_sealed" length="20" />
+        </property>
+        <property name="commodeHardwareLoose" type="string">
+            <column name="commode_hardware_loose" length="20" />
+        </property>
+        <property name="commodeHardwareMissing" type="string">
+            <column name="commode_hardware_missing" length="20" />
+        </property>
+        <property name="plasticFilmRemovedCeilingDoor" type="string">
+            <column name="plastic_film_removed_ceiling_door" length="20" />
+        </property>
+        <property name="ceilingNotLevel" type="string">
+            <column name="ceiling_not_level" length="20" />
+        </property>
+        <property name="ceilingHardwareLoose" type="string">
+            <column name="ceiling_hardware_loose" length="20" />
+        </property>
+        <property name="ceilingHardwareDent" type="string">
+            <column name="ceiling_hardware_dent" length="20" />
+        </property>
+        <property name="moduleHardwareSidewallLoose" type="string">
+            <column name="module_hardware_sidewall_loose" length="20" />
+        </property>
+        <property name="mirrorHolderLoose" type="string">
+            <column name="mirror_holder_loose" length="20" />
+        </property>
+        <property name="mirrorHolderTaper" type="string">
+            <column name="mirror_holder_taper" length="20" />
+        </property>
+        <property name="mirrorHolderApdDone" type="string">
+            <column name="mirror_holder_apd_done" length="20" />
+        </property>
+        <property name="hopperWindowFrameSited" type="string">
+            <column name="hopper_window_frame_sited" length="20" />
+        </property>
+        <property name="hopperWindowFrameShort" type="string">
+            <column name="hopper_window_frame_short" length="20" />
+        </property>
+        <property name="hopperWindowFrameExcess" type="string">
+            <column name="hopper_window_frame_excess" length="20" />
+        </property>
+        <property name="hopperWindowRubberUprooted" type="string">
+            <column name="hopper_window_rubber_uprooted" length="20" />
+        </property>
+        <property name="hopperWindowGlassCrack" type="string">
+            <column name="hopper_window_glass_crack" length="20" />
+        </property>
+        <property name="conditionLavatoryFloorLevel" type="string">
+            <column name="condition_lavatory_floor_level" length="20" />
+        </property>
+        <property name="testingObservationRemark" type="string">
+            <column name="testing_observation_remark" length="500" />
+        </property>
+        <property name="entryBy" type="string">
+            <column name="entry_by" length="20" />
+        </property>
+        <property name="entryTime" type="timestamp">
+            <column name="entry_time" length="29" />
+        </property>
+    </class>
+</hibernate-mapping>

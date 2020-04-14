@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 12 Mar, 2020 1:13:51 PM by Hibernate Tools 4.0.1.Final -->
+<hibernate-mapping>
+    <class name="beans.QciPaintTrans" table="qci_paint_trans">
+        <id name="furnishingAssetId" type="int">
+            <column name="furnishing_asset_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="fitmentDestinationboardNoPlate" type="string">
+            <column name="fitment_destinationboard_no_plate" length="20" />
+        </property>
+        <property name="properStencillingLettering" type="string">
+            <column name="proper_stencilling_lettering" length="20" />
+        </property>
+        <property name="burrBraileSticker" type="string">
+            <column name="burr_braile_sticker" length="20" />
+        </property>
+        <property name="testingObservationRemark" type="string">
+            <column name="testing_observation_remark" length="500" />
+        </property>
+        <property name="entryBy" type="string">
+            <column name="entry_by" length="15" />
+        </property>
+        <property name="entryTime" type="timestamp">
+            <column name="entry_time" length="29" />
+        </property>
+    </class>
+</hibernate-mapping>

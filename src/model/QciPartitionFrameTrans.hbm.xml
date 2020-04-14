@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 6 Mar, 2020 3:38:58 PM by Hibernate Tools 4.0.1.Final -->
+<hibernate-mapping>
+    <class name="beans.QciPartitionFrameTrans" table="qci_partition_frame_trans">
+        <id name="furnishingAssetId" type="int">
+            <column name="furnishing_asset_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="dentMarkPartitionBn" type="string">
+            <column name="dent_mark_partition_bn" length="20" />
+        </property>
+        <property name="dentMarkPartitionExceesCut" type="string">
+            <column name="dent_mark_partition_excees_cut" length="20" />
+        </property>
+        <property name="excessGapUmouldingPartitionpillar" type="string">
+            <column name="excess_gap_umoulding_partitionpillar" length="20" />
+        </property>
+        <property name="middleBearthStopperMissing" type="string">
+            <column name="middle_bearth_stopper_missing" length="20" />
+        </property>
+        <property name="middleBearthStopperLoose" type="string">
+            <column name="middle_bearth_stopper_loose" length="20" />
+        </property>
+        <property name="middleBearthStopperRubberPad" type="string">
+            <column name="middle_bearth_stopper_rubber_pad" length="20" />
+        </property>
+        <property name="partitionPillarHardwareLoose" type="string">
+            <column name="partition_pillar_hardware_loose" length="20" />
+        </property>
+        <property name="partitionPillarHardwareMissing" type="string">
+            <column name="partition_pillar_hardware_missing" length="20" />
+        </property>
+        <property name="partitionPillarHardwareTaper" type="string">
+            <column name="partition_pillar_hardware_taper" length="20" />
+        </property>
+        <property name="unwantedHolesPartitionBn" type="string">
+            <column name="unwanted_holes_partition_bn" length="20" />
+        </property>
+        <property name="plasticFilmRemovedPartition" type="string">
+            <column name="plastic_film_removed_partition" length="20" />
+        </property>
+        <property name="roughlyPuttyPartition" type="string">
+            <column name="roughly_putty_partition" length="20" />
+        </property>
+        <property name="partitionPillarZigzag" type="string">
+            <column name="partition_pillar_zigzag" length="20" />
+        </property>
+        <property name="partitionPillarProperlySited" type="string">
+            <column name="partition_pillar_properly_sited" length="20" />
+        </property>
+        <property name="burrFoundPartitionPillar" type="string">
+            <column name="burr_found_partition_pillar" length="20" />
+        </property>
+        <property name="burrFoundBerthHoldingBkt" type="string">
+            <column name="burr_found_berth_holding_bkt" length="20" />
+        </property>
+        <property name="testingObservationRemark" type="string">
+            <column name="testing_observation_remark" length="500" />
+        </property>
+    </class>
+</hibernate-mapping>

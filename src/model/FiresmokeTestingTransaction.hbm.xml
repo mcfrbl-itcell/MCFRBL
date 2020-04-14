@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="beans.FiresmokeTestingTransaction" table="firesmoke_testing_transaction">
+
+<id name="furnishingAssetId" type="java.lang.Integer">
+			<column name="furnishing_asset_id"></column>
+	</id>
+      <property name="docNoFiresmoke" type="string">
+      <column name="doc_no_firesmoke" length="100" /> 
+       </property>
+      <property name="dateOfFiresmoke" type="date">
+        <column name="date_of_firesmoke_testing"/> 
+      </property>   
+        <property name="shiftFiresmoke" type="string">
+               <column name="shift_firesmoke" length="10"/> 
+        </property> 
+        <property name="supplierName" type="string">
+           <column name="firesmoke_supplier_name" length="100"/> 
+        </property> 
+        <property name="pressureOfNitrogenObservation" type="string">
+           <column name="pressure_of_nitrogen_observation" length="100"/> 
+         </property>
+         <property name="pressureOfNitrogenRemark" type="string">
+            <column name="pressure_of_nitrogen_remark" length="100"/> 
+          </property> 
+       
+        
+        <property name="smokeDetecotrPhysicalObservation" type="string">
+               <column name="smoke_detecotr_physical_observation" length="100"/> 
+        </property>
+         
+       <property name="smokeDetecotrPhysicalRemark" type="string">
+               <column name="smoke_detecotr_physical_remark" length="100"/> 
+        </property> 
+        <property name="gensetASmokeTestObservation" type="string">
+               <column name="genset_a_smoke_test_observation" length="100"/> 
+        </property> 
+         <property name="gensetASmokeTestRemark" type="string">
+               <column name="genset_a_smoke_test_remark" length="100"/> 
+            </property>   
+    
+        <property name="gensetBSmokeTestObservation" type="string">
+               <column name="genset_b_smoke_test_observation" length="100"/> 
+        </property> 
+         <property name="gensetBSmokeTestRemark" type="string">
+               <column name="genset_b_smoke_test_remark" length="100"/>                  
+         </property> 
+         
+         <property name="gensetAHeatDetectionObservation" type="string">
+               <column name="genset_a_heat_detection_observation" length="100"/> 
+        </property> 
+         <property name="gensetAHeatDetectionRemark" type="string">
+               <column name="genset_a_heat_detection_remark" length="100"/>                  
+         </property> 
+    
+        <property name="gensetBHeatDetectionObservation" type="string">
+               <column name="genset_b_heat_detection_observation" length="100"/> 
+        </property> 
+         <property name="gensetBHeatDetectionRemark" type="string">
+               <column name="genset_b_heat_detection_remark" length="100"/>                  
+         </property> 
+         
+         <property name="conditionPipelineObservation" type="string">
+               <column name="condition_pipeline_observation" length="100"/>                  
+         </property> 
+         <property name="conditionPipelineRemark" type="string">
+               <column name="condition_pipeline_remark" length="100"/>                  
+         </property> 
+         <property name="instructionStickerObservation" type="string">
+               <column name="instruction_sticker_observation" length="100"/>                  
+         </property> 
+         <property name="instructionStickerRemark" type="string">
+               <column name="instruction_sticker_remark" length="100"/>                  
+         </property> 
+         
+         <property name="suppressionSystemObservation" type="string">
+               <column name="suppression_system_observation" length="100"/>                  
+         </property> 
+         <property name="suppressionSystemRemark" type="string">
+               <column name="suppression_system_remark" length="100"/>                  
+         </property> 
+        <property name="entryBy" type="string">
+            <column name="entry_by" length="15" />
+        </property>
+        <property name="entryDate" type="timestamp">
+            <column name="entry_date" />
+        </property>
+       
+    </class>
+</hibernate-mapping>
+
+
+
+   
+   
+   
+    
+    
+    
+    
+    
+    
+    
+     
+  

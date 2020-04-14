@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 12 Mar, 2020 1:06:11 PM by Hibernate Tools 4.0.1.Final -->
+<hibernate-mapping>
+    <class name="beans.QciPlumbingTrans" table="qci_plumbing_trans">
+        <id name="furnishingAssetId" type="int">
+            <column name="furnishing_asset_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="readingWaterLevelGauge" type="string">
+            <column name="reading_water_level_gauge" length="20" />
+        </property>
+        <property name="isOsWashbasinTapLoose" type="string">
+            <column name="is_os_washbasin_tap_loose" length="20" />
+        </property>
+        <property name="showerHandleLoose" type="string">
+            <column name="shower_handle_loose" length="20" />
+        </property>
+        <property name="showerHandleBroken" type="string">
+            <column name="shower_handle_broken" length="20" />
+        </property>
+        <property name="showerHandleStandScrewLoose" type="string">
+            <column name="shower_handle_stand_screw_loose" length="20" />
+        </property>
+        <property name="upperTankUclampRubberMissingLoose" type="string">
+            <column name="upper_tank_uclamp_rubber_missing_loose" length="20" />
+        </property>
+        <property name="testingObservationRemark" type="string">
+            <column name="testing_observation_remark" length="500" />
+        </property>
+        <property name="entryBy" type="string">
+            <column name="entry_by" length="15" />
+        </property>
+        <property name="entryTime" type="timestamp">
+            <column name="entry_time" length="29" />
+        </property>
+    </class>
+</hibernate-mapping>

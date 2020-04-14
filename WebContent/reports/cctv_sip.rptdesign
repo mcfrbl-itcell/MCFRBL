@@ -1,0 +1,1985 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.6.0.v201606072122</property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <parameters>
+        <scalar-parameter name="furnAssetId" id="164">
+            <property name="valueType">static</property>
+            <property name="dataType">integer</property>
+            <property name="distinct">true</property>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+    </parameters>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="Data Source" id="4">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>metadataBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledMetadataBidiFormatStr</name>
+                </ex-property>
+                <ex-property>
+                    <name>contentBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledContentBidiFormatStr</name>
+                </ex-property>
+            </list-property>
+            <property name="odaDriverClass">org.postgresql.Driver</property>
+            <property name="odaURL">jdbc:postgresql://localhost:5432/MCFRBL</property>
+            <property name="odaUser">postgres</property>
+            <encrypted-property name="odaPassword" encryptionID="base64">cG9zdGdyZXNz</encrypted-property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="Datedataset" id="5">
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">crnt_date</property>
+                        <property name="dataType">date</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">?column?</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">crnt_date</property>
+                    <property name="nativeName">crnt_date</property>
+                    <property name="dataType">date</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">?column?</property>
+                    <property name="nativeName">?column?</property>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select crnt_date, 'Year: ' || crnt_fin_year(prev_work_date(crnt_date::date))
+from set_date ]]></xml-property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="Data Set" id="165">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">shift_cctv</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">shift_cctv</text-property>
+                    <text-property name="heading">shift_cctv</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">doc_no_cctv</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">doc_no_cctv</text-property>
+                    <text-property name="heading">doc_no_cctv</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">date_of_cctv_testing</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">date_of_cctv_testing</text-property>
+                    <text-property name="heading">date_of_cctv_testing</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">mounting_of_camera_flag</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">mounting_of_camera_flag</text-property>
+                    <text-property name="heading">mounting_of_camera_flag</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">mounting_of_camera_remark</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">mounting_of_camera_remark</text-property>
+                    <text-property name="heading">mounting_of_camera_remark</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">mounting_of_nvr_flag</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">mounting_of_nvr_flag</text-property>
+                    <text-property name="heading">mounting_of_nvr_flag</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">mounting_of_nvr_remark</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">mounting_of_nvr_remark</text-property>
+                    <text-property name="heading">mounting_of_nvr_remark</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">dc_converter_flag</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">dc_converter_flag</text-property>
+                    <text-property name="heading">dc_converter_flag</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">dc_converter_remark</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">dc_converter_remark</text-property>
+                    <text-property name="heading">dc_converter_remark</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">hdd_flag</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">hdd_flag</text-property>
+                    <text-property name="heading">hdd_flag</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">hdd_remark</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">hdd_remark</text-property>
+                    <text-property name="heading">hdd_remark</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">sd_card_flag</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">sd_card_flag</text-property>
+                    <text-property name="heading">sd_card_flag</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">sd_card_remark</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">sd_card_remark</text-property>
+                    <text-property name="heading">sd_card_remark</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">ip_protection_box_flag</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">ip_protection_box_flag</text-property>
+                    <text-property name="heading">ip_protection_box_flag</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">ip_protection_box_remark</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">ip_protection_box_remark</text-property>
+                    <text-property name="heading">ip_protection_box_remark</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">cable_connector_flag</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">cable_connector_flag</text-property>
+                    <text-property name="heading">cable_connector_flag</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">cable_connector_remark</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">cable_connector_remark</text-property>
+                    <text-property name="heading">cable_connector_remark</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">working_camera_in_day_flag</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">working_camera_in_day_flag</text-property>
+                    <text-property name="heading">working_camera_in_day_flag</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">working_camera_in_day_remark</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">working_camera_in_day_remark</text-property>
+                    <text-property name="heading">working_camera_in_day_remark</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">working_camera_in_night_flag</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">working_camera_in_night_flag</text-property>
+                    <text-property name="heading">working_camera_in_night_flag</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">working_camera_in_night_remark</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">working_camera_in_night_remark</text-property>
+                    <text-property name="heading">working_camera_in_night_remark</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">gps_support_flag</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">gps_support_flag</text-property>
+                    <text-property name="heading">gps_support_flag</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">gps_support_remark</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">gps_support_remark</text-property>
+                    <text-property name="heading">gps_support_remark</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">recording_feature_flag</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">recording_feature_flag</text-property>
+                    <text-property name="heading">recording_feature_flag</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">recording_feature_remark</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">recording_feature_remark</text-property>
+                    <text-property name="heading">recording_feature_remark</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">status_of_observation</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">status_of_observation</text-property>
+                    <text-property name="heading">status_of_observation</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">entry_by</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">entry_by</text-property>
+                    <text-property name="heading">entry_by</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">entry_time</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">entry_time</text-property>
+                    <text-property name="heading">entry_time</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">coach_number</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">coach_number</text-property>
+                    <text-property name="heading">coach_number</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">furnishing_no</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">furnishing_no</text-property>
+                    <text-property name="heading">furnishing_no</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters">
+                <structure>
+                    <property name="name">param_1</property>
+                    <property name="paramName">furnAssetId</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                    <property name="position">1</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">shift_cctv</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">doc_no_cctv</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">date_of_cctv_testing</property>
+                        <property name="dataType">date</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">mounting_of_camera_flag</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">mounting_of_camera_remark</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">mounting_of_nvr_flag</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">mounting_of_nvr_remark</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">dc_converter_flag</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">dc_converter_remark</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">hdd_flag</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">11</property>
+                        <property name="name">hdd_remark</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">12</property>
+                        <property name="name">sd_card_flag</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">13</property>
+                        <property name="name">sd_card_remark</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">14</property>
+                        <property name="name">ip_protection_box_flag</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">15</property>
+                        <property name="name">ip_protection_box_remark</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">16</property>
+                        <property name="name">cable_connector_flag</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">17</property>
+                        <property name="name">cable_connector_remark</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">18</property>
+                        <property name="name">working_camera_in_day_flag</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">19</property>
+                        <property name="name">working_camera_in_day_remark</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">20</property>
+                        <property name="name">working_camera_in_night_flag</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">21</property>
+                        <property name="name">working_camera_in_night_remark</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">22</property>
+                        <property name="name">gps_support_flag</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">23</property>
+                        <property name="name">gps_support_remark</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">24</property>
+                        <property name="name">recording_feature_flag</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">25</property>
+                        <property name="name">recording_feature_remark</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">26</property>
+                        <property name="name">status_of_observation</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">27</property>
+                        <property name="name">entry_by</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">28</property>
+                        <property name="name">entry_time</property>
+                        <property name="dataType">date-time</property>
+                    </structure>
+                    <structure>
+                        <property name="position">29</property>
+                        <property name="name">coach_number</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">30</property>
+                        <property name="name">furnishing_no</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">shift_cctv</property>
+                    <property name="nativeName">shift_cctv</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">doc_no_cctv</property>
+                    <property name="nativeName">doc_no_cctv</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">date_of_cctv_testing</property>
+                    <property name="nativeName">date_of_cctv_testing</property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">mounting_of_camera_flag</property>
+                    <property name="nativeName">mounting_of_camera_flag</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">mounting_of_camera_remark</property>
+                    <property name="nativeName">mounting_of_camera_remark</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">mounting_of_nvr_flag</property>
+                    <property name="nativeName">mounting_of_nvr_flag</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">mounting_of_nvr_remark</property>
+                    <property name="nativeName">mounting_of_nvr_remark</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">dc_converter_flag</property>
+                    <property name="nativeName">dc_converter_flag</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">dc_converter_remark</property>
+                    <property name="nativeName">dc_converter_remark</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">10</property>
+                    <property name="name">hdd_flag</property>
+                    <property name="nativeName">hdd_flag</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">11</property>
+                    <property name="name">hdd_remark</property>
+                    <property name="nativeName">hdd_remark</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">12</property>
+                    <property name="name">sd_card_flag</property>
+                    <property name="nativeName">sd_card_flag</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">13</property>
+                    <property name="name">sd_card_remark</property>
+                    <property name="nativeName">sd_card_remark</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">14</property>
+                    <property name="name">ip_protection_box_flag</property>
+                    <property name="nativeName">ip_protection_box_flag</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">15</property>
+                    <property name="name">ip_protection_box_remark</property>
+                    <property name="nativeName">ip_protection_box_remark</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">16</property>
+                    <property name="name">cable_connector_flag</property>
+                    <property name="nativeName">cable_connector_flag</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">17</property>
+                    <property name="name">cable_connector_remark</property>
+                    <property name="nativeName">cable_connector_remark</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">18</property>
+                    <property name="name">working_camera_in_day_flag</property>
+                    <property name="nativeName">working_camera_in_day_flag</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">19</property>
+                    <property name="name">working_camera_in_day_remark</property>
+                    <property name="nativeName">working_camera_in_day_remark</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">20</property>
+                    <property name="name">working_camera_in_night_flag</property>
+                    <property name="nativeName">working_camera_in_night_flag</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">21</property>
+                    <property name="name">working_camera_in_night_remark</property>
+                    <property name="nativeName">working_camera_in_night_remark</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">22</property>
+                    <property name="name">gps_support_flag</property>
+                    <property name="nativeName">gps_support_flag</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">23</property>
+                    <property name="name">gps_support_remark</property>
+                    <property name="nativeName">gps_support_remark</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">24</property>
+                    <property name="name">recording_feature_flag</property>
+                    <property name="nativeName">recording_feature_flag</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">25</property>
+                    <property name="name">recording_feature_remark</property>
+                    <property name="nativeName">recording_feature_remark</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">26</property>
+                    <property name="name">status_of_observation</property>
+                    <property name="nativeName">status_of_observation</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">27</property>
+                    <property name="name">entry_by</property>
+                    <property name="nativeName">entry_by</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">28</property>
+                    <property name="name">entry_time</property>
+                    <property name="nativeName">entry_time</property>
+                    <property name="dataType">date-time</property>
+                    <property name="nativeDataType">93</property>
+                </structure>
+                <structure>
+                    <property name="position">29</property>
+                    <property name="name">coach_number</property>
+                    <property name="nativeName">coach_number</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">30</property>
+                    <property name="name">furnishing_no</property>
+                    <property name="nativeName">furnishing_no</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select s1.shift_cctv,s1.doc_no_cctv,  s1.date_of_cctv_testing,s1.mounting_of_camera_flag, mounting_of_camera_remark, mounting_of_nvr_flag, mounting_of_nvr_remark, dc_converter_flag, dc_converter_remark, hdd_flag, hdd_remark, sd_card_flag, sd_card_remark, ip_protection_box_flag, ip_protection_box_remark, cable_connector_flag, cable_connector_remark, working_camera_in_day_flag, working_camera_in_day_remark, working_camera_in_night_flag, working_camera_in_night_remark, gps_support_flag, gps_support_remark, recording_feature_flag, recording_feature_remark, status_of_observation, entry_by, entry_time
+         ,s2.coach_number,s3.furnishing_no
+from cctv_testing_transaction as s1 inner join furnishing_tran as s2  on s1.furnishing_asset_id=s2.furnishing_asset_id 
+inner join  paint_tran as s3 on s2.paint_asset_id=s3.paint_asset_id
+ where s1.furnishing_asset_id=?
+]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <property name="headerHeight">2in</property>
+            <page-header>
+                <grid id="3898">
+                    <column id="3899"/>
+                    <column id="6"/>
+                    <column id="7"/>
+                    <column id="8"/>
+                    <column id="9"/>
+                    <column id="10"/>
+                    <row id="11">
+                        <cell id="12">
+                            <property name="colSpan">6</property>
+                            <property name="rowSpan">1</property>
+                            <label id="2937">
+                                <property name="fontWeight">bold</property>
+                                <property name="textAlign">center</property>
+                                <text-property name="text">MODERN COACH FACTORY, RAIBARELI</text-property>
+                            </label>
+                            <label id="606">
+                                <property name="fontWeight">bold</property>
+                                <property name="textAlign">center</property>
+                                <text-property name="text">SELF INSPECTION PROFORMA</text-property>
+                            </label>
+                        </cell>
+                    </row>
+                    <row id="18">
+                        <cell id="19">
+                            <property name="colSpan">6</property>
+                            <property name="rowSpan">4</property>
+                            <grid id="607">
+                                <property name="borderBottomStyle">solid</property>
+                                <property name="borderBottomWidth">thin</property>
+                                <property name="borderLeftStyle">solid</property>
+                                <property name="borderLeftWidth">thin</property>
+                                <property name="borderRightStyle">solid</property>
+                                <property name="borderRightWidth">thin</property>
+                                <property name="borderTopStyle">solid</property>
+                                <property name="borderTopWidth">thin</property>
+                                <property name="height">0.75in</property>
+                                <column id="608">
+                                    <property name="width">1in</property>
+                                </column>
+                                <column id="609"/>
+                                <column id="610"/>
+                                <column id="611"/>
+                                <row id="612">
+                                    <property name="height">0.2708333333333333in</property>
+                                    <cell id="13">
+                                        <property name="colSpan">1</property>
+                                        <property name="rowSpan">2</property>
+                                        <property name="borderBottomStyle">solid</property>
+                                        <property name="borderBottomWidth">thin</property>
+                                        <property name="borderLeftStyle">solid</property>
+                                        <property name="borderLeftWidth">thin</property>
+                                        <property name="borderRightStyle">solid</property>
+                                        <property name="borderRightWidth">thin</property>
+                                        <property name="borderTopStyle">solid</property>
+                                        <property name="borderTopWidth">thin</property>
+                                        <image id="1151">
+                                            <property name="height">0.5729166666666666in</property>
+                                            <property name="width">0.7708333333333334in</property>
+                                            <property name="source">file</property>
+                                            <expression name="uri" type="constant">/images/cris_logo.jpg</expression>
+                                        </image>
+                                    </cell>
+                                    <cell id="14">
+                                        <property name="colSpan">2</property>
+                                        <property name="rowSpan">2</property>
+                                        <property name="fontFamily">"@Microsoft YaHei UI"</property>
+                                        <property name="borderBottomStyle">none</property>
+                                        <property name="borderLeftStyle">none</property>
+                                        <property name="borderRightStyle">none</property>
+                                        <property name="borderTopStyle">none</property>
+                                        <label id="23">
+                                            <property name="fontSize">12pt</property>
+                                            <property name="fontWeight">bold</property>
+                                            <property name="borderBottomStyle">none</property>
+                                            <property name="borderLeftStyle">none</property>
+                                            <property name="borderRightStyle">none</property>
+                                            <property name="borderTopStyle">none</property>
+                                            <property name="textAlign">center</property>
+                                            <text-property name="text">CCTV</text-property>
+                                        </label>
+                                    </cell>
+                                    <cell id="16">
+                                        <property name="colSpan">1</property>
+                                        <property name="rowSpan">2</property>
+                                        <grid id="758">
+                                            <property name="height">0.6875in</property>
+                                            <column id="759"/>
+                                            <column id="760"/>
+                                            <row id="761">
+                                                <property name="height">0.6875in</property>
+                                                <cell id="762">
+                                                    <property name="borderBottomStyle">none</property>
+                                                    <property name="borderLeftStyle">solid</property>
+                                                    <property name="borderLeftWidth">thin</property>
+                                                    <property name="borderRightStyle">solid</property>
+                                                    <property name="borderRightWidth">thin</property>
+                                                    <property name="borderTopStyle">none</property>
+                                                    <label id="24">
+                                                        <property name="fontWeight">bold</property>
+                                                        <property name="borderBottomStyle">none</property>
+                                                        <property name="borderLeftStyle">none</property>
+                                                        <property name="borderRightStyle">none</property>
+                                                        <property name="borderTopStyle">none</property>
+                                                        <property name="textAlign">center</property>
+                                                        <text-property name="text">Date</text-property>
+                                                    </label>
+                                                    <label id="968"/>
+                                                    <data id="3909">
+                                                        <property name="dataSet">Datedataset</property>
+                                                        <list-property name="boundDataColumns">
+                                                            <structure>
+                                                                <property name="name">crnt_date</property>
+                                                                <text-property name="displayName">crnt_date</text-property>
+                                                                <expression name="expression" type="javascript">dataSetRow["crnt_date"]</expression>
+                                                                <property name="dataType">date</property>
+                                                            </structure>
+                                                        </list-property>
+                                                        <property name="resultSetColumn">crnt_date</property>
+                                                    </data>
+                                                </cell>
+                                                <cell id="763">
+                                                    <image id="1152">
+                                                        <property name="height">0.5208333333333334in</property>
+                                                        <property name="width">0.7708333333333334in</property>
+                                                        <property name="source">file</property>
+                                                        <expression name="uri" type="constant">/images/mcf_logo.jpg</expression>
+                                                    </image>
+                                                </cell>
+                                            </row>
+                                        </grid>
+                                    </cell>
+                                </row>
+                                <row id="17">
+                                    <property name="height">0.4791666666666667in</property>
+                                </row>
+                            </grid>
+                        </cell>
+                    </row>
+                    <row id="25"/>
+                    <row id="3900"/>
+                    <row id="3901"/>
+                    <row id="3902">
+                        <cell id="3903">
+                            <property name="colSpan">6</property>
+                            <property name="rowSpan">1</property>
+                            <label id="1181"/>
+                        </cell>
+                    </row>
+                    <row id="3904">
+                        <cell id="3905">
+                            <property name="colSpan">6</property>
+                            <property name="rowSpan">3</property>
+                            <grid id="1698">
+                                <property name="height">0.4583333333333333in</property>
+                                <column id="1699"/>
+                                <column id="1700"/>
+                                <column id="1701"/>
+                                <column id="1702"/>
+                                <column id="1703"/>
+                                <column id="1704"/>
+                                <row id="1705">
+                                    <property name="height">0.14583333333333334in</property>
+                                    <cell id="1706"/>
+                                    <cell id="1707"/>
+                                    <cell id="1708"/>
+                                    <cell id="1709"/>
+                                    <cell id="1710">
+                                        <property name="borderBottomStyle">solid</property>
+                                        <property name="borderBottomWidth">thin</property>
+                                        <property name="borderLeftStyle">solid</property>
+                                        <property name="borderLeftWidth">thin</property>
+                                        <property name="borderRightStyle">solid</property>
+                                        <property name="borderRightWidth">thin</property>
+                                        <property name="borderTopStyle">solid</property>
+                                        <property name="borderTopWidth">thin</property>
+                                        <label id="1726">
+                                            <property name="fontSize">11pt</property>
+                                            <text-property name="text">DOC NO</text-property>
+                                        </label>
+                                    </cell>
+                                    <cell id="1711">
+                                        <property name="colSpan">1</property>
+                                        <property name="rowSpan">2</property>
+                                        <property name="borderBottomStyle">solid</property>
+                                        <property name="borderBottomWidth">thin</property>
+                                        <property name="borderLeftStyle">solid</property>
+                                        <property name="borderLeftWidth">thin</property>
+                                        <property name="borderRightStyle">solid</property>
+                                        <property name="borderRightWidth">thin</property>
+                                        <property name="borderTopStyle">solid</property>
+                                        <property name="borderTopWidth">thin</property>
+                                        <data id="3908">
+                                            <property name="dataSet">Data Set</property>
+                                            <list-property name="boundDataColumns">
+                                                <structure>
+                                                    <property name="name">doc_no_cctv</property>
+                                                    <text-property name="displayName">doc_no_cctv</text-property>
+                                                    <expression name="expression" type="javascript">dataSetRow["doc_no_cctv"]</expression>
+                                                    <property name="dataType">string</property>
+                                                </structure>
+                                            </list-property>
+                                            <property name="resultSetColumn">doc_no_cctv</property>
+                                        </data>
+                                    </cell>
+                                </row>
+                                <row id="1712">
+                                    <property name="height">0.23958333333333334in</property>
+                                    <cell id="1713"/>
+                                    <cell id="1714"/>
+                                    <cell id="1715"/>
+                                    <cell id="1716"/>
+                                    <cell id="1717">
+                                        <property name="borderBottomStyle">solid</property>
+                                        <property name="borderBottomWidth">thin</property>
+                                        <property name="borderLeftStyle">solid</property>
+                                        <property name="borderLeftWidth">thin</property>
+                                        <property name="borderRightStyle">solid</property>
+                                        <property name="borderRightWidth">thin</property>
+                                        <property name="borderTopStyle">solid</property>
+                                        <property name="borderTopWidth">thin</property>
+                                        <label id="1727">
+                                            <property name="fontSize">11pt</property>
+                                            <text-property name="text">REV NO</text-property>
+                                        </label>
+                                    </cell>
+                                </row>
+                            </grid>
+                        </cell>
+                    </row>
+                    <row id="3906"/>
+                    <row id="3907"/>
+                </grid>
+            </page-header>
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <label id="28">
+            <text-property name="text">Check list for(CCTV) closed circuit television surveillance system in coaches of India Railway ae per Spec. No. ICF/MD/SPEC-269, Issue status:01, Rev-05 Dt-12.08.16</text-property>
+        </label>
+        <label id="51"/>
+        <grid id="31">
+            <column id="32"/>
+            <column id="33"/>
+            <column id="34"/>
+            <column id="35"/>
+            <column id="36"/>
+            <column id="37"/>
+            <column id="38"/>
+            <column id="39"/>
+            <row id="40">
+                <cell id="41">
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">thin</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">thin</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">thin</property>
+                    <label id="52">
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">Coach No.</text-property>
+                    </label>
+                </cell>
+                <cell id="42">
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">thin</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">thin</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">thin</property>
+                    <data id="168">
+                        <property name="dataSet">Data Set</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">coach_number</property>
+                                <text-property name="displayName">coach_number</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["coach_number"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">coach_number</property>
+                    </data>
+                </cell>
+                <cell id="43">
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">thin</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">thin</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">thin</property>
+                    <label id="53">
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">Furnishing No.</text-property>
+                    </label>
+                </cell>
+                <cell id="44">
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">thin</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">thin</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">thin</property>
+                    <data id="169">
+                        <property name="dataSet">Data Set</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">furnishing_no</property>
+                                <text-property name="displayName">furnishing_no</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["furnishing_no"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">furnishing_no</property>
+                    </data>
+                </cell>
+                <cell id="45">
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">thin</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">thin</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">thin</property>
+                    <label id="54">
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">Date</text-property>
+                    </label>
+                </cell>
+                <cell id="46">
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">thin</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">thin</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">thin</property>
+                    <data id="170">
+                        <property name="dataSet">Data Set</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">date_of_cctv_testing</property>
+                                <text-property name="displayName">date_of_cctv_testing</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["date_of_cctv_testing"]</expression>
+                                <property name="dataType">date</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">date_of_cctv_testing</property>
+                    </data>
+                </cell>
+                <cell id="47">
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">thin</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">thin</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">thin</property>
+                    <label id="55">
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">Shift</text-property>
+                    </label>
+                </cell>
+                <cell id="48">
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">thin</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">thin</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">thin</property>
+                    <data id="3915">
+                        <property name="dataSet">Data Set</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">shift_cctv</property>
+                                <text-property name="displayName">shift_cctv</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["shift_cctv"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">shift_cctv</property>
+                    </data>
+                </cell>
+            </row>
+        </grid>
+        <label id="3917"/>
+        <grid id="56">
+            <column id="57">
+                <property name="width">0.5in</property>
+            </column>
+            <column id="58"/>
+            <column id="59"/>
+            <column id="60"/>
+            <row id="61">
+                <cell id="62">
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">thin</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">thin</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">thin</property>
+                    <label id="149">
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">S.NO.</text-property>
+                    </label>
+                </cell>
+                <cell id="63">
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">thin</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">thin</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">thin</property>
+                    <label id="147">
+                        <property name="fontWeight">bold</property>
+                        <property name="textAlign">center</property>
+                        <text-property name="text">Check List</text-property>
+                    </label>
+                </cell>
+                <cell id="64">
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">thin</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">thin</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">thin</property>
+                    <label id="161">
+                        <property name="fontWeight">bold</property>
+                        <property name="textAlign">center</property>
+                        <text-property name="text">Observation</text-property>
+                    </label>
+                </cell>
+                <cell id="65">
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">thin</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">thin</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">thin</property>
+                    <label id="162">
+                        <property name="fontWeight">bold</property>
+                        <property name="textAlign">center</property>
+                        <text-property name="text">If NOT OK then defects there in</text-property>
+                    </label>
+                </cell>
+            </row>
+            <row id="66">
+                <cell id="67">
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">thin</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">thin</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">thin</property>
+                    <label id="136">
+                        <text-property name="text">1</text-property>
+                    </label>
+                </cell>
+                <cell id="68">
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">thin</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">thin</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">thin</property>
+                    <label id="150">
+                        <text-property name="text">Mounting of 1.3 MP cameras(6 no.)</text-property>
+                    </label>
+                </cell>
+                <cell id="69">
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">thin</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">thin</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">thin</property>
+                    <data id="172">
+                        <property name="dataSet">Data Set</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">mounting_of_camera_flag</property>
+                                <text-property name="displayName">mounting_of_camera_flag</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["mounting_of_camera_flag"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">mounting_of_camera_flag</property>
+                    </data>
+                </cell>
+                <cell id="70">
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">thin</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">thin</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">thin</property>
+                    <data id="173">
+                        <property name="dataSet">Data Set</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">mounting_of_camera_remark</property>
+                                <text-property name="displayName">mounting_of_camera_remark</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["mounting_of_camera_remark"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">mounting_of_camera_remark</property>
+                    </data>
+                </cell>
+            </row>
+            <row id="71">
+                <cell id="72">
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">thin</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">thin</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">thin</property>
+                    <label id="138">
+                        <text-property name="text">2</text-property>
+                    </label>
+                </cell>
+                <cell id="73">
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">thin</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">thin</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">thin</property>
+                    <label id="151">
+                        <text-property name="text">Mounting NVR (Network Video) recorder with 8 ports</text-property>
+                    </label>
+                </cell>
+                <cell id="74">
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">thin</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">thin</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">thin</property>
+                    <data id="174">
+                        <property name="dataSet">Data Set</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">mounting_of_nvr_flag</property>
+                                <text-property name="displayName">mounting_of_nvr_flag</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["mounting_of_nvr_flag"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">mounting_of_nvr_flag</property>
+                    </data>
+                </cell>
+                <cell id="75">
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">thin</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">thin</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">thin</property>
+                    <data id="175">
+                        <property name="dataSet">Data Set</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">mounting_of_nvr_remark</property>
+                                <text-property name="displayName">mounting_of_nvr_remark</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["mounting_of_nvr_remark"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">mounting_of_nvr_remark</property>
+                    </data>
+                </cell>
+            </row>
+            <row id="76">
+                <cell id="77">
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">thin</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">thin</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">thin</property>
+                    <label id="139">
+                        <text-property name="text">3</text-property>
+                    </label>
+                </cell>
+                <cell id="78">
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">thin</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">thin</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">thin</property>
+                    <label id="152">
+                        <text-property name="text">DC to DC converter 110V to 12V DC</text-property>
+                    </label>
+                </cell>
+                <cell id="79">
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">thin</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">thin</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">thin</property>
+                    <data id="176">
+                        <property name="dataSet">Data Set</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">dc_converter_flag</property>
+                                <text-property name="displayName">dc_converter_flag</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["dc_converter_flag"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">dc_converter_flag</property>
+                    </data>
+                </cell>
+                <cell id="80">
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">thin</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">thin</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">thin</property>
+                    <data id="177">
+                        <property name="dataSet">Data Set</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">dc_converter_remark</property>
+                                <text-property name="displayName">dc_converter_remark</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["dc_converter_remark"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">dc_converter_remark</property>
+                    </data>
+                </cell>
+            </row>
+            <row id="81">
+                <cell id="82">
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">thin</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">thin</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">thin</property>
+                    <label id="140">
+                        <text-property name="text">4</text-property>
+                    </label>
+                </cell>
+                <cell id="83">
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">thin</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">thin</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">thin</property>
+                    <label id="153">
+                        <text-property name="text">One 2.5" HDD with minimum capacity of 2TB for recording videos for 30 days</text-property>
+                    </label>
+                </cell>
+                <cell id="84">
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">thin</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">thin</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">thin</property>
+                    <data id="178">
+                        <property name="dataSet">Data Set</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">hdd_flag</property>
+                                <text-property name="displayName">hdd_flag</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["hdd_flag"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">hdd_flag</property>
+                    </data>
+                </cell>
+                <cell id="85">
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">thin</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">thin</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">thin</property>
+                    <data id="179">
+                        <property name="dataSet">Data Set</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">hdd_remark</property>
+                                <text-property name="displayName">hdd_remark</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["hdd_remark"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">hdd_remark</property>
+                    </data>
+                </cell>
+            </row>
+            <row id="86">
+                <cell id="87">
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">thin</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">thin</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">thin</property>
+                    <label id="141">
+                        <text-property name="text">5</text-property>
+                    </label>
+                </cell>
+                <cell id="88">
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">thin</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">thin</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">thin</property>
+                    <label id="154">
+                        <text-property name="text">One side card with 32 GB capacity</text-property>
+                    </label>
+                </cell>
+                <cell id="89">
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">thin</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">thin</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">thin</property>
+                    <data id="180">
+                        <property name="dataSet">Data Set</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">sd_card_flag</property>
+                                <text-property name="displayName">sd_card_flag</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["sd_card_flag"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">sd_card_flag</property>
+                    </data>
+                </cell>
+                <cell id="90">
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">thin</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">thin</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">thin</property>
+                    <data id="181">
+                        <property name="dataSet">Data Set</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">sd_card_remark</property>
+                                <text-property name="displayName">sd_card_remark</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["sd_card_remark"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">sd_card_remark</property>
+                    </data>
+                </cell>
+            </row>
+            <row id="91">
+                <cell id="92">
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">thin</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">thin</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">thin</property>
+                    <label id="142">
+                        <text-property name="text">6</text-property>
+                    </label>
+                </cell>
+                <cell id="93">
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">thin</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">thin</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">thin</property>
+                    <label id="155">
+                        <text-property name="text">IP protection box with Dirak make lock</text-property>
+                    </label>
+                </cell>
+                <cell id="94">
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">thin</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">thin</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">thin</property>
+                    <data id="182">
+                        <property name="dataSet">Data Set</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">ip_protection_box_flag</property>
+                                <text-property name="displayName">ip_protection_box_flag</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["ip_protection_box_flag"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">ip_protection_box_flag</property>
+                    </data>
+                </cell>
+                <cell id="95">
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">thin</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">thin</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">thin</property>
+                    <data id="183">
+                        <property name="dataSet">Data Set</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">ip_protection_box_remark</property>
+                                <text-property name="displayName">ip_protection_box_remark</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["ip_protection_box_remark"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">ip_protection_box_remark</property>
+                    </data>
+                </cell>
+            </row>
+            <row id="96">
+                <cell id="97">
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">thin</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">thin</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">thin</property>
+                    <label id="143">
+                        <text-property name="text">7</text-property>
+                    </label>
+                </cell>
+                <cell id="98">
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">thin</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">thin</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">thin</property>
+                    <label id="156">
+                        <text-property name="text">Cable with connectors</text-property>
+                    </label>
+                </cell>
+                <cell id="99">
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">thin</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">thin</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">thin</property>
+                    <data id="166">
+                        <property name="dataSet">Data Set</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">cable_connector_flag</property>
+                                <text-property name="displayName">cable_connector_flag</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["cable_connector_flag"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">cable_connector_flag</property>
+                    </data>
+                </cell>
+                <cell id="100">
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">thin</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">thin</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">thin</property>
+                    <data id="167">
+                        <property name="dataSet">Data Set</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">cable_connector_remark</property>
+                                <text-property name="displayName">cable_connector_remark</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["cable_connector_remark"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">cable_connector_remark</property>
+                    </data>
+                </cell>
+            </row>
+            <row id="101">
+                <cell id="102">
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">thin</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">thin</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">thin</property>
+                    <label id="144">
+                        <text-property name="text">8</text-property>
+                    </label>
+                </cell>
+                <cell id="103">
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">thin</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">thin</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">thin</property>
+                    <label id="157">
+                        <text-property name="text">Working for all 6 cameras in day mode</text-property>
+                    </label>
+                </cell>
+                <cell id="104">
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">thin</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">thin</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">thin</property>
+                    <data id="184">
+                        <property name="dataSet">Data Set</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">working_camera_in_day_flag</property>
+                                <text-property name="displayName">working_camera_in_day_flag</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["working_camera_in_day_flag"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">working_camera_in_day_flag</property>
+                    </data>
+                </cell>
+                <cell id="105">
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">thin</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">thin</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">thin</property>
+                    <data id="185">
+                        <property name="dataSet">Data Set</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">working_camera_in_day_remark</property>
+                                <text-property name="displayName">working_camera_in_day_remark</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["working_camera_in_day_remark"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">working_camera_in_day_remark</property>
+                    </data>
+                </cell>
+            </row>
+            <row id="106">
+                <cell id="107">
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">thin</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">thin</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">thin</property>
+                    <label id="145">
+                        <text-property name="text">9</text-property>
+                    </label>
+                </cell>
+                <cell id="108">
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">thin</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">thin</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">thin</property>
+                    <label id="158">
+                        <text-property name="text">Working fpr all 6 camera in night mode</text-property>
+                    </label>
+                </cell>
+                <cell id="109">
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">thin</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">thin</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">thin</property>
+                    <data id="186">
+                        <property name="dataSet">Data Set</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">working_camera_in_night_flag</property>
+                                <text-property name="displayName">working_camera_in_night_flag</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["working_camera_in_night_flag"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">working_camera_in_night_flag</property>
+                    </data>
+                </cell>
+                <cell id="110">
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">thin</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">thin</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">thin</property>
+                    <data id="187">
+                        <property name="dataSet">Data Set</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">working_camera_in_night_remark</property>
+                                <text-property name="displayName">working_camera_in_night_remark</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["working_camera_in_night_remark"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">working_camera_in_night_remark</property>
+                    </data>
+                </cell>
+            </row>
+            <row id="111">
+                <cell id="112">
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">thin</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">thin</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">thin</property>
+                    <label id="146">
+                        <text-property name="text">10</text-property>
+                    </label>
+                </cell>
+                <cell id="113">
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">thin</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">thin</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">thin</property>
+                    <label id="159">
+                        <text-property name="text">Compatibility to support GPS for real time location and speed tagging of video stream</text-property>
+                    </label>
+                </cell>
+                <cell id="114">
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">thin</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">thin</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">thin</property>
+                    <data id="3912">
+                        <property name="dataSet">Data Set</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">gps_support_flag</property>
+                                <text-property name="displayName">gps_support_flag</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["gps_support_flag"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">gps_support_flag</property>
+                    </data>
+                </cell>
+                <cell id="115">
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">thin</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">thin</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">thin</property>
+                    <data id="3913">
+                        <property name="dataSet">Data Set</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">gps_support_remark</property>
+                                <text-property name="displayName">gps_support_remark</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["gps_support_remark"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">gps_support_remark</property>
+                    </data>
+                </cell>
+            </row>
+            <row id="116">
+                <cell id="117">
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">thin</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">thin</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">thin</property>
+                    <label id="163">
+                        <text-property name="text">11</text-property>
+                    </label>
+                </cell>
+                <cell id="118">
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">thin</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">thin</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">thin</property>
+                    <label id="160">
+                        <text-property name="text">Recording features</text-property>
+                    </label>
+                </cell>
+                <cell id="119">
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">thin</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">thin</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">thin</property>
+                    <data id="3910">
+                        <property name="dataSet">Data Set</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">recording_feature_flag</property>
+                                <text-property name="displayName">recording_feature_flag</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["recording_feature_flag"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">recording_feature_flag</property>
+                    </data>
+                </cell>
+                <cell id="120">
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">thin</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">thin</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">thin</property>
+                    <data id="3911">
+                        <property name="dataSet">Data Set</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">recording_feature_remark</property>
+                                <text-property name="displayName">recording_feature_remark</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["recording_feature_remark"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">recording_feature_remark</property>
+                    </data>
+                </cell>
+            </row>
+        </grid>
+        <label id="189"/>
+        <grid id="190">
+            <column id="191"/>
+            <column id="192"/>
+            <column id="193"/>
+            <row id="194">
+                <cell id="195"/>
+                <cell id="196">
+                    <data id="198">
+                        <property name="dataSet">Data Set</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">status_of_observation</property>
+                                <text-property name="displayName">status_of_observation</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["status_of_observation"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">status_of_observation</property>
+                    </data>
+                </cell>
+                <cell id="197"/>
+            </row>
+        </grid>
+        <label id="3918"/>
+        <grid id="3930">
+            <column id="3931"/>
+            <column id="3932"/>
+            <column id="3933"/>
+            <row id="3934">
+                <cell id="3935">
+                    <label id="3942">
+                        <property name="textAlign">center</property>
+                        <text-property name="text">Firm Representative</text-property>
+                    </label>
+                </cell>
+                <cell id="3936">
+                    <label id="3943">
+                        <property name="fontWeight">normal</property>
+                        <property name="textAlign">center</property>
+                        <text-property name="text">Quality Control</text-property>
+                    </label>
+                </cell>
+                <cell id="3937">
+                    <label id="3944">
+                        <property name="textAlign">center</property>
+                        <text-property name="text">Furnishing Stage</text-property>
+                    </label>
+                </cell>
+            </row>
+            <row id="3938">
+                <cell id="3939"/>
+                <cell id="3940">
+                    <label id="3945">
+                        <property name="textAlign">center</property>
+                        <text-property name="text">MCF/RBL</text-property>
+                    </label>
+                </cell>
+                <cell id="3941">
+                    <label id="3946">
+                        <property name="textAlign">center</property>
+                        <text-property name="text">MCF/RBL</text-property>
+                    </label>
+                </cell>
+            </row>
+        </grid>
+    </body>
+</report>

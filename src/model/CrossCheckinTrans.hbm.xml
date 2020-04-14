@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 12 Mar, 2020 1:13:51 PM by Hibernate Tools 4.0.1.Final -->
+<hibernate-mapping>
+    <class name="beans.CrossCheckinTrans" table="cross_checkin_trans">
+        <id name="furnishingAssetId" type="int">
+            <column name="furnishing_asset_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="textFpvc" type="text">
+            <column name="text_fpvc"/>
+        </property>
+        <property name="textParitionFrame" type="text">
+            <column name="text_parition_frame"/>
+        </property>
+       <property name="textPanel" type="text">
+            <column name="text_panel"/>
+        </property>
+        <property name="textWindowCelling" type="text">
+            <column name="text_window_celling"/>
+        </property>
+        <property name="textMoulding" type="text">
+            <column name="text_moulding"/>
+        </property>
+        <property name="textSeatBerth" type="text">
+            <column name="text_seat_berth"/>
+        </property>
+        <property name="textLavatory" type="text">
+            <column name="text_lavatory"/>
+        </property>
+        <property name="textPlumbing" type="text">
+            <column name="text_plumbing"/>
+        </property>
+        <property name="textAirBrake" type="text">
+            <column name="text_air_brake"/>
+        </property>
+        <property name="textCoachLowering" type="text">
+            <column name="text_coach_lowering"/>
+        </property>
+        <property name="textPaint" type="text">
+            <column name="text_paint"/>
+        </property>
+        <property name="textCoachCleaning" type="text">
+            <column name="text_coach_cleaning"/>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 20 Mar, 2020 5:30:25 PM by Hibernate Tools 4.0.1.Final -->
+<hibernate-mapping>
+    <class name="beans.QcraTrans" table="qcra_trans">
+        <composite-id name="id" class="beans.QcraTransId">
+            <key-property name="furnishingAssetId" type="int">
+                <column name="furnishing_asset_id" />
+            </key-property>
+            <key-property name="furnishingTestStage" type="string">
+                <column name="furnishing_test_stage" length="10" />
+            </key-property>
+        </composite-id>
+        <property name="docNoQcra" type="string">
+            <column name="doc_no_qcra" length="30" />
+        </property>
+        <property name="revNoQcra" type="string">
+            <column name="rev_no_qcra" length="4" />
+        </property>
+        <property name="dateOfDocQcra" type="date">
+            <column name="date_of_doc_qcra" length="13" />
+        </property>
+        <property name="dateOfTesting" type="date">
+            <column name="date_of_testing" length="13" />
+        </property>
+        <property name="shifOfTesting" type="string">
+            <column name="shif_of_testing" length="10" />
+        </property>
+         <property name="natureOfQc" type="string">
+            <column name="nature_of_qc" length="15" />
+        </property>
+        <property name="assemblyDetail" type="string">
+            <column name="assembly_detail" length="100" />
+        </property>
+        <property name="componentNoReference" type="string">
+            <column name="component_no_reference" length="100" />
+        </property>
+        <property name="rectification" type="string">
+            <column name="rectification" length="100" />
+        </property>
+        <property name="defectReportNo" type="string">
+            <column name="defect_report_no" length="100" />
+        </property>
+        <property name="defectReportDate" type="date">
+            <column name="defect_report_date" length="13" />
+        </property>
+        <property name="pointNoRectified" type="string">
+            <column name="point_no_rectified" length="100" />
+        </property>
+        <property name="itemPointNo" type="string">
+            <column name="item_point_no" length="100" />
+        </property>
+        <property name="pointNoNotRectified" type="string">
+            <column name="point_no_not_rectified" length="100" />
+        </property>
+        <property name="observationRemark" type="string">
+            <column name="observation_remark" length="100" />
+        </property>
+        <property name="entryBy" type="string">
+            <column name="entry_by" length="15" />
+        </property>
+        <property name="entryTime" type="timestamp">
+            <column name="entry_time" length="29" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 6 Mar, 2020 3:38:58 PM by Hibernate Tools 4.0.1.Final -->
+<hibernate-mapping>
+    <class name="beans.QciPanelTrans" table="qci_panel_trans">
+        <id name="furnishingAssetId" type="int">
+            <column name="furnishing_asset_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="acAirGrillScrewTighten" type="string">
+            <column name="ac_air_grill_screw_tighten" length="20" />
+        </property>
+        <property name="acAirGrillScrewMissing" type="string">
+            <column name="ac_air_grill_screw_missing" length="20" />
+        </property>
+        <property name="gapPartitionPanel" type="string">
+            <column name="gap_partition_panel" length="20" />
+        </property>
+        <property name="cutMarkPanelCorner" type="string">
+            <column name="cut_mark_panel_corner" length="20" />
+        </property>
+        <property name="panelCrackNear" type="string">
+            <column name="panel_crack_near" length="20" />
+        </property>
+        <property name="panelDentNear" type="string">
+            <column name="panel_dent_near" length="20" />
+        </property>
+        <property name="magazineBagScrewLoose" type="string">
+            <column name="magazine_bag_screw_loose" length="20" />
+        </property>
+        <property name="magazineBagScrewNotFitted" type="string">
+            <column name="magazine_bag_screw_not_fitted" length="20" />
+        </property>
+        <property name="magazineTaperFitted" type="string">
+            <column name="magazine_taper_fitted" length="20" />
+        </property>
+        <property name="magazineTaperBulged" type="string">
+            <column name="magazine_taper_bulged" length="20" />
+        </property>
+        <property name="magazineTaperDamage" type="string">
+            <column name="magazine_taper_damage" length="20" />
+        </property>
+        <property name="holePanelPartition" type="string">
+            <column name="hole_panel_partition" length="20" />
+        </property>
+        <property name="panelNotLocked" type="string">
+            <column name="panel_not_locked" length="20" />
+        </property>
+        <property name="excessGapPanelPartition" type="string">
+            <column name="excess_gap_panel_partition" length="20" />
+        </property>
+        <property name="windowRubberExcessLength" type="string">
+            <column name="window_rubber_excess_length" length="20" />
+        </property>
+        <property name="windowRubberShortLength" type="string">
+            <column name="window_rubber_short_length" length="20" />
+        </property>
+        <property name="windowRubberUprooted" type="string">
+            <column name="window_rubber_uprooted" length="20" />
+        </property>
+        <property name="testingObservationRemark" type="string">
+            <column name="testing_observation_remark" length="500" />
+        </property>
+    </class>
+</hibernate-mapping>

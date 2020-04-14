@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="model.Asset_master" table="asset_master" >
+	
+	<composite-id>
+	    <key-property name="asset_subtype" type="java.lang.String" >
+	    <column name="asset_subtype"></column>
+	    </key-property>
+	  
+		<key-property name="asset_type" type="java.lang.String" >
+		<column name="asset_type" ></column>
+		</key-property>
+  </composite-id>
+	
+		<property name="asset_subtype_description" type="java.lang.String">
+			<column name="asset_subtype_description"></column>
+		</property>
+		<property name="asset_subtype_class" type="java.lang.String">
+			<column name="asset_subtype_class" ></column>
+		</property>
+		<property name="tare_weight" type="java.lang.Float">
+			<column name="tare_weight"></column>
+		</property>
+		
+		<property name="seating_capacity" type="java.lang.Integer">
+			<column name="seating_capacity"></column>
+		</property>
+		<property name="sleeping_capacity" type="java.lang.Integer">
+			<column name="sleeping_capacity"></column>
+		</property>
+		<property name="luggage_capacity" type="java.lang.Integer">
+			<column name="luggage_capacity"></column>
+		</property>
+		
+		<property name="max_length_body" type="java.lang.Integer">
+			<column name="max_length_body"></column>
+		</property>
+		<property name="max_width_body" type="java.lang.Integer">
+			<column name="max_width_body"></column>
+		</property>
+		<property name="max_height_rail_level" type="java.lang.Integer">
+			<column name="max_height_rail_level"></column>
+		</property>
+		
+	</class>
+</hibernate-mapping>
