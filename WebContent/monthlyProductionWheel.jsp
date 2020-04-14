@@ -188,6 +188,7 @@ function toggleDataSeries(e2) {
 	<td id="chartContainer1" style="width: 48%;"></td>
 	<td width='4%'></td>
 	<td id="chartContainer2" style="width: 48%;"></td>
+	<!-- hello -->
 </tr>
 </table>
 
