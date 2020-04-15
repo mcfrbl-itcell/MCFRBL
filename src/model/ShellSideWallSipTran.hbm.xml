@@ -190,13 +190,13 @@
 		<property name="distanceAnglehoneyprtSidewallMiddlearea4" type="integer">
 			<column name="distance_anglehoneyprt_sidewall_middlearea4" ></column>
 		</property>
-		<property name="detailsOfModification" type="string">
+		<property name="sideWallDetailsOfModification" type="string">
 			<column name="details_of_modification" length="500"></column>
 		</property>
-		<property name="detailsOfTrialItem" type="string">
+		<property name="sideWallDetailsOfTrialItem" type="string">
 			<column name="details_of_trial_item" length="500"></column>
 		</property>
-		<property name="remarks" type="string">
+		<property name="sideWallRemarks" type="string">
 			<column name="remarks" length="500"></column>
 		</property>
 		<property name="shellSidewallTestingStatus" type="string">

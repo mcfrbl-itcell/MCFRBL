@@ -19,8 +19,8 @@ public class SaveRoofSIP {
 	private String roofSipDate;
 	private String roofType;
 	private String roofMake; 
-	private String applicableDrawingNo;
-	private String applicableWiNo;                   							
+	private String roofApplicableDrawingNo;
+	private String roofApplicableWiNo;                   							
 	private String machineSpotWeild;              							
 	private String observationItemAsPerDrawing;
 	private String observationComplianceWi;                   							
@@ -52,9 +52,9 @@ public class SaveRoofSIP {
 	private String distanceRoofcenterlineSpeakerbkt;
 	private String distanceRoofcenterlineElbkt;
 	private String noCrossBracesFitted;
-	private String detailsOfModification;
-	private String detailsOfTrial;
-	private String remarks;
+	private String roofDetailsOfModification;
+	private String roofDetailsOfTrial;
+	private String roofRemarks;
 	private String shellRoofSipTestingStatus;
 	private String entryBy;
 	private String entryTime;
@@ -83,14 +83,14 @@ public class SaveRoofSIP {
 		if(!"".equals(roofSipDate))	{shellRoofTransaction.setRoofSipDate(DateUtil.convertToDate(roofSipDate));}
 		shellRoofTransaction.setRoofMake(roofMake);
 		shellRoofTransaction.setRoofType(roofType);
-		shellRoofTransaction.setApplicableWiNo(applicableWiNo);
-		shellRoofTransaction.setApplicableDrawingNo(applicableDrawingNo);
+		shellRoofTransaction.setApplicableWiNo(roofApplicableWiNo);
+		shellRoofTransaction.setApplicableDrawingNo(roofApplicableDrawingNo);
 		shellRoofTransaction.setMachineSpotWeild(machineSpotWeild);
 		shellRoofTransaction.setObservationItemAsPerDrawing(observationItemAsPerDrawing);
 		shellRoofTransaction.setObservationComplianceWi(observationComplianceWi);
 		shellRoofTransaction.setObservationWeildingThroatLength(observationWeildingThroatLength);
 		if(!"".equals(lengthRoof)){Integer lengthRoofAsInt=Integer.parseInt(lengthRoof);
-		shellRoofTransaction.setLengthRoof( lengthRoofAsInt);}
+		shellRoofTransaction.setLengthRoof(lengthRoofAsInt);}
 		if(!"".equals(lengthRoofsheet)){Integer lengthRoofsheetAsInt=Integer.parseInt(lengthRoofsheet);
 		shellRoofTransaction.setLengthRoofsheet(lengthRoofsheetAsInt);}
 		if(!"".equals(widthRoofsheet)){Integer widthRoofsheetAsInt=Integer.parseInt(widthRoofsheet);
@@ -125,9 +125,9 @@ public class SaveRoofSIP {
 		shellRoofTransaction.setDistanceRoofcenterlineSpeakerbkt(distanceRoofcenterlineSpeakerbkt);
 		shellRoofTransaction.setDistanceRoofcenterlineElbkt(distanceRoofcenterlineElbkt);
 		shellRoofTransaction.setNoCrossBracesFitted(noCrossBracesFitted);
-		shellRoofTransaction.setDetailsOfModification(detailsOfModification);
-		shellRoofTransaction.setDetailsOfTrial(detailsOfTrial);
-		shellRoofTransaction.setRemarks(remarks);
+		shellRoofTransaction.setDetailsOfModification(roofDetailsOfModification);
+		shellRoofTransaction.setDetailsOfTrial(roofDetailsOfTrial);
+		shellRoofTransaction.setRemarks(roofRemarks);
 		shellRoofTransaction.setShellRoofSipTestingStatus(shellRoofSipTestingStatus);
 		shellRoofTransaction.setEntryBy(userID);
 		Timestamp entryTime =new Timestamp(System.currentTimeMillis()) ;
@@ -135,7 +135,7 @@ public class SaveRoofSIP {
 		
 		
 			
-			ShellTransaction shellTran=(ShellTransaction) session.get(ShellTransaction.class, shellAssetIdAsInt);
+			ShellTransaction shellTran=(ShellTransaction) session.get(ShellTransaction.class,shellAssetIdAsInt);
 		    shellTran.setRoofSipFlag(1);
 		    try
 		    {
@@ -293,13 +293,8 @@ public class SaveRoofSIP {
 
 
 
-
-
-
-
-
-	public String getApplicableDrawingNo() {
-		return applicableDrawingNo;
+	public String getRoofApplicableDrawingNo() {
+		return roofApplicableDrawingNo;
 	}
 
 
@@ -309,8 +304,8 @@ public class SaveRoofSIP {
 
 
 
-	public void setApplicableDrawingNo(String applicableDrawingNo) {
-		this.applicableDrawingNo = applicableDrawingNo;
+	public void setRoofApplicableDrawingNo(String roofApplicableDrawingNo) {
+		this.roofApplicableDrawingNo = roofApplicableDrawingNo;
 	}
 
 
@@ -320,8 +315,8 @@ public class SaveRoofSIP {
 
 
 
-	public String getApplicableWiNo() {
-		return applicableWiNo;
+	public String getRoofApplicableWiNo() {
+		return roofApplicableWiNo;
 	}
 
 
@@ -331,8 +326,8 @@ public class SaveRoofSIP {
 
 
 
-	public void setApplicableWiNo(String applicableWiNo) {
-		this.applicableWiNo = applicableWiNo;
+	public void setRoofApplicableWiNo(String roofApplicableWiNo) {
+		this.roofApplicableWiNo = roofApplicableWiNo;
 	}
 
 
@@ -1020,12 +1015,8 @@ public class SaveRoofSIP {
 
 
 
-
-
-
-
-	public String getDetailsOfModification() {
-		return detailsOfModification;
+	public String getRoofDetailsOfModification() {
+		return roofDetailsOfModification;
 	}
 
 
@@ -1035,8 +1026,8 @@ public class SaveRoofSIP {
 
 
 
-	public void setDetailsOfModification(String detailsOfModification) {
-		this.detailsOfModification = detailsOfModification;
+	public void setRoofDetailsOfModification(String roofDetailsOfModification) {
+		this.roofDetailsOfModification = roofDetailsOfModification;
 	}
 
 
@@ -1046,8 +1037,8 @@ public class SaveRoofSIP {
 
 
 
-	public String getDetailsOfTrial() {
-		return detailsOfTrial;
+	public String getRoofDetailsOfTrial() {
+		return roofDetailsOfTrial;
 	}
 
 
@@ -1057,8 +1048,8 @@ public class SaveRoofSIP {
 
 
 
-	public void setDetailsOfTrial(String detailsOfTrial) {
-		this.detailsOfTrial = detailsOfTrial;
+	public void setRoofDetailsOfTrial(String roofDetailsOfTrial) {
+		this.roofDetailsOfTrial = roofDetailsOfTrial;
 	}
 
 
@@ -1068,8 +1059,8 @@ public class SaveRoofSIP {
 
 
 
-	public String getRemarks() {
-		return remarks;
+	public String getRoofRemarks() {
+		return roofRemarks;
 	}
 
 
@@ -1079,8 +1070,8 @@ public class SaveRoofSIP {
 
 
 
-	public void setRemarks(String remarks) {
-		this.remarks = remarks;
+	public void setRoofRemarks(String roofRemarks) {
+		this.roofRemarks = roofRemarks;
 	}
 
 

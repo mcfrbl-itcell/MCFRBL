@@ -98,6 +98,7 @@ public class FurnishingTransaction implements java.io.Serializable{
 	private String dispatchDiv;
 	private Date coachLoweringDate;
 	private Date dispatchMemoDate;
+	private Integer rscFlag;
 	//electrical_air_delivery_flag
 	public FurnishingTransaction()
 	{
@@ -127,7 +128,7 @@ public class FurnishingTransaction implements java.io.Serializable{
 			Integer electricalSafetyTestingFlag, Integer electricalCurrentTestingFlag,
 			Integer electricalWheelSlideProtectionFlag, Integer electricalFunctionalFlag,
 			Integer electricalRollingStockFlag, Integer electricalStageTestingFlag, Integer qciTestingFlag,
-			Date qciTestingDate,String dispatchRly,String dispatchDiv,Date coachLoweringDate,Date dispatchMemoDate) {
+			Date qciTestingDate,String dispatchRly,String dispatchDiv,Date coachLoweringDate,Date dispatchMemoDate,Integer rscFlag) {
 		super();
 		this.furnishingAssetId = furnishingAssetId;
 		this.stageId = stageId;
@@ -218,6 +219,8 @@ public class FurnishingTransaction implements java.io.Serializable{
 		this.dispatchDiv=dispatchDiv;
 		this.coachLoweringDate=coachLoweringDate;
 		this.dispatchMemoDate=dispatchMemoDate;
+		this.rscFlag=rscFlag;
+		
 	}
 
 
@@ -1198,6 +1201,12 @@ public class FurnishingTransaction implements java.io.Serializable{
 	}
 	public void setDispatchMemoDate(Date dispatchMemoDate) {
 		this.dispatchMemoDate = dispatchMemoDate;
+	}
+	public Integer getRscFlag() {
+		return rscFlag;
+	}
+	public void setRscFlag(Integer rscFlag) {
+		this.rscFlag = rscFlag;
 	}
 	
 }

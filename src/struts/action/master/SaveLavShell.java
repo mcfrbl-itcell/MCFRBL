@@ -16,8 +16,8 @@ public class SaveLavShell {
 	private String lavsidewallSipDate;
 	private String lavsidewallNo;
 	private String lavsidewallShellType;
-	private String drawingNo;
-	private String wiNo;
+	private String lavSidewallDrawingNo;
+	private String lavSidewallWiNo;
 	private String frameWorkByLav1;
 	private String frameJigRoboticsBoLav1;
 	private String frameWorkByLav2;;
@@ -46,9 +46,9 @@ public class SaveLavShell {
 	private String lavsidewallMake2;
 	private String lavsidewallMake3;
 	private String lavsidewallMake4;
-	private String observationItemsAsPerDrawingFlag;
-	private String observationComplianceWiFlag;
-	private String observationWeldingThroatFlag;
+	private String lavSidewallObservationItemsAsPerDrawingFlag;
+	private String lavSidewallObservationComplianceWiFlag;
+	private String lavSidewallObservationWeldingThroatFlag;
 	private String totalheightLav1;
 	private String totalheightLav2;
 	private String totalheightLav3;
@@ -81,9 +81,9 @@ public class SaveLavShell {
     private String lavsidewallMemberWeldingFlag;
 	private String conditionLavsidewallMemberJointweldingFlag;
     private String conditionLavsidewallSheetLaserweldingFlag;
-    private String detailsOfModification;
-    private String detailsOfTrial;
-    private String remarks;
+    private String lavSidewallDetailsOfModification;
+    private String lavSidewallDetailsOfTrial;
+    private String lavSidewallRemarks;
     private String lavSidewallTestingStatus;
    
   
@@ -105,8 +105,8 @@ public class SaveLavShell {
     	{
     		 shellLavSideWallSipTran.setLavsidewallSipDate(DateUtil.convertToDate(lavsidewallSipDate));
     	}
-    	shellLavSideWallSipTran.setDrawingNo(drawingNo);
-    	shellLavSideWallSipTran.setWiNo(wiNo);
+    	shellLavSideWallSipTran.setDrawingNo(lavSidewallDrawingNo);
+    	shellLavSideWallSipTran.setWiNo(lavSidewallWiNo);
     	shellLavSideWallSipTran.setFrameWorkByLav1(frameWorkByLav1);
     	shellLavSideWallSipTran.setFrameWorkByLav2(frameWorkByLav2);
     	shellLavSideWallSipTran.setFrameWorkByLav3(frameWorkByLav3);
@@ -135,9 +135,9 @@ public class SaveLavShell {
     	shellLavSideWallSipTran.setLavsidewallMake2(lavsidewallMake2);
     	shellLavSideWallSipTran.setLavsidewallMake3(lavsidewallMake3);
     	shellLavSideWallSipTran.setLavsidewallMake4(lavsidewallMake4);
-    	shellLavSideWallSipTran.setObservationItemsAsPerDrawingFlag(observationItemsAsPerDrawingFlag);
-    	shellLavSideWallSipTran.setObservationComplianceWiFlag(observationComplianceWiFlag);
-    	shellLavSideWallSipTran.setObservationWeldingThroatFlag(observationWeldingThroatFlag);
+    	shellLavSideWallSipTran.setObservationItemsAsPerDrawingFlag(lavSidewallObservationItemsAsPerDrawingFlag);
+    	shellLavSideWallSipTran.setObservationComplianceWiFlag(lavSidewallObservationComplianceWiFlag);
+    	shellLavSideWallSipTran.setObservationWeldingThroatFlag(lavSidewallObservationWeldingThroatFlag);
   
     	
     	if(!"".equals(totalheightLav1))
@@ -271,9 +271,9 @@ public class SaveLavShell {
     	shellLavSideWallSipTran.setLavsidewallMemberWeldingFlag(lavsidewallMemberWeldingFlag);
     	shellLavSideWallSipTran.setConditionLavsidewallMemberJointweldingFlag(conditionLavsidewallMemberJointweldingFlag);
     	shellLavSideWallSipTran.setConditionLavsidewallSheetLaserweldingFlag(conditionLavsidewallSheetLaserweldingFlag);
-    	shellLavSideWallSipTran.setDetailsOfModification(detailsOfModification);
-    	shellLavSideWallSipTran.setDetailsOfTrial(detailsOfTrial);
-    	shellLavSideWallSipTran.setRemarks(remarks);
+    	shellLavSideWallSipTran.setDetailsOfModification(lavSidewallDetailsOfModification);
+    	shellLavSideWallSipTran.setDetailsOfTrial(lavSidewallDetailsOfTrial);
+    	shellLavSideWallSipTran.setRemarks(lavSidewallRemarks);
     	shellLavSideWallSipTran.setLavSidewallTestingStatus(lavSidewallTestingStatus);
     	shellLavSideWallSipTran.setEntryBy(userID);
     	shellLavSideWallSipTran.setEntryTime(entryTime);
@@ -365,23 +365,23 @@ public class SaveLavShell {
 	}
 
 
-	public String getDrawingNo() {
-		return drawingNo;
+	public String getLavSidewallDrawingNo() {
+		return lavSidewallDrawingNo;
 	}
 
 
-	public void setDrawingNo(String drawingNo) {
-		this.drawingNo = drawingNo;
+	public void setLavSidewallDrawingNo(String lavSidewallDrawingNo) {
+		this.lavSidewallDrawingNo = lavSidewallDrawingNo;
 	}
 
 
-	public String getWiNo() {
-		return wiNo;
+	public String getLavSidewallWiNo() {
+		return lavSidewallWiNo;
 	}
 
 
-	public void setWiNo(String wiNo) {
-		this.wiNo = wiNo;
+	public void setLavSidewallWiNo(String lavSidewallWiNo) {
+		this.lavSidewallWiNo = lavSidewallWiNo;
 	}
 
 
@@ -665,33 +665,33 @@ public class SaveLavShell {
 	}
 
 
-	public String getObservationItemsAsPerDrawingFlag() {
-		return observationItemsAsPerDrawingFlag;
+	public String getLavSidewallObservationItemsAsPerDrawingFlag() {
+		return lavSidewallObservationItemsAsPerDrawingFlag;
 	}
 
 
-	public void setObservationItemsAsPerDrawingFlag(String observationItemsAsPerDrawingFlag) {
-		this.observationItemsAsPerDrawingFlag = observationItemsAsPerDrawingFlag;
+	public void setLavSidewallObservationItemsAsPerDrawingFlag(String lavSidewallObservationItemsAsPerDrawingFlag) {
+		this.lavSidewallObservationItemsAsPerDrawingFlag = lavSidewallObservationItemsAsPerDrawingFlag;
 	}
 
 
-	public String getObservationComplianceWiFlag() {
-		return observationComplianceWiFlag;
+	public String getLavSidewallObservationComplianceWiFlag() {
+		return lavSidewallObservationComplianceWiFlag;
 	}
 
 
-	public void setObservationComplianceWiFlag(String observationComplianceWiFlag) {
-		this.observationComplianceWiFlag = observationComplianceWiFlag;
+	public void setLavSidewallObservationComplianceWiFlag(String lavSidewallObservationComplianceWiFlag) {
+		this.lavSidewallObservationComplianceWiFlag = lavSidewallObservationComplianceWiFlag;
 	}
 
 
-	public String getObservationWeldingThroatFlag() {
-		return observationWeldingThroatFlag;
+	public String getLavSidewallObservationWeldingThroatFlag() {
+		return lavSidewallObservationWeldingThroatFlag;
 	}
 
 
-	public void setObservationWeldingThroatFlag(String observationWeldingThroatFlag) {
-		this.observationWeldingThroatFlag = observationWeldingThroatFlag;
+	public void setLavSidewallObservationWeldingThroatFlag(String lavSidewallObservationWeldingThroatFlag) {
+		this.lavSidewallObservationWeldingThroatFlag = lavSidewallObservationWeldingThroatFlag;
 	}
 
 
@@ -1015,33 +1015,33 @@ public class SaveLavShell {
 	}
 
 
-	public String getDetailsOfModification() {
-		return detailsOfModification;
+	public String getLavSidewallDetailsOfModification() {
+		return lavSidewallDetailsOfModification;
 	}
 
 
-	public void setDetailsOfModification(String detailsOfModification) {
-		this.detailsOfModification = detailsOfModification;
+	public void setLavSidewallDetailsOfModification(String lavSidewallDetailsOfModification) {
+		this.lavSidewallDetailsOfModification = lavSidewallDetailsOfModification;
 	}
 
 
-	public String getDetailsOfTrial() {
-		return detailsOfTrial;
+	public String getLavSidewallDetailsOfTrial() {
+		return lavSidewallDetailsOfTrial;
 	}
 
 
-	public void setDetailsOfTrial(String detailsOfTrial) {
-		this.detailsOfTrial = detailsOfTrial;
+	public void setLavSidewallDetailsOfTrial(String lavSidewallDetailsOfTrial) {
+		this.lavSidewallDetailsOfTrial = lavSidewallDetailsOfTrial;
 	}
 
 
-	public String getRemarks() {
-		return remarks;
+	public String getLavSidewallRemarks() {
+		return lavSidewallRemarks;
 	}
 
 
-	public void setRemarks(String remarks) {
-		this.remarks = remarks;
+	public void setLavSidewallRemarks(String lavSidewallRemarks) {
+		this.lavSidewallRemarks = lavSidewallRemarks;
 	}
 
 

@@ -4,10 +4,15 @@ package struts.action.master;
 import org.hibernate.Session;
 import dao.DaoCrossCheckin;
 import beans.CrossCheckinTrans;
+import common.DateUtil;
 import hibernateConnect.HibernateConfig;
 
 public class SaveCrossCheck {
 	private String furnishingAssetId;
+	private String textGeneral;
+	private String docDate;
+	private String dateOfTesting;
+	private String shiftOfTesting;
 	private String textFpvc;
 	private String textParitionFrame;
 	private String textPanel;
@@ -21,6 +26,62 @@ public class SaveCrossCheck {
 	private String textPaint;
 	private String textCoachCleaning;
 	
+	public String saveGeneral()
+	{
+		Session session=null;
+		session=HibernateConfig.getSession();
+		Integer furnishingAssetIdAsInt=Integer.parseInt(furnishingAssetId);
+		System.out.println(":>");
+		System.out.println("Furnishing asset id: "+furnishingAssetIdAsInt);
+		
+		
+		
+		
+		CrossCheckinTrans crossCheckinTransSave=new CrossCheckinTrans();
+		CrossCheckinTrans crossCheckinTransUpdate= (CrossCheckinTrans) session.get(CrossCheckinTrans.class, furnishingAssetIdAsInt);
+		
+		if(crossCheckinTransUpdate!=null){	
+			if(!"".equals(docDate))
+			{
+				crossCheckinTransUpdate.setDocDate(DateUtil.convertToDate(docDate));
+			}
+			if(!"".equals(dateOfTesting))
+			{
+				crossCheckinTransUpdate.setDateOfTesting(DateUtil.convertToDate(dateOfTesting));
+			}
+			crossCheckinTransUpdate.setShiftOfTesting(shiftOfTesting);
+			crossCheckinTransUpdate.setTextGeneral(textGeneral);
+		}
+		else
+		{
+			if(!"".equals(docDate))
+			{
+				crossCheckinTransSave.setDocDate(DateUtil.convertToDate(docDate));
+			}
+			if(!"".equals(dateOfTesting))
+			{
+				crossCheckinTransSave.setDateOfTesting(DateUtil.convertToDate(dateOfTesting));
+			}
+			crossCheckinTransSave.setShiftOfTesting(shiftOfTesting);
+			crossCheckinTransSave.setFurnishingAssetId(furnishingAssetIdAsInt);
+			crossCheckinTransSave.setTextGeneral(textGeneral);
+			
+		}
+	
+		//end of code
+			try
+			{
+				DaoCrossCheckin dao=new DaoCrossCheckin();
+				dao.saveData(crossCheckinTransUpdate,crossCheckinTransSave);
+				return "success";
+				
+			}
+			catch(Exception ex)
+			{
+				ex.printStackTrace();
+				return "error";
+			}
+		}
 	public String saveFpvc()
 	{
 		Session session=null;
@@ -36,13 +97,14 @@ public class SaveCrossCheck {
 		CrossCheckinTrans crossCheckinTransUpdate= (CrossCheckinTrans) session.get(CrossCheckinTrans.class, furnishingAssetIdAsInt);
 		
 		if(crossCheckinTransUpdate!=null){
+			
 			crossCheckinTransUpdate.setTextFpvc(textFpvc);
 		}
 		else
 		{
 			crossCheckinTransSave.setFurnishingAssetId(furnishingAssetIdAsInt);
-			crossCheckinTransSave.setTextFpvc(textFpvc);
 			
+			crossCheckinTransSave.setTextFpvc(textFpvc);
 		}
 	
 		//end of code
@@ -467,11 +529,35 @@ public String saveLavatory()
 	}
 
 
+	public String getTextGeneral() {
+		return textGeneral;
+	}
+	public void setTextGeneral(String textGeneral) {
+		this.textGeneral = textGeneral;
+	}
+	
+	public String getDocDate() {
+		return docDate;
+	}
+	public void setDocDate(String docDate) {
+		this.docDate = docDate;
+	}
+	public String getDateOfTesting() {
+		return dateOfTesting;
+	}
+	public void setDateOfTesting(String dateOfTesting) {
+		this.dateOfTesting = dateOfTesting;
+	}
+	
+	public String getShiftOfTesting() {
+		return shiftOfTesting;
+	}
+	public void setShiftOfTesting(String shiftOfTesting) {
+		this.shiftOfTesting = shiftOfTesting;
+	}
 	public String getTextFpvc() {
 		return textFpvc;
 	}
-
-
 	public void setTextFpvc(String textFpvc) {
 		this.textFpvc = textFpvc;
 	}

@@ -486,6 +486,79 @@ Session session =  null;
 			
 	
 	}
+	public List<FurnishingTransaction> getCoachAvailableForRSC(String stageID, String jtSorting, int startPageIndex, int numRecordsPerPage) 
+	{
+Session session =  null;
+		
+		List<FurnishingTransaction> list = null;
+		String username= null;
+		
+		HttpSession session_http = ServletActionContext.getRequest().getSession(true);
+		username = (String) session_http.getAttribute("userid");
+		
+		if (username != null)
+		{
+	session = HibernateConfig.getSession();
+	
+	  
+		try{
+			System.out.println("--Inside dao.DaoFurnishingProduction getCoachAvailableInQuality() methods try Block--");
+			session = HibernateConfig.getSession();
+			Criteria cr = session.createCriteria(FurnishingTransaction.class);
+			cr.add(Restrictions.eq("stageId", stageID));
+			
+			//cr.add(Restrictions.ne("mergeFunishFlag", 1));
+			/*cr.add(
+					Restrictions.or(
+					Restrictions.isNotNull("exitDate"), 
+					Restrictions.eq("exitDate","")
+					)
+					);*/
+//cr.add(Restrictions.isNull("mergeFunishFlag"));
+			
+			cr.add(Restrictions.isNotNull("receiptDateAtQuality"));
+			cr.add(Restrictions.eq("assignedFlagQuality", 1));
+			cr.add(Restrictions.isNotNull("bogiePpSideAssetId"));
+			cr.add(Restrictions.isNotNull("bogieNppSideAssetId"));
+			cr.add(Restrictions.or(Restrictions.ne("rscFlag", 1), Restrictions.isNull("rscFlag")));
+			
+			String[] temp;
+	         String delimiter = " ";
+	         /* given string will be split by the argument delimiter provided. */
+	         temp = jtSorting.split(delimiter);
+	 if(jtSorting.endsWith("ASC"))
+		         {
+		        	 cr.addOrder(Order.asc(temp[0]));
+		         }
+		         else if(jtSorting.endsWith("DESC"))
+		         {
+		        	 cr.addOrder(Order.desc(temp[0]));	 
+		         }
+	 int total_rec_count = cr.list().size();  // retrieve total no of record in table mapped to bean class based on condition on criteria
+	 System.out.println("Total no of record fount to satisfy criteria " +total_rec_count);
+	 Map session_map=ActionContext.getContext().getSession();      
+     session_map.put("holding_count", total_rec_count);
+     cr.setFirstResult(startPageIndex);
+     cr.setMaxResults(numRecordsPerPage);
+			list = cr.list();
+			
+		}catch(Exception ex){
+			System.out.println("--- Error Inside dao.DaoFurnishingProduction getCoachAvailableInQuality() methods catch block---");
+			ex.printStackTrace();
+		}finally{
+			if(session!= null){
+				System.out.println("--Inside dao.DaoFurnishingProduction getCoachAvailableInQuality() methods finally Block--");
+				session.close();
+			}			
+		}
+		
+	}
+		return list;
+			
+	
+	}
+	
+	
 	public List<FurnishingTransaction> getCoachAvailableForQCRA(String stageID, String jtSorting, int startPageIndex, int numRecordsPerPage) 
 	{
 Session session =  null;

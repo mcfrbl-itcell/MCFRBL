@@ -21,8 +21,8 @@ public class SidewallSIPAction {
 	private String sidewallSipDocNo;
 	private String sidewallSipShift;
 	private String sidewallType;
-	private String drawingNo;
-	private String wiNo;
+	private String sideWallDrawingNo;
+	private String sideWallWiNo;
 	private String  frameWorkBy;
 	private String frameJigRoboticsBo;
 	private String spotWeldingBy;
@@ -79,9 +79,9 @@ public class SidewallSIPAction {
 	private String distanceAnglehoneyprtSidewallMiddlearea2;
 	private String distanceAnglehoneyprtSidewallMiddlearea3;
 	private String distanceAnglehoneyprtSidewallMiddlearea4;
-	private String detailsOfModification;
-	private String detailsOfTrialItem;
-	private String remarks;
+	private String sideWallDetailsOfModification;
+	private String sideWallDetailsOfTrialItem;
+	private String sideWallRemarks;
 	private String shellSidewallTestingStatus;
 		
 	
@@ -190,8 +190,8 @@ public class SidewallSIPAction {
 		shellSideWallSipTran.setSidewallSipShift(sidewallSipShift);
 		if(!"".equals(sidewallDate)){shellSideWallSipTran.setSidewallSipDate(DateUtil.convertToDate(sidewallDate));}
 		shellSideWallSipTran.setSidewallType(sidewallType);
-		shellSideWallSipTran.setDrawingNo(drawingNo);
-		shellSideWallSipTran.setWiNo(wiNo);
+		shellSideWallSipTran.setDrawingNo(sideWallDrawingNo);
+		shellSideWallSipTran.setWiNo(sideWallWiNo);
 		shellSideWallSipTran.setFrameWorkBy(frameWorkBy);
 		shellSideWallSipTran.setFrameJigRoboticsBo(frameJigRoboticsBo);
 		shellSideWallSipTran.setSpotWeldingBy(spotWeldingBy);
@@ -219,9 +219,9 @@ public class SidewallSIPAction {
 		shellSideWallSipTran.setHorizontalVerticalWeldingGrindingFlag(horizontalVerticalWeldingGrindingFlag);
 		shellSideWallSipTran.setDistanceBackpieceVerticalmemberTransverse(distanceBackpieceVerticalmemberTransverse);
 		shellSideWallSipTran.setDistanceBackpieceVerticalmemberSingle(distanceBackpieceVerticalmemberSingle);
-		shellSideWallSipTran.setDetailsOfModification(detailsOfModification);
-		shellSideWallSipTran.setDetailsOfTrialItem(detailsOfTrialItem);
-		shellSideWallSipTran.setRemarks(remarks);
+		shellSideWallSipTran.setSideWallDetailsOfModification(sideWallDetailsOfModification);
+		shellSideWallSipTran.setSideWallDetailsOfTrialItem(sideWallDetailsOfTrialItem);
+		shellSideWallSipTran.setSideWallRemarks(sideWallRemarks);
 		shellSideWallSipTran.setShellSidewallTestingStatus(shellSidewallTestingStatus);
 		shellSideWallSipTran.setEntryBy(userID);
 		shellSideWallSipTran.setEntryTime(entryTime);
@@ -230,7 +230,7 @@ public class SidewallSIPAction {
 		ShellTransaction shellTran=new ShellTransaction();
 		shellTran=	(ShellTransaction) session.get(ShellTransaction.class,shellAssetIdAsInt );
 		System.out.println("Shell transaction: "+shellTran.getShellTransactionId());
-		
+		System.out.println("Shell : "+shellSideWallSipTran.getSideWallDetailsOfTrialItem());
 		shellTran.setSideWallMakeNoPp(sidewallMakeNoLh);
 		shellTran.setSideWallMakeNoNpp(sidewallMakeNoRh);
 	    shellTran.setSidewallSipFlag(1);
@@ -302,25 +302,23 @@ public class SidewallSIPAction {
 	}
 
 
-	public String getDrawingNo() {
-		return drawingNo;
+	
+
+	public String getSideWallDrawingNo() {
+		return sideWallDrawingNo;
 	}
 
-
-	public void setDrawingNo(String drawingNo) {
-		this.drawingNo = drawingNo;
+	public void setSideWallDrawingNo(String sideWallDrawingNo) {
+		this.sideWallDrawingNo = sideWallDrawingNo;
 	}
 
-
-	public String getWiNo() {
-		return wiNo;
+	public String getSideWallWiNo() {
+		return sideWallWiNo;
 	}
 
-
-	public void setWiNo(String wiNo) {
-		this.wiNo = wiNo;
+	public void setSideWallWiNo(String sideWallWiNo) {
+		this.sideWallWiNo = sideWallWiNo;
 	}
-
 
 	public String getFrameWorkBy() {
 		return frameWorkBy;
@@ -881,36 +879,36 @@ public class SidewallSIPAction {
 		this.distanceAnglehoneyprtSidewallMiddlearea4 = distanceAnglehoneyprtSidewallMiddlearea4;
 	}
 
-
-	public String getDetailsOfModification() {
-		return detailsOfModification;
+	public String getSideWallDetailsOfModification() {
+		return sideWallDetailsOfModification;
 	}
 
-
-	public void setDetailsOfModification(String detailsOfModification) {
-		this.detailsOfModification = detailsOfModification;
+	public void setSideWallDetailsOfModification(String sideWallDetailsOfModification) {
+		this.sideWallDetailsOfModification = sideWallDetailsOfModification;
 	}
 
-
-	public String getDetailsOfTrialItem() {
-		return detailsOfTrialItem;
+	public String getSideWallDetailsOfTrialItem() {
+		return sideWallDetailsOfTrialItem;
 	}
 
-
-	public void setDetailsOfTrialItem(String detailsOfTrialItem) {
-		this.detailsOfTrialItem = detailsOfTrialItem;
+	public void setSideWallDetailsOfTrialItem(String sideWallDetailsOfTrialItem) {
+		this.sideWallDetailsOfTrialItem = sideWallDetailsOfTrialItem;
 	}
 
-
-	public String getRemarks() {
-		return remarks;
+	public String getSideWallRemarks() {
+		return sideWallRemarks;
 	}
 
-
-	public void setRemarks(String remarks) {
-		this.remarks = remarks;
+	public void setSideWallRemarks(String sideWallRemarks) {
+		this.sideWallRemarks = sideWallRemarks;
 	}
 
+	public String getShellSidewallTestingStatus() {
+		return shellSidewallTestingStatus;
+	}
 
+	public void setShellSidewallTestingStatus(String shellSidewallTestingStatus) {
+		this.shellSidewallTestingStatus = shellSidewallTestingStatus;
+	}
 
 }

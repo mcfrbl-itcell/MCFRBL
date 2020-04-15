@@ -736,6 +736,9 @@
 <action name="issue-cross-check-testing-in-coach" class="ACTION.CoachTypeAction" method="getAssetType">
 			<result name="success" type="tiles">/issueCrossCheckInCoach.tiles</result>
 </action>
+<action name="generate-rolling-stock-certificate" class="ACTION.CoachTypeAction" method="getAssetType">
+			<result name="success" type="tiles">/generateRollingStockCertificate.tiles</result>
+</action>
 <action name="quarterly_prod_paint" class="ACTION.QuarterlyProDisPaint" method="getQuarterlyProdDataPaint">
 		 <result name="success" type="tiles">/PaintQuarterlyProDis.tiles</result>
 		 </action>
@@ -1288,6 +1291,9 @@
 	<action name="showExistingDataWarrantySpecialFeatures"  class="struts.action.master.ShowWarrantySpecialFeatures"  method="getData">
          	<result  name="success" type= "json"/>
 	</action>
+	<action name="saveGeneralText"  class="struts.action.master.SaveCrossCheck" method="saveGeneral">         			
+           			<result  name="success" type= "json"/>
+     </action>
 	<action name="saveFpvc"  class="struts.action.master.SaveCrossCheck" method="saveFpvc">         			
            			<result  name="success" type= "json"/>
 	</action>

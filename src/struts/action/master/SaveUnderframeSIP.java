@@ -103,7 +103,7 @@ public class SaveUnderframeSIP {
 	private String detlOfModf;
 	private String detlOfTrialItems;
 	private String rmk;
-	private String underframeTestingStatus;
+	private String shellUnderframeTestingStatus;
 	
 	public String SaveUnderframe()
 	{
@@ -361,7 +361,7 @@ public class SaveUnderframeSIP {
 		shellUnderframeSipTrans.setDetlOfModf(detlOfModf);
 		shellUnderframeSipTrans.setDetlOfTrialItems(detlOfTrialItems);
 		shellUnderframeSipTrans.setRmk(rmk);
-		shellUnderframeSipTrans.setUnderframeTestingStatus(underframeTestingStatus);
+		shellUnderframeSipTrans.setUnderframeTestingStatus(shellUnderframeTestingStatus);
 		shellUnderframeSipTrans.setEntryBy(userID);
 		shellUnderframeSipTrans.setEntryTime(entryTime);
 
@@ -1116,6 +1116,16 @@ public class SaveUnderframeSIP {
 	public void setRmk(String rmk) {
 		this.rmk = rmk;
 	}
+
+	public String getShellUnderframeTestingStatus() {
+		return shellUnderframeTestingStatus;
+	}
+
+	public void setShellUnderframeTestingStatus(String shellUnderframeTestingStatus) {
+		this.shellUnderframeTestingStatus = shellUnderframeTestingStatus;
+	}
+
+	
 	
 	
 	

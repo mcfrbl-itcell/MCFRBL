@@ -261,6 +261,51 @@ Map session_map=ActionContext.getContext().getSession();
 		
 		return ActionSupport.SUCCESS;
 	}
+	
+	public String availableForGenerateRSC()
+	{
+		session= HibernateConfig.getSession();
+		try
+		{
+Map session_map=ActionContext.getContext().getSession();
+			
+			int startPageIndex= Integer.parseInt(jtStartIndex);
+			int numRecordsPerPage=Integer.parseInt(jtPageSize);
+			System.out.println("Stage Id value "+stageID);
+			System.out.println("JT Sorting value "+jtSorting);
+			System.out.println("Start Page Index "+startPageIndex);
+			System.out.println("No of Record Per Page "+numRecordsPerPage);
+			//To check  previous stage of substage master
+			//Criteria cr1 = session.createCriteria(SubStagesMaster.class);
+			
+			//cr1.add(Restrictions.eq("substageId", stageID));
+			
+		//	SubStagesMaster subStagesMaster = (SubStagesMaster)cr1.list().get(0);
+			//String previousStage=subStagesMaster.getPreviousstageId();
+			setRecords(dao.getCoachAvailableForRSC(stageID, jtSorting, startPageIndex, numRecordsPerPage));
+			totalRecordCount=(int)session_map.get("holding_count");
+			session_map.remove("holding_count");
+			System.out.println("Records = "+getRecords());
+			setResult("OK");	
+		}
+		catch (Exception ex)
+		{
+			setResult("ERROR");
+			setMessage(ex.getMessage());
+			System.err.println(ex.getMessage());
+		}
+		finally
+		{
+			if(session!=null)
+			{
+				session.close();
+			}
+		}
+		
+		
+		return ActionSupport.SUCCESS;
+	}
+	
 	public String availableForQCRA()
 	{
 		session= HibernateConfig.getSession();

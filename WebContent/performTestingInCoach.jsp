@@ -171,7 +171,7 @@ width: 45%;
 <div id="PlumbingTestingSIPDialog" style="height:150%; width:200%; display:none;z-index: 9;" >
 <!-- //<h3 align="center">SELF INSPECTION PROFARMA</h3> -->
 <form name="PlumbingTestingForm">
-<p>DOC NO &nbsp;<input type= text id="plumbingDocNo" name="plumbingDocNo" readonly /></p>
+<p>DOC NO &nbsp;<input type= text id="plumbingDocNo" name="plumbingDocNo" readonly/></p>
 <p><b>Applicability:</b>(All fields are mandatory.Strike out which is not applicable)</p>
 <table>
 <tr>
@@ -3170,17 +3170,12 @@ var shellArray=[];
     								}
     									
     								});
-                    	 		
-                    	 		
-
-								
-								
-								$('#showerTestingDate').datepicker('option', 'minDate', new Date(record.assemblyStartDate));
+                    	 		$('#showerTestingDate').datepicker('option', 'minDate', new Date(record.assemblyStartDate));
 								
             					
                     	 	 	$("#ShowerTestingSIPDialog").dialog({
                     	 	 		title : 'ShowerTest'+record.shellTransactionId + 'from Stage- <%=stageID%>', 
-                    	 	 		width:'80%',
+                    	 	 		width:'60%',
                     	 	 		close: function (e, u) {
               	 		             
                     	 	 			$('#ShowerTestingSIPDialog').find('form[name="ShowerTestingForm"]')[0].reset();
