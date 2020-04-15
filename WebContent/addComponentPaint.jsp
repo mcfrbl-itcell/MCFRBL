@@ -232,7 +232,6 @@ String componentDetails=null;
 HttpSession session_http = ServletActionContext.getRequest().getSession(true);
 username = (String) session_http.getAttribute("userid");
 String assetId= request.getParameter("assetId");
-/* String  */
 %>
 <input type="hidden" id="assetId" value="<%=assetId%>" />
 <table class="customers">
