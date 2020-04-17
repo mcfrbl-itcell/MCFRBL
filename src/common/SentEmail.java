@@ -10,8 +10,7 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 //import javax.net.ssl.SSLSocketFactory;
 public class SentEmail {
-	String host="smtp.googlemail.com";  
-    
+	String host="smtp.googlemail.com";   
 	final String sender="mcfrbl.itcell@gmail.com";//change accordingly  
 	final String password="MCFRBL@123";//change accordingly  
     final String cc_receipient="nkgupta.mmmec@gmail.com";

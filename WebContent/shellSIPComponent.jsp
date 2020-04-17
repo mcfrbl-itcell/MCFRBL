@@ -193,8 +193,8 @@ width: 45%;
 <p>1.Applicability:</p>
 <table>
 <tr>
-<td>1</td><td>Applicable Drawing No.</td><td><input type="text" name="ApplicableDrawingNo" id="drawingNo"></td></tr>
-<tr><td>2</td><td>Applicable W.I No.(If Any)</td><td><input type="text" name="ApplicableWINo" id="wiNo"></td>
+<td>1</td><td>Applicable Drawing No.</td><td><input type="text" name="ApplicableDrawingNo" id="sideWallDrawingNo"></td></tr>
+<tr><td>2</td><td>Applicable W.I No.(If Any)</td><td><input type="text" name="ApplicableWINo" id="sideWallWiNo"></td>
 </tr>
 </table>
 
@@ -654,17 +654,17 @@ Side wall sheet width(specified-1995(+2#))</td>
 <tr>
 <td>1</td>
 <td>Details of modification carried out (if any):</td>
-<td><input type="text" name="detailsOfModification" id="detailsOfModification"></td>
+<td><input type="text" name="sideWallDetailsOfModification" id="sideWallDetailsOfModification"></td>
 </tr>
 <tr>
 <td>2</td>
 <td>Details of trial items fitted(if any):</td>
-<td><input type="text" name="detailsOfTrailItem"id="detailsOfTrialItem"></td>
+<td><input type="text" name="sideWallDetailsOfTrialItem" id="sideWallDetailsOfTrialItem"></td>
 </tr>
 <tr>
 <td>3</td>
 <td>Remarks(if any)</td>
-<td><input type="text" name="remarks" id="remarks"></td>
+<td><input type="text" name="sideWallRemarks" id="sideWallRemarks"></td>
 </tr>
 </table>
 <br>
@@ -674,8 +674,10 @@ Side wall sheet width(specified-1995(+2#))</td>
 <option value="Not Conforming">Not Conforming</option>
 </select></p>
 </form>
-
  </div>
+ 
+ 
+ 
  
   <div id="RoofSIPDialog" style="height:150%; width:200%; display:none;z-index: 9;" >
     <form name="roofSIP">
@@ -705,8 +707,8 @@ Side wall sheet width(specified-1995(+2#))</td>
 <li>
 <b>Applicablility:</b> 
 <table>
-<tr><td> 1.1 Applicable Drawing No:</td><td><input type=text id="applicableDrawingNo" ></tr>
-<tr><td> 1.2 Applicable WI NO(if Any):</td><td><input type= text id="applicableWiNo"></td></tr>
+<tr><td> 1.1 Applicable Drawing No:</td><td><input type=text id="roofApplicableDrawingNo" ></tr>
+<tr><td> 1.2 Applicable WI NO(if Any):</td><td><input type= text id="roofApplicableWiNo"></td></tr>
 </table>
 </li>
 
@@ -714,16 +716,16 @@ Side wall sheet width(specified-1995(+2#))</td>
 <b>Data of Traceability </b>
 <table>
 
-<tr><td>2.1 Machine used for spot weilding </td><td><input type=radio id="machineSpotWeild" value="CNCSpotWeilding">CNC Spot Welding</td> <td><input type=radio id="machineSpotWeild" value="ManualButtWeilding">Manual Butt Weilding</td></tr>
+<tr><td>2.1 Machine used for spot weilding </td><td><input type=radio id="machineSpotWeild"  name="machineSpotWeild" value="CNCSpotWeilding">CNC Spot Welding</td> <td><input type=radio id="machineSpotWeild" name="machineSpotWeild" value="ManualButtWeilding">Manual Butt Weilding</td></tr>
 
 </table>
 </li>
 
 <li>
 <b>Observations:</b>
-<table> <tr><td> 3.1 Items Fitted as per Drawing</td><td>  <input type=radio id="observationItemAsPerDrawing" value="ok">OK &nbsp;<input type=radio id="observationItemAsPerDrawing" value="notok">NOT OK &nbsp<input type= radio id="observationItemAsPerDrawing" value="na"> NA</td></tr>
-<tr><td> 3.2 Compliance of applicable WI</td><td>  <input type=radio id="observationComplianceWi" value="ok">OK &nbsp;<input type=radio id="observationComplianceWi" value="notok">NOT OK&nbsp<input type= radio id="observationComplianceWi" value="na"> NA</td></tr>
-<tr><td> 3.3 Welding throat & length as per drawing</td><td> <input type=radio id="observationWeildingThroatLength" value="ok">OK &nbsp;<input type=radio id="observationWeildingThroatLength" value="notok">NOT OK &nbsp;<input type= radio id="observationWeildingThroatLength" value="na"> NA </td></tr>
+<table> <tr><td> 3.1 Items Fitted as per Drawing</td><td>  <input type=radio id="observationItemAsPerDrawing" name="observationItemAsPerDrawing" value="ok">OK &nbsp;<input type=radio id="observationItemAsPerDrawing" name="observationItemAsPerDrawing" value="notok">NOT OK &nbsp<input type= radio id="observationItemAsPerDrawing" name="observationItemAsPerDrawing" value="na"> NA</td></tr>
+<tr><td> 3.2 Compliance of applicable WI</td><td>  <input type=radio id="observationComplianceWi" name="observationComplianceWi" value="ok">OK &nbsp;<input type=radio id="observationComplianceWi" name="observationComplianceWi" value="notok">NOT OK&nbsp<input type= radio id="observationComplianceWi" name="observationComplianceWi" value="na"> NA</td></tr>
+<tr><td> 3.3 Welding throat & length as per drawing</td><td> <input type=radio id="observationWeildingThroatLength" name="observationWeildingThroatLength" value="ok">OK &nbsp;<input type=radio id="observationWeildingThroatLength" name="observationWeildingThroatLength" value="notok">NOT OK &nbsp;<input type= radio id="observationWeildingThroatLength" name="observationWeildingThroatLength" value="na"> NA </td></tr>
 <tr><td>3.4 Checked Dimensions As per Table</td></tr>
 </table>
 <table border=1>
@@ -965,12 +967,12 @@ Cross brace supporting bracket distance(L3T/L2T,LWFAC,LBAC)(111/1500)
 <tr><td>3.5 Checked Dimensions Remarks</td><td> <input type=text id="checkedDimensionRemark" ></td></tr>
 <tr><td>3.6 Distance from center line of roof and the center line of 
              FL BKTS(traverse side/longitudinal side)Specified:(829,790)(LSCN)</td><td>Observed<input type=text id="distanceCenterlineroofCenterlineflbkts" ></td></tr>
-<tr><td>3.7 Condition of roof sheet joint(lateral &longitudinal welding)(robotic/manual)</td><td> <input type=radio id="conditionRoofSheetJoint" value="ok">OK &nbsp;<input type=radio id="conditionRoofSheetJoint" value="notok">NOT OK &nbsp<input type= radio id="conditionRoofSheetJoint" value="na"> NA</td></tr>
-<tr><td>3.8 Roof sheet joint leakage test</td><td><input type=radio id="roofSheetJointLeakage" value="done"> Done &nbsp; &nbsp; <input type=radio id="roofSheetJointLeakage" value="notdone">Not Done</td></tr>
-<tr><td>3.9 Condition of roof sheet with roof arch(Spot/manual butt)weilding )</td><td> <input type=radio id="conditionRoofSheetArch" value="ok">OK &nbsp;<input type=radio id="conditionRoofSheetArch" value="notok">NOT OK &nbsp;<input type= radio id="conditionRoofSheetArch" value="na"> NA</td></tr>
+<tr><td>3.7 Condition of roof sheet joint(lateral &longitudinal welding)(robotic/manual)</td><td> <input type=radio id="conditionRoofSheetJoint" name="conditionRoofSheetJoint" value="ok">OK &nbsp;<input type=radio id="conditionRoofSheetJoint" name="conditionRoofSheetJoint" value="notok">NOT OK &nbsp<input type= radio id="conditionRoofSheetJoint" name="conditionRoofSheetJoint" value="na"> NA</td></tr>
+<tr><td>3.8 Roof sheet joint leakage test</td><td><input type=radio id="roofSheetJointLeakage" name="roofSheetJointLeakage" value="done"> Done &nbsp; &nbsp; <input type=radio id="roofSheetJointLeakage" name="roofSheetJointLeakage" value="notdone">Not Done</td></tr>
+<tr><td>3.9 Condition of roof sheet with roof arch(Spot/manual butt)weilding )</td><td> <input type=radio id="conditionRoofSheetArch" name="conditionRoofSheetArch" value="ok">OK &nbsp;<input type=radio id="conditionRoofSheetArch" name="conditionRoofSheetArch" value="notok">NOT OK &nbsp;<input type= radio id="conditionRoofSheetArch" name="conditionRoofSheetArch" value="na"> NA</td></tr>
 <tr><td>3.10 Distance from the center line of roof and the center line of 
               EL&NL bkts Specified:576790.(LSCN)/FL bkt Specified:849(LGS) </td><td>Observed<input type= text id="distanceRoofcenterlineCenterlineelbkt" class='validate[required]'></td></tr>
-<tr><td>3.11 Fitment of Standard L-Stiffner </td><td> <input type=radio id="fittmentLstiffener" value="ok">OK &nbsp<input type=radio id="fittmentLstiffener" value="notok">NOT OK &nbsp<input type= radio id="fittmentLstiffener" value="na"> NA</td></tr>
+<tr><td>3.11 Fitment of Standard L-Stiffner </td><td> <input type=radio id="fittmentLstiffener" name="fittmentLstiffener" value="ok">OK &nbsp<input type=radio id="fittmentLstiffener" name="fittmentLstiffener"  value="notok">NOT OK &nbsp<input type= radio id="fittmentLstiffener" name="fittmentLstiffener" value="na"> NA</td></tr>
 <tr><td>3.12 Distance from roof center line to speaker bkt center in LGS specified value-625mm</td><td>observed <input type=text id="distanceRoofcenterlineSpeakerbkt" ></td></tr>
 <tr><td>3.13 Distance from roof center line to EL bkt center in LGS specified value=712mm </td><td>Observed <input type=text id="distanceRoofcenterlineElbkt"></td></tr>
 <tr><td>3.14 Total no. of cross braces fitted in roof</td><td>Total no.<input type=text id="noCrossBracesFitted" ></td></tr>
@@ -979,15 +981,15 @@ Cross brace supporting bracket distance(L3T/L2T,LWFAC,LBAC)(111/1500)
 <li>
 <b>Details:</b>
 <table>
-<tr><td>4.1 Details of modification carried out(if any):</td><td><input type=text id="detailsOfModification"></td></tr>
-<tr><td>4.2 Details of trial items fitted(if any) </td><td><input type=text id="detailsOfTrial"></td></tr>
-<tr><td>4.3 Remarks(if any)</td><td><input type=text id="remarks"></td></tr>
+<tr><td>4.1 Details of modification carried out(if any):</td><td><input type=text id="roofDetailsOfModification"></td></tr>
+<tr><td>4.2 Details of trial items fitted(if any) </td><td><input type=text id="roofDetailsOfTrial"></td></tr>
+<tr><td>4.3 Remarks(if any)</td><td><input type=text id="roofRemarks"></td></tr>
 </table>
 </li>
 <li>
 <b>Final Decision</b>
 <table>
-<tr><td></td><td> <input type=radio id="shellRoofSipTestingStatus" value="Confirming">Conforming <input type=radio id="shellRoofSipTestingStatus" value="Not Comfirming">Not Conforming</td></tr>
+<tr><td></td><td> <input type=radio id="shellRoofSipTestingStatus" name="shellRoofSipTestingStatus" value="Confirming">Conforming <input type=radio id="shellRoofSipTestingStatus" name="shellRoofSipTestingStatus"  value="Not Comfirming">Not Conforming</td></tr>
 
 </table>
 </li>
@@ -995,6 +997,9 @@ Cross brace supporting bracket distance(L3T/L2T,LWFAC,LBAC)(111/1500)
 </ol>
 </form>
  </div>
+
+
+
 
 <div id="UnderframeSIPDialog" style="height:150%; width:200%; display:none;z-index: 9;" >
 <h3 align="center">SELF INSPECTION PROFARMA</h3>
@@ -1054,19 +1059,19 @@ Cross brace supporting bracket distance(L3T/L2T,LWFAC,LBAC)(111/1500)
 </tr>
 <tr>
 	<td colspan="2">2.2 Water tank BKT Make and No</td>
-	<td colspan="3"><input type=text id="waterTankBkt1"class='validate[required]' placeholder="1st Water Tank" />&nbsp;&nbsp;&nbsp;&nbsp;
-	<input type=text id="waterTankBkt2"class='validate[required]' placeholder="2nd Water Tank"/>&nbsp;&nbsp;&nbsp;&nbsp;
-    <input type=text id="waterTankBkt3"class='validate[required]' placeholder="3rd Water Tank"/>&nbsp;&nbsp;&nbsp;&nbsp;
-    <input type=text id="waterTankBkt4"class='validate[required]' placeholder="4th Water Tank"/></td>
+	<td colspan="3"><input type=text id="waterTankBkt1"class='validate[required]' placeholder="1st Water Tank">&nbsp;&nbsp;&nbsp;&nbsp;
+	<input type=text id="waterTankBkt2"class='validate[required]' placeholder="2nd Water Tank">&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type=text id="waterTankBkt3"class='validate[required]' placeholder="3rd Water Tank">&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type=text id="waterTankBkt4"class='validate[required]' placeholder="4th Water Tank"></td>
 </tr>
 <tr>
 	<td>2.3 CBC Make and no</td>
 	<td align=right>PP side</td>
-	<td><input type=text id="cbCMakePp1" class='validate[required]' placeholder="Enter make"/>&nbsp;&nbsp;&nbsp;&nbsp;
+	<td><input type=text id="cbCMakePp1" class='validate[required]' placeholder="Enter make">&nbsp;&nbsp;&nbsp;&nbsp;
 	<input type=text id="cbCMakePp2" class='validate[required]' placeholder="Enter no."></td>
 	<td align=right>NPP side</td>
-	<td><input type=text id="cbCMakeNpp1" class='validate[required]' placeholder="Enter make"/>&nbsp;&nbsp;&nbsp;&nbsp; 
-	<input type=text id="cbCMakeNpp2" class='validate[required]' placeholder="Enter no" /></td>
+	<td><input type=text id="cbCMakeNpp1" class='validate[required]' placeholder="Enter make">&nbsp;&nbsp;&nbsp;&nbsp; 
+	<input type=text id="cbCMakeNpp2" class='validate[required]' placeholder="Enter no"></td>
 	</tr>
 <tr>
 	<td>2.4 CBC Fitted by </td>
@@ -1138,7 +1143,7 @@ Cross brace supporting bracket distance(L3T/L2T,LWFAC,LBAC)(111/1500)
 </tr>
 <tr>
 	<td>3.14 Water tank mounting BKT welding</td>
-	<td><input type=radio id="waterTankMount" name="waterTankMount" value="OK" >OK &nbsp; &nbsp; <input type=radio id="waterTankMount" name="waterTankMount" value="NOT OK" >NOT OK &nbsp;; <input type= radio id="waterTankMount"  name="waterTankMount" value="NA" > NA</td>
+	<td><input type=radio id="waterTankMount" name="waterTankMount" value="OK" >OK &nbsp; &nbsp; <input type=radio id="waterTankMount" name="waterTankMount" value="NOT OK" >NOT OK &nbsp; <input type= radio id="waterTankMount"  name="waterTankMount" value="NA" > NA</td>
 </tr>
 <tr>
 	<td>3.15 Front part both side bracket distances. Specified: 15mm from vestibule plate </td>
@@ -1444,10 +1449,9 @@ Cross brace supporting bracket distance(L3T/L2T,LWFAC,LBAC)(111/1500)
 </table>
 <table>
 <tr align="center"><td>Testing Status</td>
-<td> 
-<input type=radio id="shellUnderframeSipTestingStatus"  name="shellUnderframeSipTestingStatus" value="NA">NA 
-<input type=radio id="shellUnderframeSipTestingStatus" name="shellUnderframeSipTestingStatus" value="Confirming">Conforming 
-<input type=radio id="shellUnderframeSipTestingStatus" name="shellUnderframeSipTestingStatus" value="Not Comfirming">Not Conforming
+<td>  
+<input type=radio id="shellUnderframeSipTestingStatus" name="shellUnderframeSipTestingStatus" value="Conforming">Conforming 
+<input type=radio id="shellUnderframeSipTestingStatus" name="shellUnderframeSipTestingStatus" value="Not Comforming">Not Conforming
 </td></tr>
 
 </table>
@@ -1530,8 +1534,8 @@ Cross brace supporting bracket distance(L3T/L2T,LWFAC,LBAC)(111/1500)
 </tr>
 </table>
 <h4>1.Applicability:</h4>
-  <h5>1.1 Applicable Drawing No.<input type="text" name="drawingNo"  id="drawingNo" ></h5>
-  <h5>1.2 Applica ble W.I No.(If Any)<input type="text" name="wiNo" id="wiNo"></h5>
+  <h5>1.1 Applicable Drawing No.<input type="text" name="lavSidewallDrawingNo"  id="lavSidewallDrawingNo" ></h5>
+  <h5>1.2 Applica ble W.I No.(If Any)<input type="text" name="lavSidewallWiNo" id="lavSidewallWiNo"></h5>
  <h4>2. Data of Traceability:</h4>
   <h5>2.1 LAV side wall make and Sr.no</h5>
   <input type="text" id="lavsidewallMake1" name="lavsidewallMake1">
@@ -1543,25 +1547,25 @@ Cross brace supporting bracket distance(L3T/L2T,LWFAC,LBAC)(111/1500)
  <tr>
  <td><h5>3.1 Items fitted as per drawing</h5><td>
  <td>
- <input type="radio" class="c4" id="observationItemsAsPerDrawingFlag" name="observationItemsAsPerDrawingFlag" value="OK"> OK
-  <input type="radio" class="c4" id="observationItemsAsPerDrawingFlag" name="observationItemsAsPerDrawingFlag" value="NOT OK">NOT Ok
-  <input type="radio" class="c4" id="observationItemsAsPerDrawingFlag" name="observationItemsAsPerDrawingFlag" value="NA"> NA
+ <input type="radio" class="c4" id="lavSidewallObservationItemsAsPerDrawingFlag" name="lavSidewallObservationItemsAsPerDrawingFlag" value="OK"> OK
+  <input type="radio" class="c4" id="lavSidewallObservationItemsAsPerDrawingFlag" name="lavSidewallObservationItemsAsPerDrawingFlag" value="NOT OK">NOT Ok
+  <input type="radio" class="c4" id="lavSidewallObservationItemsAsPerDrawingFlag" name="lavSidewallObservationItemsAsPerDrawingFlag" value="NA"> NA
  </td>
  </tr>
  <tr>
 <td><h5>3.2 Compliance of applicble W.I</h5></td>
 <td>
-  <input type="radio" class="c4" id="observationComplianceWiFlag" name="observationComplianceWiFlag" value="OK"> OK
-  <input type="radio" class="c4" id="observationComplianceWiFlag" name="observationComplianceWiFlag" value="NOT OK">NOT Ok
-  <input type="radio" class="c4" id="observationComplianceWiFlag" name="observationComplianceWiFlag" value="NA"> NA
+  <input type="radio" class="c4" id="lavSidewallObservationComplianceWiFlag" name="lavSidewallObservationComplianceWiFlag" value="OK"> OK
+  <input type="radio" class="c4" id="lavSidewallObservationComplianceWiFlag" name="lavSidewallObservationComplianceWiFlag" value="NOT OK">NOT Ok
+  <input type="radio" class="c4" id="lavSidewallObservationComplianceWiFlag" name="lavSidewallObservationComplianceWiFlag" value="NA"> NA
 </td>
  </tr>
  <tr>
  <td><h5>3.3 Welding throat and length as per drawing</h5></td>
  <td>
-  <input type="radio" class="c4" id="observationWeldingThroatFlag" name="observationWeldingThroatFlag" value="OK"> OK
-  <input type="radio" class="c4" id="observationWeldingThroatFlag" name="observationWeldingThroatFlag" value="NOT OK">NOT Ok
-  <input type="radio" class="c4" id="observationWeldingThroatFlag" name="observationWeldingThroatFlag" value="NA"> NA
+  <input type="radio" class="c4" id="lavSidewallObservationWeldingThroatFlag" name="lavSidewallObservationWeldingThroatFlag" value="OK"> OK
+  <input type="radio" class="c4" id="lavSidewallObservationWeldingThroatFlag" name="lavSidewallObservationWeldingThroatFlag" value="NOT OK">NOT Ok
+  <input type="radio" class="c4" id="lavSidewallObservationWeldingThroatFlag" name="lavSidewallObservationWeldingThroatFlag" value="NA"> NA
   </td>
   </tr>
   </table>
@@ -1634,7 +1638,7 @@ Cross brace supporting bracket distance(L3T/L2T,LWFAC,LBAC)(111/1500)
 <tr>
 <th>7.</th>
 <th class="c3">Window profile cut for Exhaust(in LscN/LGS)</th>
-<th class="c3" >provided/notprovided</th>
+<th class="c3" >provided/not provided</th>
 <td><input type="text" id="windowprofilecutForExhaustLav1" placeholder="Enter text here"></td>
 <td><input type="text" id="windowprofilecutForExhaustLav2" placeholder="Enter text here"></td>
 <td><input type="text" id="windowprofilecutForExhaustLav3" placeholder="Enter text here"></td>
@@ -1675,29 +1679,28 @@ Cross brace supporting bracket distance(L3T/L2T,LWFAC,LBAC)(111/1500)
  <tr>
 <td><h4>Details of modification carried out(if any)</h4></td>
 <td>
-  <input type="radio" class="c4" id="detailsOfModification" name="detailsOfModification" value="NO">NO
-  <input type="radio" class="c4" id="detailsOfModification" name="detailsOfModification" value="YES">YES
+  <input type="text" class="c4" id="lavSidewallDetailsOfModification" name="detailsOfModification">
+  
  </td>
  </tr>
  <tr> 
  <td><h4>Details of trail items fitted(if any):</h4></td>
  <td>
-  <input type="radio" class="c4" id="detailsOfTrial" name="detailsOfTrial" value="OK">NO
-  <input type="radio" class="c4" id="detailsOfTrial" name="detailsOfTrial" value="NOT OK">YES
+  <input type="text" class="c4" id="lavSidewallDetailsOfTrial" name="detailsOfTrial">
+  
  </td>
  </tr>
  <tr> 
 <td><h4>Remarks(if any):</h4></td>
 <td>
-<input  type="radio" class="c4"  id="remarks" name="remarks" value="NO">NO
-  <input  type="radio" class="c4" id="remarks" name="remarks" value="YES">YES
+<input  type="text" class="c4"  id="lavSidewallRemarks" name="remarks">
+
   </td>
 </tr>  
   </table>
   <table>
 <tr align="center"><td>Testing Status</td>
 <td> 
-<input type=radio name="shellLavSidewallSipTestingStatus" id="shellLavSidewallSipTestingStatus" value="NA">NA 
 <input type=radio name="shellLavSidewallSipTestingStatus" id="shellLavSidewallSipTestingStatus" value="Confirming">Conforming 
 <input type=radio  name="shellLavSidewallSipTestingStatus" id="shellLavSidewallSipTestingStatus" value="Not Comfirming">Not Conforming
 </td></tr>
@@ -2079,8 +2082,8 @@ Cross brace supporting bracket distance(L3T/L2T,LWFAC,LBAC)(111/1500)
  										var sideWallDateArray=sideWallDate.split("-");
  										//var sideWallD= new Date(sideWallDateArray[0],sideWallDateArray[1]-1,sideWallDateArray[2]);
  										$('#sidewallSipDate').datepicker("setDate", new Date(sideWallDateArray[0],sideWallDateArray[1]-1,sideWallDateArray[2]))
- 										$('#drawingNo').val(data.shellSideWallTran.drawingNo);
- 										$('#wiNo').val(data.shellSideWallTran.wiNo);
+ 										$('#sideWallDrawingNo').val(data.shellSideWallTran.drawingNo);
+ 										$('#sideWallWiNo').val(data.shellSideWallTran.wiNo);
  										$('#frameWorkBy').val(data.shellSideWallTran.frameWorkBy);
  										$('#frameJigRoboticsBo').val(data.shellSideWallTran.frameJigRoboticsBo);
  										$('#spotWeldingBy').val(data.shellSideWallTran.spotWeldingBy);
@@ -2147,9 +2150,9 @@ Cross brace supporting bracket distance(L3T/L2T,LWFAC,LBAC)(111/1500)
  										$('#distanceAnglehoneyprtSidewallMiddlearea2').val(data.shellSideWallTran.distanceAnglehoneyprtSidewallMiddlearea2);
  										$('#distanceAnglehoneyprtSidewallMiddlearea3').val(data.shellSideWallTran.distanceAnglehoneyprtSidewallMiddlearea3);
  										$('#distanceAnglehoneyprtSidewallMiddlearea4').val(data.shellSideWallTran.distanceAnglehoneyprtSidewallMiddlearea4);
- 										$('#detailsOfModification').val(data.shellSideWallTran.detailsOfModification);
- 										$('#detailsOfTrialItem').val(data.shellSideWallTran.detailsOfTrialItem);
- 										$('#remarks').val(data.shellSideWallTran.remarks);
+ 										$('#sideWallDetailsOfModification').val(data.shellSideWallTran.sideWallDetailsOfModification);
+ 										$('#sideWallDetailsOfTrialItem').val(data.shellSideWallTran.sideWallDetailsOfTrialItem);
+ 										$('#sideWallRemarks').val(data.shellSideWallTran.sideWallRemarks);
  										$('#shellSidewallTestingStatus').val(data.shellSideWallTran.shellSidewallTestingStatus);
  										
  									}
@@ -2316,8 +2319,8 @@ Cross brace supporting bracket distance(L3T/L2T,LWFAC,LBAC)(111/1500)
  	                    							 sidewallShellNo:$('#sidewallShellNo').val(),
  	                    						  sidewallSipShift:$('#sidewallSipShift').val(),
  	                    						  sidewallType:$('#sidewallType').val(),
- 	                    						  drawingNo:$('#drawingNo').val(),
- 	                    						  wiNo:$('#wiNo').val(),
+ 	                    						 sideWallDrawingNo:$('#sideWallDrawingNo').val(),
+ 	                    						sideWallWiNo:$('#sideWallWiNo').val(),
  	                    						  frameWorkBy:$('#frameWorkBy').val(),
  	                    						  frameJigRoboticsBo:$('#frameJigRoboticsBo').val(),
  	                    						  spotWeldingBy:$('#spotWeldingBy').val(),
@@ -2374,10 +2377,10 @@ Cross brace supporting bracket distance(L3T/L2T,LWFAC,LBAC)(111/1500)
  	                    						  distanceAnglehoneyprtSidewallMiddlearea2:$('#distanceAnglehoneyprtSidewallMiddlearea2').val(),
  	                    						  distanceAnglehoneyprtSidewallMiddlearea3:$('#distanceAnglehoneyprtSidewallMiddlearea3').val(),
  	                    						  distanceAnglehoneyprtSidewallMiddlearea4:$('#distanceAnglehoneyprtSidewallMiddlearea4').val(),
- 	                    						  detailsOfModification:$('#detailsOfModification').val(),
- 	                    						  detailsOfTrialItem:$('#detailsOfTrialItem').val(),
- 	                    						  remarks:$('#remarks').val(),
- 	                    						 shellSidewallTestingStatus: $('#shellSidewallTestingStatus').val(),
+ 	                    						  sideWallDetailsOfModification:$('#sideWallDetailsOfModification').val(),
+ 	                    						  sideWallDetailsOfTrialItem:$('#sideWallDetailsOfTrialItem').val(),
+ 	                    						  sideWallRemarks:$('#sideWallRemarks').val(),
+ 	                    						 shellSidewallTestingStatus:$('#shellSidewallTestingStatus').val(),
  	                    						 
  	                    						  
  	                    						},
@@ -2393,8 +2396,8 @@ Cross brace supporting bracket distance(L3T/L2T,LWFAC,LBAC)(111/1500)
  	                    							$('#sidewallShellType').val(''),
  	                    						  	$('#sidewallSipShift').val(''),
  	                    						  	$('#sidewallType').val(''),
- 	                    						  $('#drawingNo').val(''),
- 	                    						  $('#wiNo').val(''),
+ 	                    						  $('#sideWallDrawingNo').val(''),
+ 	                    						  $('#sideWallWiNo').val(''),
  	                    						  $('#frameWorkBy').val(''),
  	                    						  $('#frameJigRoboticsBo').val(''),
  	                    						  $('#spotWeldingBy').val(''),
@@ -2451,9 +2454,9 @@ Cross brace supporting bracket distance(L3T/L2T,LWFAC,LBAC)(111/1500)
  	                    						  $('#distanceAnglehoneyprtSidewallMiddlearea2').val(''),
  	                    						  $('#distanceAnglehoneyprtSidewallMiddlearea3').val(''),
  	                    						  $('#distanceAnglehoneyprtSidewallMiddlearea4').val(''),
- 	                    						  $('#detailsOfModification').val(''),
- 	                    						  $('#detailsOfTrialItem').val(''),
- 	                    						  $('#remarks').val(''),
+ 	                    						  $('#sideWallDetailsOfModification').val(''),
+ 	                    						  $('#sideWallDetailsOfTrialItem').val(''),
+ 	                    						  $('#sideWallRemarks').val(''),
  	                
  	                    							                    							
  	                    							$('#sidewallSIPDialog').dialog('close');
@@ -2542,8 +2545,8 @@ Cross brace supporting bracket distance(L3T/L2T,LWFAC,LBAC)(111/1500)
  										var roofDate=(data.shellRoofTransaction.roofSipDate).substring(0,10);
  										var roofDateArray=roofDate.split("-");
  										$('#roofSipDate').datepicker("setDate",new Date(roofDateArray[0],roofDateArray[1]-1,roofDateArray[2])); 
- 										$('#applicableDrawingNo').val(data.shellRoofTransaction.applicableDrawingNo);
- 										$('#applicableWiNo').val(data.shellRoofTransaction.applicableWiNo);
+ 										$('#roofApplicableDrawingNo').val(data.shellRoofTransaction.applicableDrawingNo);
+ 										$('#roofApplicableWiNo').val(data.shellRoofTransaction.applicableWiNo);
  									   $('[id="machineSpotWeild"]').val([data.shellRoofTransaction.machineSpotWeild]);
  										//$('#machineSpotWeild').val(data.shellRoofTransaction.machineSpotWeild);
  										$('[id="observationItemAsPerDrawing"]').val([data.shellRoofTransaction.observationItemAsPerDrawing]);
@@ -2583,9 +2586,9 @@ Cross brace supporting bracket distance(L3T/L2T,LWFAC,LBAC)(111/1500)
  										$('#distanceRoofcenterlineSpeakerbkt').val(data.shellRoofTransaction.distanceRoofcenterlineSpeakerbkt);
  										$('#distanceRoofcenterlineElbkt').val(data.shellRoofTransaction.distanceRoofcenterlineElbkt);
  										$('#noCrossBracesFitted').val(data.shellRoofTransaction.noCrossBracesFitted);
- 										$('#detailsOfModification').val(data.shellRoofTransaction.detailsOfModification);
- 										$('#detailsOfTrial').val(data.shellRoofTransaction.detailsOfTrial);
- 										$('#remarks').val(data.shellRoofTransaction.remarks);
+ 										$('#roofDetailsOfModification').val(data.shellRoofTransaction.detailsOfModification);
+ 										$('#roofDetailsOfTrial').val(data.shellRoofTransaction.detailsOfTrial);
+ 										$('#roofRemarks').val(data.shellRoofTransaction.remarks);
  										//$('#shellRoofSipTestingStatus').val(data.shellRoofTransaction.shellRoofSipTestingStatus);
  										$('[id="shellRoofSipTestingStatus"]').val([data.shellRoofTransaction.shellRoofSipTestingStatus]);
  										$('#entryBy').val(data.shellRoofTransaction.entryBy);
@@ -2683,8 +2686,8 @@ Cross brace supporting bracket distance(L3T/L2T,LWFAC,LBAC)(111/1500)
  	                    					        roofSipDate: $('#roofSipDate').val(),  
  	                    							roofType:$('#roofType').val(),
  	                    							roofMake:$('#roofMake').val(),              							
- 	                    							applicableDrawingNo:$('#applicableDrawingNo').val(),
- 	                    							applicableWiNo: $('#applicableWiNo').val(),                   							
+ 	                    							roofApplicableDrawingNo:$('#roofApplicableDrawingNo').val(),
+ 	                    							roofApplicableWiNo: $('#roofApplicableWiNo').val(),                   							
  	                    							machineSpotWeild:$("input[id='machineSpotWeild']:checked").val(),              							
  	                    							observationItemAsPerDrawing:$("input[id='observationItemAsPerDrawing']:checked").val(),
  	                    							observationComplianceWi: $("input[id='observationComplianceWi']:checked").val(),                   							
@@ -2717,10 +2720,10 @@ Cross brace supporting bracket distance(L3T/L2T,LWFAC,LBAC)(111/1500)
  	                    							distanceRoofcenterlineSpeakerbkt:$('#distanceRoofcenterlineSpeakerbkt').val(),
  	                    							distanceRoofcenterlineElbkt:$('#distanceRoofcenterlineElbkt').val(),
  	                    							noCrossBracesFitted:$('#noCrossBracesFitted').val(),
- 	                    				            detailsOfModification:$('#detailsOfModification').val(),
- 	                    							detailsOfTrial:$('#detailsOfTrial').val(),
- 	                    							remarks:$('#remarks').val(),
- 	                    							shellRoofSipTestingStatus:$('#shellRoofSipTestingStatus').val(),
+ 	                    				            roofDetailsOfModification:$('#roofDetailsOfModification').val(),
+ 	                    							roofDetailsOfTrial:$('#roofDetailsOfTrial').val(),
+ 	                    							roofRemarks:$('#roofRemarks').val(),
+ 	                    							shellRoofSipTestingStatus:$("input[id='shellRoofSipTestingStatus']:checked").val(),
  	                    							entryby:$('#entryBy').val(),
  	                    							entrytime:$('#entryTime').val()
  	                    						},
@@ -2735,12 +2738,12 @@ Cross brace supporting bracket distance(L3T/L2T,LWFAC,LBAC)(111/1500)
  		                    						$('#roofSipDate').val(''),
  		                    						$('#roofType').val(''),
  		                    						$('#roofMake').val(''),              							
- 		                    						$('#applicableDrawingNo').val(''),
- 		                    						$('#applicableWiNo').val(''),                   							
- 		                    						$('#machineSpotWeild').val(''),              							
- 		                    						$('#observationItemAsPerDrawing').val(''),
- 		                    						$('#observationComplianceWi').val(''),                   							
- 		                    						$('#observationWeildingThroatLength').val(''),              							
+ 		                    						$('#roofApplicableDrawingNo').val(''),
+ 		                    						$('#roofApplicableWiNo').val(''),                   							
+ 		                    						$("input[id='machineSpotWeild']:checked").val(''),
+ 		                    						$("input[id='observationItemAsPerDrawing']:checked").val(''),
+ 		                    						$("input[id='observationComplianceWi']:checked").val(''),
+ 		                    						$("input[id='observationWeildingThroatLength']:checked").val(''),         							
  		                    						$('#lengthRoof').val(''),
  		                    						//	underFrameNumber:$('#underFrameNumber').val(),
  		                    						$('#lengthRoofsheet').val(''),
@@ -2761,18 +2764,18 @@ Cross brace supporting bracket distance(L3T/L2T,LWFAC,LBAC)(111/1500)
  		                   						    $('#distanceCrossBraceBracket').val(''),
  		                   							$('#checkedDimensionRemark').val(''),
  		                    						$('#distanceCenterlineroofCenterlineflbkts').val(''),
- 		                    						$('#conditionRoofSheetJoint').val(''),
- 		                    						$('#roofSheetJointLeakage').val(''),
- 		                    					    $('#conditionRoofSheetArch').val(''),
+ 		                    						$("input[id='conditionRoofSheetJoint']:checked").val(''),
+ 		                    						$("input[id='roofSheetJointLeakage']:checked").val(''),
+ 		                    						$("input[id='conditionRoofSheetArch']:checked").val(''),
  		                    						$('#distanceRoofcenterlineCenterlineelbkt').val(''),
- 		                    						$('#fittmentLstiffener').val(''),
+ 		                    						$("input[id='fittmentLstiffener']:checked").val(''),
  		                    						$('#distanceRoofcenterlineSpeakerbkt').val(''),
  		                    					    $('#distanceRoofcenterlineElbkt').val(''),
  		                    				        $('#noCrossBracesFitted').val(''),
- 		                    						$('#detailsOfModification').val(''),
- 		                    					    $('#detailsOfTrial').val(''),
- 		                    						$('#remarks').val(''),
- 		                    					    $('#shellRoofSipTestingStatus').val(''),
+ 		                    						$('#roofDetailsOfModification').val(''),
+ 		                    					    $('#roofDetailsOfTrial').val(''),
+ 		                    						$('#roofRemarks').val(''),
+ 		                    					    $("input[id='shellRoofSipTestingStatus']:checked").val(''),
  		                    					    $('#entryBy').val(''),
  		                    					    $('#entryTime').val(''),
  	                    							
@@ -2866,20 +2869,20 @@ Cross brace supporting bracket distance(L3T/L2T,LWFAC,LBAC)(111/1500)
  										$('#appLineNoUnderframe').val(data.shellUndeframeSipTrans.appLineNoUnderframe);
  										$('#appWiNoUnderframe').val(data.shellUndeframeSipTrans.appWiNoUnderframe);
  										
- 										$('#frntPrtPp').val(data.shellTran.frntPrtPp);
- 										$('#frntPrtNpp').val(data.shellTran.frntPrtNpp);
+ 										$('#frntPrtPp').val(data.shellTran.underframeFrontPartMakePp);
+ 										$('#frntPrtNpp').val(data.shellTran.underframeFrontPartMakeNpp);
  										$('#waterTankBkt1').val(data.shellTran.waterTankBkt1);
  										
  										$('#waterTankBkt2').val(data.shellTran.waterTankBkt2);
  										$('#waterTankBkt3').val(data.shellTran.waterTankBkt3);
  										$('#waterTankBkt4').val(data.shellTran.waterTankBkt4);
- 										$('#cbCMakePp1').val(data.shellTran.cbCMakePp1);
- 										$('#cbCMakePp2').val(data.shellTran.cbCMakePp2);
- 										$('#cbCMakeNpp1').val(data.shellTran.cbCMakeNpp1);
- 										$('#cbCMakeNpp2').val(data.shellTran.cbCMakeNpp2);
- 										$('#cbCFitPp').val(data.shellTran.cbCFitPp);
- 										$('#cbCFitNpp').val(data.shellTran.cbCFitNpp);
- 										$('#underframeMakeNo').val(data.shellTran.underframeMakeNo);
+ 										$('#cbCMakePp1').val(data.shellTran.cbcPpEndMake);
+ 										$('#cbCMakePp2').val(data.shellTran.cbcPpEndSrno);
+ 										$('#cbCMakeNpp1').val(data.shellTran.cbcNppEndMake);
+ 										$('#cbCMakeNpp2').val(data.shellTran.cbcNppEndSrno);
+ 										$('#cbCFitPp').val(data.shellTran.cbcFittedByPp);
+ 										$('#cbCFitNpp').val(data.shellTran.cbcFittedByNpp);
+ 										$('#underframeMakeNo').val(data.shellTran.underframeCompleteMake);
  										
  										$('[id="itemsFitted"]').val([data.shellUndeframeSipTrans.itemsFitted]);
  										$('[id="compAppWi"]').val([data.shellUndeframeSipTrans.compAppWi]);
@@ -2950,7 +2953,8 @@ Cross brace supporting bracket distance(L3T/L2T,LWFAC,LBAC)(111/1500)
  										$('#detlOfModf').val(data.shellUndeframeSipTrans.detlOfModf);
  										$('#detlOfTrialItems').val(data.shellUndeframeSipTrans.detlOfTrialItems);
  										$('#rmk').val(data.shellUndeframeSipTrans.rmk);
- 										$('#shellUnderframeSipTestingStatus').val(data.shellUndeframeSipTrans.underframeTestingStatus);
+ 										$('[id="shellUnderframeSipTestingStatus"]').val([data.shellUndeframeSipTrans.underframeTestingStatus]);
+ 										
  										
  								
  										
@@ -3345,7 +3349,8 @@ Cross brace supporting bracket distance(L3T/L2T,LWFAC,LBAC)(111/1500)
  	                    							detlOfModf:$('#detlOfModf').val(),
  	                    							detlOfTrialItems:$('#detlOfTrialItems').val(),
  	                    							rmk:$('#rmk').val(),
- 	                    							underframeTestingStatus:$('#shellUnderframeSipTestingStatus').val(),
+ 	                    							shellUnderframeTestingStatus:$("input[id='shellUnderframeSipTestingStatus']:checked").val(),
+ 	                    							
  	                    						
  	                    						},
  	                    						
@@ -3378,12 +3383,13 @@ Cross brace supporting bracket distance(L3T/L2T,LWFAC,LBAC)(111/1500)
  	                    							$('#cbCFitNpp').val(''),
  	                    							$('#underframeMakeNo').val(''),
  	                    							
- 	       				  							$('#itemsFitted').val(''),
- 	                    							$('#compAppWi').val(''),
- 	                    							$('#weldThroatLen').val(''),
- 	                    							$('#tightScrew').val(''),
- 	                    							$('#outerFaceOuterHead').val(''),
- 	                    							$('#conditionOfPlugWelding').val(''),
+ 	       				  							
+ 	       				  						    $("input[id='itemsFitted']:checked").val(''),
+ 	                    							$("input[id='compAppWi']:checked").val(''),
+ 	                    							$("input[id='weldThroatLen']:checked").val(''),
+ 	                    							$("input[id='tightScrew']:checked").val(''),
+ 	                    							$("input[id='outerFaceOuterHead']:checked").val(''),
+ 	                    							$("input[id='conditionOfPlugWelding']:checked").val(''),
  	                    							$('#conditionOfConsole').val(''),
  	                    							$('#bodyBolster').val(''),
  	                    							$('#completeLenUndeframe').val(''),
@@ -3391,18 +3397,18 @@ Cross brace supporting bracket distance(L3T/L2T,LWFAC,LBAC)(111/1500)
  	                    							$('#ufWidth').val(''),
  	                    							$('#coveringPlate').val(''),
  	                    							$('#wedgeBolt').val(''),
- 	                    							$('#waterTankMount').val(''),
+ 	                    							$("input[id='waterTankMount']:checked").val(''),
  	                    							$('#frntPartBrktDist').val(''),
  	                    							$('#footStepsDist').val(''),
  	                    							$('#distBwConsoleBrkt').val(''),
- 	                    							$('#suppMemTrough').val(''),
- 	                    							$('#pillarMountChannel').val(''),
+ 	                    							$("input[id='suppMemTrough']:checked").val(''),
+ 	                    							$("input[id='pillarMountChannel']:checked").val(''),
  	                    							$('#distBwCurvedRoll').val(''),
- 	                    							$('#grindWeldJoints').val(''),
- 	                    							$('#holesForDrawing').val(''),
- 	                    							$('#holesDrilled').val(''),
+ 	                    							$("input[id='grindWeldJoints']:checked").val(''),
+ 	                    							$("input[id='holesForDrawing']:checked").val(''),
+ 	                    							$("input[id='holesDrilled']:checked").val(''),
  	                    							$('#distBwCenterCenter').val(''),
- 	                    							$('#doorFixBrkt').val(''),
+ 	                    							$("input[id='doorFixBrkt']:checked").val(''),
  	                    							$('#doorFixBrktOb').val(''),
  	                    							$('#fitmentDimenBiotank').val(''),
  	                    							$('#longDistBrktBrktpp').val(''),
@@ -3413,15 +3419,15 @@ Cross brace supporting bracket distance(L3T/L2T,LWFAC,LBAC)(111/1500)
  	                    							$('#distCenCen').val(''),
  	                    							$('#genMmountScrew1').val(''),
  	                    							$('#genMmountScrew2').val(''),
- 	                    							$('#cbcUncoup').val(''),
+ 	                    							$("input[id='cbcUncoup']:checked").val(''),
  	                    							$('#transfMount').val(''),
  	                    							$('#batteryBox').val(''),
  	                    							$('#airBrakeModule').val(''),
  	                    							$('#guideDistPP').val(''),
  	                    							$('#guideDistNPP').val(''),
  	                    							$('#twinePipHoleObs').val(''),
- 	                    							$('#fibaBktAirPro').val(''),
- 	                    							$('#reserBktAirPro').val(''),
+ 	                    							$("input[id='fibaBktAirPro']:checked").val(''),
+ 	                    							$("input[id='reserBktAirPro']:checked").val(''),
  	                    							$('#distanceCrossMemberpp1').val(''),
  	                    							$('#distanceCrossMemberpp2').val(''),
  	                    							$('#distanceCrossMemberpp3').val(''),
@@ -3446,9 +3452,13 @@ Cross brace supporting bracket distance(L3T/L2T,LWFAC,LBAC)(111/1500)
  	                    							$('#detlOfModf').val(''),
  	                    							$('#detlOfTrialItems').val(''),
  	                    							$('#rmk').val(''),
- 	                    							$('#shellUnderframeSipTestingStatus').val(''),    							
+ 	                    							$("input[id='shellUnderframeSipTestingStatus']:checked").val(''),
+ 	                    							
+ 	                    							
+ 	                    							
+ 	                    							
  	                    							$('#UnderframeSIPDialog').dialog('close');
- 	                    						   $('#UnderframeSIPDialog').find('form[name="underframeSIP"]')[0].reset();
+ 	                    						
  	                    							$('#ShellProductionTableContainer').jtable('load');
  	                    							
  	                    							
@@ -3536,8 +3546,8 @@ Cross brace supporting bracket distance(L3T/L2T,LWFAC,LBAC)(111/1500)
 										var lavDate=(data.shellLavSideWallTran.lavsidewallSipDate).substring(0,10);
 										var lavDateArray=lavDate.split("-");
 										$('#lavsidewallSipDate').datepicker("setDate",new Date(lavDateArray[0],lavDateArray[1]-1,lavDateArray[2]));
-										$('#drawingNo').val(data.shellLavSideWallTran.drawingNo);
-										$('#wiNo').val(data.shellLavSideWallTran.wiNo);
+										$('#lavSidewallDrawingNo').val(data.shellLavSideWallTran.drawingNo);
+										$('#lavSidewallWiNo').val(data.shellLavSideWallTran.wiNo);
 										$('#frameWorkByLav1').val(data.shellLavSideWallTran.frameWorkByLav1);
 										
 										$('#frameJigRoboticsBoLav1').val(data.shellLavSideWallTran.frameJigRoboticsBoLav1);
@@ -3563,9 +3573,9 @@ Cross brace supporting bracket distance(L3T/L2T,LWFAC,LBAC)(111/1500)
 										$('#interlockJointJigRoboticsBoLav2').val(data.shellLavSideWallTran.interlockJointJigRoboticsBoLav2);
 										$('#interlockJointJigRoboticsBoLav3').val(data.shellLavSideWallTran.interlockJointJigRoboticsBoLav3);
 										$('#interlockJointJigRoboticsBoLav4').val(data.shellLavSideWallTran.interlockJointJigRoboticsBoLav4);
-										$('[id="observationItemsAsPerDrawingFlag"]').val([data.shellLavSideWallTran.observationItemsAsPerDrawingFlag]);
-										$('[id="observationComplianceWiFlag"]').val([data.shellLavSideWallTran.observationComplianceWiFlag]);
-										$('[id="observationWeldingThroatFlag"]').val([data.shellLavSideWallTran.observationWeldingThroatFlag]);
+										$('[id="lavSidewallObservationItemsAsPerDrawingFlag"]').val([data.shellLavSideWallTran.observationItemsAsPerDrawingFlag]);
+										$('[id="lavSidewallObservationComplianceWiFlag"]').val([data.shellLavSideWallTran.observationComplianceWiFlag]);
+										$('[id="lavSidewallObservationWeldingThroatFlag"]').val([data.shellLavSideWallTran.observationWeldingThroatFlag]);
 										$('#lavsidewallMake1').val(data.shellLavSideWallTran.lavsidewallMake1);
 										$('#lavsidewallMake2').val(data.shellLavSideWallTran.lavsidewallMake2);
 										$('#lavsidewallMake3').val(data.shellLavSideWallTran.lavsidewallMake3);
@@ -3602,9 +3612,10 @@ Cross brace supporting bracket distance(L3T/L2T,LWFAC,LBAC)(111/1500)
 										$('[id="lavsidewallMemberWeldingFlag"]').val([data.shellLavSideWallTran.lavsidewallMemberWeldingFlag]);
 										$('[id="conditionLavsidewallMemberJointweldingFlag"]').val([data.shellLavSideWallTran.conditionLavsidewallMemberJointweldingFlag]);
 										$('[id="conditionLavsidewallSheetLaserweldingFlag"]').val([data.shellLavSideWallTran.conditionLavsidewallSheetLaserweldingFlag]);
-										$('[id="detailsOfModification"]').val([data.shellLavSideWallTran.detailsOfModification]);
-										$('[id="detailsOfTrial"]').val([data.shellLavSideWallTran.detailsOfTrial]);
-										$('[id="remarks"]').val([data.shellLavSideWallTran.remarks]);
+										$('#lavSidewallDetailsOfModification').val(data.shellLavSideWallTran.detailsOfModification);
+										$('#lavSidewallDetailsOfTrial').val(data.shellLavSideWallTran.detailsOfTrial);
+										$('#lavSidewallRemarks').val(data.shellLavSideWallTran.remarks);
+										$('[id="shellLavSidewallSipTestingStatus"]').val([data.shellLavSideWallTran.lavSidewallTestingStatus]);
 									  
 									}
 									});
@@ -3772,8 +3783,8 @@ Cross brace supporting bracket distance(L3T/L2T,LWFAC,LBAC)(111/1500)
 	                    							lavsidewallSipDate: $('#lavsidewallSipDate').val(),
 	                    							lavsidewallNo:$('#lavsidewallNo').val(),
 	                    							lavsidewallShellType:$('#lavsidewallShellType').val(),
-	                    							drawingNo:$('#drawingNo').val(),
-	                    							wiNo: $('#wiNo').val(),
+	                    							lavSidewallDrawingNo:$('#lavSidewallDrawingNo').val(),
+	                    							lavSidewallWiNo: $('#lavSidewallWiNo').val(),
 	                    							frameWorkByLav1:$('#frameWorkByLav1').val(),
 	                    							frameJigRoboticsBoLav1: $('#frameJigRoboticsBoLav1').val(),
 	                    							frameWorkByLav2:$('#frameWorkByLav2').val(),
@@ -3802,9 +3813,9 @@ Cross brace supporting bracket distance(L3T/L2T,LWFAC,LBAC)(111/1500)
 	                    							lavsidewallMake2:$('#lavsidewallMake2').val(),
 	                    							lavsidewallMake3:$('#lavsidewallMake3').val(),
 	                    							lavsidewallMake4:$('#lavsidewallMake4').val(),
-	                    							observationItemsAsPerDrawingFlag:$("input[id='observationItemsAsPerDrawingFlag']:checked").val(),
-	                    							observationComplianceWiFlag:$("input[id='observationComplianceWiFlag']:checked").val(),
-	                    							observationWeldingThroatFlag:$("input[id='observationWeldingThroatFlag']:checked").val(),
+	                    							lavSidewallObservationItemsAsPerDrawingFlag:$("input[id='lavSidewallObservationItemsAsPerDrawingFlag']:checked").val(),
+	                    							lavSidewallObservationComplianceWiFlag:$("input[id='lavSidewallObservationComplianceWiFlag']:checked").val(),
+	                    							lavSidewallObservationWeldingThroatFlag:$("input[id='lavSidewallObservationWeldingThroatFlag']:checked").val(),
 	                    							totalheightLav1:$('#totalheightLav1').val(),
 	                    							totalheightLav2:$('#totalheightLav2').val(),
 	                    							totalheightLav3:$('#totalheightLav3').val(),
@@ -3837,9 +3848,9 @@ Cross brace supporting bracket distance(L3T/L2T,LWFAC,LBAC)(111/1500)
 	                    							lavsidewallMemberWeldingFlag:$("input[id='lavsidewallMemberWeldingFlag']:checked").val(),
 	                                                conditionLavsidewallMemberJointweldingFlag:$("input[id='conditionLavsidewallMemberJointweldingFlag']:checked").val(),
 	                                                conditionLavsidewallSheetLaserweldingFlag:$("input[id='conditionLavsidewallSheetLaserweldingFlag']:checked").val(),
-	                                                detailsOfModification:$("input[id='detailsOfModification']:checked").val(),
-	                                                detailsOfTrial:$("input[id='detailsOfTrial']:checked").val(),
-	                                                remarks:$("input[name='remarks']:checked").val(),
+	                                                lavSidewallDetailsOfModification:$('#lavSidewallDetailsOfModification').val(),
+	                                                lavSidewallDetailsOfTrial:$('#lavSidewallDetailsOfTrial').val(),
+	                                                lavSidewallRemarks:$('#lavSidewallRemarks').val(),
 	                                                lavSidewallTestingStatus:$("input[name='shellLavSidewallSipTestingStatus']:checked").val(),
 	                    						
 	                    						},
@@ -3857,8 +3868,8 @@ Cross brace supporting bracket distance(L3T/L2T,LWFAC,LBAC)(111/1500)
 	                    							$('#lavsidewallSipDate').val(''),
 	                    							$('#lavsidewallNo').val(''),
 	                    							$('#lavsidewallShellType').val(''),
-	                    							$('#drawingNo').val(''),
-	                    							$('#wiNo').val(''),
+	                    							$('#lavSidewallDrawingNo').val(''),
+	                    							$('#lavSidewallWiNo').val(''),
 	                    							$('#frameWorkByLav1').val(''),
 	                    						    $('#frameJigRoboticsBoLav1').val(''),
 	                    							$('#frameWorkByLav2').val(''),
@@ -3887,9 +3898,9 @@ Cross brace supporting bracket distance(L3T/L2T,LWFAC,LBAC)(111/1500)
 	                    							$('#lavsidewallMake2').val(''),
 	                    							$('#lavsidewallMake3').val(''),
 	                    							$('lavsidewallMake4').val(''),
-	                    							$("input[id='observationItemsAsPerDrawingFlag']:checked").val(''),
-	                    							$("input[id='observationComplianceWiFlag']:checked").val(''),
-	                    							$("input[id='observationWeldingThroatFlag']:checked").val(''),
+	                    							$("input[id='lavSidewallObservationItemsAsPerDrawingFlag']:checked").val(''),
+	                    							$("input[id='lavSidewallObservationComplianceWiFlag']:checked").val(''),
+	                    							$("input[id='lavSidewallObservationWeldingThroatFlag']:checked").val(''),
 	                    							$('#totalheightLav1').val(''),
 	                    							$('#totalheightLav2').val(''),
 	                    						    $('#totalheightLav3').val(''),
@@ -3922,13 +3933,13 @@ Cross brace supporting bracket distance(L3T/L2T,LWFAC,LBAC)(111/1500)
 	                    							$("input[id='lavsidewallMemberWeldingFlag']:checked").val(''),
 	                                                $("input[id='conditionLavsidewallMemberJointweldingFlag']:checked").val(''),
 	                                                $("input[id='conditionLavsidewallSheetLaserweldingFlag']:checked").val(''),
-	                                                $("input[id='detailsOfModification']:checked").val('');
-	                                                $("input[id='detailsOfTrial']:checked").val('');
-	                                                $("input[id='remarks']:checked").val(''),
+	                                                $('#lavSidewallDetailsOfModification').val('');
+	                                                $('#lavSidewallDetailsOfTrial').val('');
+	                                                $('#lavSidewallRemarks').val(''),
 	                                                $("input[id='shellLavSidewallSipTestingStatus']:checked").val(''),
 	                                                
 	                    							$('#lavsidewallSIP').dialog('close');
-	                                                $('#lavsidewallSIP').find('form[name="lavSidewallForm"]')[0].reset();
+	                                               
 	                    							$('#ShellProductionTableContainer').jtable('load');
 	         								  })
 	         								.error(function (msg){

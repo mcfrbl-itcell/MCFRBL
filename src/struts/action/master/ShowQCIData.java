@@ -5,6 +5,7 @@ import beans.FurnishingTransaction;
 import beans.PaintTransaction;
 import beans.ShellTransaction;
 import beans.BogiesetTransaction;
+import beans.CrossCheckinTrans;
 import hibernateConnect.HibernateConfig;
 public class ShowQCIData {
 	private String furnishingAssetId;
@@ -17,6 +18,7 @@ public class ShowQCIData {
 	private String bogieNoNpp;
 	private String bookedRly;
 	private String bookedDiv;
+	private CrossCheckinTrans crossCheck;
 	public String showQCIData()
 	{
 		Integer furnishingAssetIdAsInt=Integer.parseInt(furnishingAssetId);
@@ -29,6 +31,7 @@ public class ShowQCIData {
 	{
 	session=HibernateConfig.getSession();
 	FurnishingTransaction furnishingTransaction= (FurnishingTransaction) session.get(FurnishingTransaction.class, furnishingAssetIdAsInt);
+	crossCheck=(CrossCheckinTrans) session.get(CrossCheckinTrans.class, furnishingAssetIdAsInt);
 	coachNumber=furnishingTransaction.getCoachNumber();
 	bookedRly=furnishingTransaction.getDispatchRly();
 	bookedDiv=furnishingTransaction.getDispatchDiv();
@@ -122,6 +125,12 @@ public class ShowQCIData {
 	}
 	public void setBookedDiv(String bookedDiv) {
 		this.bookedDiv = bookedDiv;
+	}
+	public CrossCheckinTrans getCrossCheck() {
+		return crossCheck;
+	}
+	public void setCrossCheck(CrossCheckinTrans crossCheck) {
+		this.crossCheck = crossCheck;
 	}
 		
 }

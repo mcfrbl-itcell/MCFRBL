@@ -8,6 +8,18 @@
             <column name="furnishing_asset_id" />
             <generator class="assigned" />
         </id>
+        <property name="textGeneral" type="text">
+            <column name="text_general"/>
+        </property>
+         <property name="docDate" type="date">
+            <column name="doc_date" length="13" />
+        </property>
+        <property name="dateOfTesting" type="date">
+            <column name="date_of_testing" length="13" />
+        </property>
+        <property name="shiftOfTesting" type="string">
+            <column name="shift_of_testing" length="10" />
+        </property>
         <property name="textFpvc" type="text">
             <column name="text_fpvc"/>
         </property>

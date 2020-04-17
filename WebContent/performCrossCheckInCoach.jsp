@@ -183,32 +183,33 @@ width: 45%;
 <div id="selectStages" style="height:150%; width:200%; display:none;z-index: 9;">
 <table>
 <tr>	
-	<td><button class="tablinks" id="1" onclick="openCity(event, 'F&PVC')">F&PVC</button></td>
-   	<td><button class="tablinks" id="2" onclick="openCity(event, 'ParitionFrame')">Parition frame</button></td>
-   	<td><button class="tablinks" id="3" onclick="openCity(event, 'Panel')">Panel</button></td>
-   	<td><button class="tablinks" id="4" onclick="openCity(event, 'WindowCelling')">Window & celling</button></td>
-   	<td><button class="tablinks" id="5" onclick="openCity(event, 'Moulding')">Moulding</button></td>
-   	<td><button class="tablinks" id="6" onclick="openCity(event, 'SeatBerth')">Seat & Berth</button></td>
-   	<td><button class="tablinks" id="7" onclick="openCity(event, 'Lavatory')">Lavatory</button></td>
-   	<td><button class="tablinks" id="8" onclick="openCity(event, 'Plumbing')">Plumbing</button></td>
-   	<td><button class="tablinks" id="9" onclick="openCity(event, 'AirBrake')">Air Brake</button></td>
-   	<td><button class="tablinks" id="10" onclick="openCity(event, 'CoachLowering')">Coach Lowering</button></td>
-   	<td><button class="tablinks" id="11" onclick="openCity(event, 'Paint')">Paint</button></td>
-   	<td><button class="tablinks" id="12" onclick="openCity(event, 'CoachCleaning')">Coach Cleaning</button></td>
+	<td><button class="tablinks" id="1" onclick="openCity(event, 'General')">General</button></td>
+	<td><button class="tablinks" id="2" onclick="openCity(event, 'F&PVC')">F&PVC</button></td>
+   	<td><button class="tablinks" id="3" onclick="openCity(event, 'ParitionFrame')">Parition frame</button></td>
+   	<td><button class="tablinks" id="4" onclick="openCity(event, 'Panel')">Panel</button></td>
+   	<td><button class="tablinks" id="5" onclick="openCity(event, 'WindowCelling')">Window & celling</button></td>
+   	<td><button class="tablinks" id="6" onclick="openCity(event, 'Moulding')">Moulding</button></td>
+   	<td><button class="tablinks" id="7" onclick="openCity(event, 'SeatBerth')">Seat & Berth</button></td>
+   	<td><button class="tablinks" id="8" onclick="openCity(event, 'Lavatory')">Lavatory</button></td>
+   	<td><button class="tablinks" id="9" onclick="openCity(event, 'Plumbing')">Plumbing</button></td>
+   	<td><button class="tablinks" id="10" onclick="openCity(event, 'AirBrake')">Air Brake</button></td>
+   	<td><button class="tablinks" id="11" onclick="openCity(event, 'CoachLowering')">Coach Lowering</button></td>
+   	<td><button class="tablinks" id="12" onclick="openCity(event, 'Paint')">Paint</button></td>
+   	<td><button class="tablinks" id="13" onclick="openCity(event, 'CoachCleaning')">Coach Cleaning</button></td>
  </tr>
- </table>  	
-<div id="F&PVC" class="tabcontent">
-    <form name="fpvc" id="fpvc">
-     <p Style="text-align:center;font-size:22px;"><b>F&PVC</b></p><span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
-    <br><br><br>
+ </table>
+ <div id="General" class="tabcontent">
+    <form name="general" id="general">
+        <p Style="text-align:center;font-size:22px;"><b>General</b></p>
+     <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
     <table class="t2" border="1" style="height:70px;">
 			<tr style="height:100%;"><td class="t3"><p Style="text-align:center;font-size:12px;margin:0px;padding:0px;"><b>Modern Coach Factory, Raebareli</b></p><br><p Style="text-align:center;font-size:8px;margin:0px;padding:0px;">QUALITY CONTROL INSPECTION REPORT(QCI)</p><br><p Style="text-align:center;font-size:8px;margin:0px;padding:0px;">L2T,L3T,L2T(T),HUMSAFAR (FURNISHING QUALITY)</p></td><td>
 			&nbsp;&nbsp;&nbsp;Doc No.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="docNo" name="docNo" class="validate[required]"><br>&nbsp;&nbsp;&nbsp;Rev No: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="docRevNo" name="docRevNo"><br>&nbsp;&nbsp;&nbsp;Date: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="docDate" name="docDate" class="validate[required]"></td></tr>
 		</table>
 		<table border="1">
-			<tr><td>Furnishing No.:<input type="text" id="furnishingNoQCI" name="furnishingNoQCI" readonly></td><td colspan="2">Booked To:<input type="text" id="bookedRly" name="bookedRly"></td><td>Shell No.:<input type="text" id="shellNo" name="shellNo"></td></tr>
+			<tr><td>Furnishing No.:<input type="text" id="furnishingNoQCI" name="furnishingNoQCI" readonly></td><td colspan="2">Booked To:<select id="bookedRly" name="bookedRly" onchange="myFunction(this.value)"></select></td><td>Shell No.:<input type="text" id="shellNo" name="shellNo"></td></tr>
 			<tr><td>Coach No.:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="coachNo" name="coachNo" readonly></td><td colspan="2">Bogie No.<td>Date:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="dateOfTesting" name="dateOfTesting" class="validate[required]"></td></tr>
-			<tr><td>RLY:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="bookedDiv" name="bookedDiv"></td><td>PP:<input type="text" id="bogiePp" name="bogiePp" readonly></td><td>NPP:<input type="text" id="bogieNpp" name="bogieNpp" readonly></td>
+			<tr><td>RLY:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select id="bookedDiv" name="bookedDiv" disabled></select></td><td>PP:<input type="text" id="bogiePp" name="bogiePp" readonly></td><td>NPP:<input type="text" id="bogieNpp" name="bogieNpp" readonly></td>
 			<td>Shift:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select id="shiftOfTesting" class="validate[required]">
 				 <option value="">Select</option>
              <option value="general">General</option>
@@ -218,7 +219,16 @@ width: 45%;
 				</select></td></tr>
 		</table>
 		<br><br>
-		<p id="text1"></p>
+		
+		<textarea name="generaltext" id="generaltext" rows="5" cols="47"></textarea>
+		</form>
+  </div>  	
+<div id="F&PVC" class="tabcontent">
+    <form name="fpvc" id="fpvc">
+     <p Style="text-align:center;font-size:22px;"><b>F&PVC</b></p><span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+    <br><br><br>
+    
+		
 		<textarea name="fpvctext" id="fpvctext" rows="5" cols="47"></textarea>
 		
     </form>
@@ -228,7 +238,7 @@ width: 45%;
 	   <form name="paritionFrame" id="paritionFrame">	
 	   <p Style="text-align:center;font-size:22px;"><b>Parition Frame</b></p> <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
     <br><br><br>
-		<p id="text2"></p>
+		
 		<textarea name="paritionframetext" id="paritionframetext" rows="5" cols="47"></textarea>
 		</form>
   </div>
@@ -238,7 +248,7 @@ width: 45%;
     <p Style="text-align:center;font-size:22px;"><b>Panel</b></p>
      <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
     <br><br><br>
-    	<p id="text3"></p>
+    	
 		<textarea name="paneltext" id="paneltext" rows="5" cols="47"></textarea>
 		</form>
   </div> 
@@ -248,7 +258,7 @@ width: 45%;
         <p Style="text-align:center;font-size:22px;"><b>Window Celling</b></p>
      <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
     <br><br><br>
-		<p id="text4"></p>
+		
 		<textarea name="windowcellingtext" id="windowcellingtext" rows="5" cols="47"></textarea>
 		</form>
   </div>
@@ -259,7 +269,7 @@ width: 45%;
             <p Style="text-align:center;font-size:22px;"><b>Moulding</b></p>
      <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
     <br><br><br>
-		<p id="text5"></p>
+		
 		<textarea name="mouldingtext" id="mouldingtext" rows="5" cols="47"></textarea>
 		</form>
   </div>
@@ -270,7 +280,7 @@ width: 45%;
                 <p Style="text-align:center;font-size:22px;"><b>Seat Berth</b></p>
      <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
     <br><br><br>
-		<p id="text6"></p>
+		
 		<textarea name="seatBerthtext" id="seatBerthtext" rows="5" cols="47"></textarea>
 		</form>
   </div>
@@ -281,7 +291,7 @@ width: 45%;
 	    <p Style="text-align:center;font-size:22px;"><b>Lavatory</b></p>
 	    <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
     <br><br><br>
-		<p id="text7"></p>
+		
 		<textarea name="lavatorytext" id="lavatorytext" rows="5" cols="47"></textarea>
 		</form>
   </div>
@@ -292,7 +302,7 @@ width: 45%;
 	       <p Style="text-align:center;font-size:22px;"><b>Plumbing</b></p>
 	    <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
     <br><br><br>
-		<p id="text8"></p>
+		
 		<textarea name="plumbingtext" id="plumbingtext" rows="5" cols="47"></textarea>
 		</form>
   </div>
@@ -303,7 +313,7 @@ width: 45%;
 	   	       <p Style="text-align:center;font-size:22px;"><b>Air Brake</b></p>
 	    <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
     <br><br><br>
-		<textarea id="text10" style="height:200px;width:100%;border:none;outline:none;"></textarea>
+		
 		<textarea name="airbraketext" id="airbraketext" rows="5" cols="47"></textarea>
 		</form>
   </div>
@@ -314,7 +324,7 @@ width: 45%;
 	     <p Style="text-align:center;font-size:22px;"><b>Coach Lowering</b></p>
 	    <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
     <br><br><br>	
-	   <textarea id="text10" style="height:200px;width:100%;border:none;outline:none;"></textarea>
+	   
 	   <textarea name="coachloweringtext" id="coachloweringtext" rows="5" cols="47"></textarea>
 		</form>
   </div>
@@ -325,7 +335,7 @@ width: 45%;
 	   	 <p Style="text-align:center;font-size:22px;"><b>Paint</b></p>
 	    <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
     <br><br><br>
-		<textarea id="text11" style="height:200px;width:100%;border:none;outline:none;"></textarea>
+		
 		<textarea name="painttext" id="painttext" rows="5" cols="47">
 				</textarea>
 		</form>
@@ -337,7 +347,7 @@ width: 45%;
 	   <p Style="text-align:center;font-size:22px;"><b>Coach Cleaning</b></p>
 	    <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
     <br><br><br>
-		<textarea id="text12" style="height:200px;width:100%;border:none;outline:none;"></textarea>
+		
 		<textarea name="coachcleaningtext" id="coachcleaningtext" rows="5" cols="47">
 				</textarea>
 		</form>
@@ -353,22 +363,150 @@ width: 45%;
   <script>
   
        // CKEDITOR.replace( 'example' );
-    function DestroyCKEditorInstances(text)
+    function DestroyCKEditorInstances1(generaltext)
 	{
-    if (CKEDITOR.instances[text])
-    {
-        CKEDITOR.instances[text].destroy();
-    }
+    	if (CKEDITOR.instances[generaltext])
+    	{
+        	CKEDITOR.instances[generaltext].destroy();
+    	}
+	}  
+	function DestroyCKEditorInstances2(fpvctext)
+	{
+    	if (CKEDITOR.instances[fpvctext])
+    	{
+        	CKEDITOR.instances[fpvctext].destroy();
+    	}
 	}
+    function DestroyCKEditorInstances3(paritionframetext)
+    {
+        if (CKEDITOR.instances[paritionframetext])
+        {
+            CKEDITOR.instances[paritionframetext].destroy();
+        }
+    }
+    function DestroyCKEditorInstances4(paneltext)
+    {
+        if (CKEDITOR.instances[paneltext])
+        {
+            CKEDITOR.instances[paneltext].destroy();
+        }
+    }
+    function DestroyCKEditorInstances5(windowcellingtext)
+    {
+        if (CKEDITOR.instances[windowcellingtext])
+        {
+            CKEDITOR.instances[windowcellingtext].destroy();
+        }
+    }
+    function DestroyCKEditorInstances6(mouldingtext)
+    {
+        if (CKEDITOR.instances[mouldingtext])
+        {
+            CKEDITOR.instances[mouldingtext].destroy();
+        }
+    }
+    function DestroyCKEditorInstances7(seatBerthtext)
+    {
+        if (CKEDITOR.instances[seatBerthtext])
+        {
+            CKEDITOR.instances[seatBerthtext].destroy();
+        }
+    }
+    function DestroyCKEditorInstances8(lavatorytext)
+    {
+        if (CKEDITOR.instances[lavatorytext])
+        {
+            CKEDITOR.instances[lavatorytext].destroy();
+        }
+    }
+    function DestroyCKEditorInstances9(plumbingtext)
+    {
+        if (CKEDITOR.instances[plumbingtext])
+        {
+            CKEDITOR.instances[plumbingtext].destroy();
+        }
+    }
+    function DestroyCKEditorInstances10(airbraketext)
+    {
+        if (CKEDITOR.instances[airbraketext])
+        {
+            CKEDITOR.instances[airbraketext].destroy();
+        }
+    }
+    function DestroyCKEditorInstances11(coachloweringtext)
+    {
+        if (CKEDITOR.instances[coachloweringtext])
+        {
+            CKEDITOR.instances[coachloweringtext].destroy();
+        }
+    }
+    function DestroyCKEditorInstances12(painttext)
+    {
+        if (CKEDITOR.instances[painttext])
+        {
+            CKEDITOR.instances[painttext].destroy();
+        }
+    }
+    function DestroyCKEditorInstances13(coachcleaningtext)
+    {
+        if (CKEDITOR.instances[coachcleaningtext])
+        {
+            CKEDITOR.instances[coachcleaningtext].destroy();
+        }
+    }
    
 var shellArray=[];
 var btn;
 var furnishingId;
 var obj={};
 		$(document).ready(function() {
+
+			//retrieve railway 
+	        $("#bookedRly").append('<option value="">Select</option>');
+				<c:forEach var="a" items="${zoneList}">
+				var o = new Option("${a}", "${a}");
+				$("#bookedRly").append(o);
+		    </c:forEach>
+//end of code
+
 			
-			
-			$('#dateOfTesting').datepicker({
+			$('#docDate').datepicker({			
+			    //inline: true,
+			    dateFormat: 'dd-mm-yy',
+			    changeMonth: true,
+			    changeYear: true,
+			    yearRange: '-1:+1',
+			    
+			    constrainInput: true,
+			    duration: '',
+			    gotoCurrent: true,
+			    beforeShow: function() {
+			        setTimeout(function(){
+			            $('.ui-datepicker').css('z-index', 99999999999999);
+			        }, 0);
+			    }
+
+			}).datepicker("setDate", new Date());
+
+			 $('#dateOfTesting').datepicker({			
+			    //inline: true,
+			    dateFormat: 'dd-mm-yy',
+			    changeMonth: true,
+			    changeYear: true,
+			    yearRange: '-1:+1',
+			    
+			    constrainInput: true,
+			    duration: '',
+			    gotoCurrent: true,
+			    beforeShow: function() {
+			        setTimeout(function(){
+			            $('.ui-datepicker').css('z-index', 99999999999999);
+			        }, 0);
+			    }
+
+			}).datepicker("setDate", new Date());
+			 
+		/* 	$('#dateOfTesting').datepicker({
 		        //inline: true,
 		        dateFormat: 'dd-mm-yy',
 		        changeMonth: true,
@@ -378,7 +516,7 @@ var obj={};
 		        constrainInput: true,
 		        duration: '',
 		        gotoCurrent: true,
-		      		    });
+		      		    }); */
 				var bogieNumbers=[]; 
 
 				var j=1;
@@ -388,14 +526,7 @@ var obj={};
 					j++;
 				    </c:forEach>
 				  //end: retrieving axle number in dropdown option
-				  
-				  
-				  
-				  
-	 
-         
-  
-						
+							
 	$('#FurnishingProductionTableContainer').jtable({
 			
 			title : 'Issue Cross Check for Coach',
@@ -436,7 +567,17 @@ var obj={};
     						},
     						success:function(data)
     						{
-    							obj=data.crossCheckinTrans; 	//set value in obj	
+    							obj=data.crossCheckinTrans; 	//set value in obj
+    							
+    							$('#generaltext').val(data.crossCheckinTrans.textGeneral);
+    							var date1=(data.crossCheckinTrans.docDate).substring(0,10);
+    							var date1Array=date1.split("-");
+    							$('#docDate').datepicker("setDate",new Date(date1Array[0],date1Array[1]-1,date1Array[2]));
+    							
+    							var date2=(data.crossCheckinTrans.dateOfTesting).substring(0,10);
+    							var date2Array=date2.split("-");
+    							$('#dateOfTesting').datepicker("setDate",new Date(date2Array[0],date2Array[1]-1,date2Array[2]));
+    							$('#shiftOfTesting').val(data.crossCheckinTrans.shiftOfTesting);
     							$('#fpvctext').val(data.crossCheckinTrans.textFpvc);
     							$('#paritionframetext').val(data.crossCheckinTrans.textParitionFrame);
     							$('#paneltext').val(data.crossCheckinTrans.textPanel);
@@ -455,42 +596,74 @@ var obj={};
                         
              	 		
              	 			//code to open form using tabs
-             	 		$('#1').click(function(){
-             	 			
-        	 				 	$('#fpvc').show();
-        	 				 					
+             	 			$('#1').click(function(){
+             	 		    	$('#general').show();	
+             	 		    	$.ajax({
+    	    						url : "showExistingDataOfQCI",  //action-name as defined in struts.xml
+    	    						dataType: 'json', 
+    	    						async:false,
+    	    						data : {
+    	    							furnishingAssetId: record.furnishingAssetId,
+    	    						},
+    	    						success:function(data)
+    	    						{ 	
+    	    							$('#docNo').val(data.formDocNoOCI),	
+    	    							$('#docRevNo').val(data.formRevNoQCI),
+    	    							$('#coachNo').val(data.coachNumber),
+    	    							$('#furnishingNoQCI').val(data.furnishingNo),
+    	    							$('#shellNo').val(data.shellNumber),
+    	    							$('#bogiePp').val(data.bogieNopp),
+    	    							$('#bogieNpp').val(data.bogieNoNpp),
+    	    							$('#bookedRly').val(data.bookedRly),
+    	    							$('#bookedDiv').val(data.bookedDiv);
+    	    							if(data.crossCheck!=null)
+        	    							{
+    	    								var da=(data.crossCheck.docDate).substring(0,10);
+    	    								var daArray=da.split("-");
+    	        							$('#dateOfTesting').datepicker("setDate",new Date(daArray[0],daArray[1]-1,daArray[2]));
+    	        							$('#shiftOfTesting').val(data.crossCheck.shiftOfTesting);
+        	    							}
+    	    							// $('#fpvctext').val(obj.textFpvc);
+    	    							//$('#generaltext').val(obj.textGeneral);						
+    	    						}
+    	    				  });			
      						});
              	 			$('#2').click(function(){
-             	 		    	$('#paritionFrame').show();				
+             	 			
+        	 				 	$('#fpvc').show();
+        	 				 	 				
      						});
              	 			$('#3').click(function(){
+             	 		    	$('#paritionFrame').show();				
+     						});
+             	 			$('#4').click(function(){
             	 				$('#panel').show();				
          					});
-                 	 		$('#4').click(function(){
+                 	 		$('#5').click(function(){
                  		    	$('#windowCelling').show();				
          					});
-                	 		$('#5').click(function(){
+                	 		$('#6').click(function(){
       	 				 		$('#moulding').show();				
              				});
-                     		$('#6').click(function(){
+                     		$('#7').click(function(){
                      	    	$('#seatBerth').show();				
              				});
-                     	 	$('#7').click(function(){
+                     	 	$('#8').click(function(){
                     	 		$('#lavatory').show();				
                 			});
-                	 		$('#8').click(function(){
+                	 		$('#9').click(function(){
                             	$('#plumbing').show();				
                  			});
-                         	$('#9').click(function(){
+                         	$('#10').click(function(){
                         	 	$('#airBrake').show();				
                      		});
-                            $('#10').click(function(){
+                            $('#11').click(function(){
                             	$('#coachLowering').show();				
                      		});
-                            $('#11').click(function(){
+                            $('#12').click(function(){
                              	$('#paint').show();				
                          	});
-                            $('#12').click(function(){
+                            $('#13').click(function(){
                              	$('#coachCleaning').show();				
                          	});
              	 		
@@ -500,7 +673,8 @@ var obj={};
              	 	 		height: ($(window).height() - 60),
              	 	 		create: function (event) { $(event.target).parent().css('position', 'fixed');},
             		        open:function(event) {
-                		     CKEDITOR.replace('fpvctext',{language: 'html',height:300,width:800, allowedContent: true});
+            		         CKEDITOR.replace('generaltext',{language: 'html',height:300,width:800, allowedContent: true});
+            		         CKEDITOR.replace('fpvctext',{language: 'html',height:300,width:800, allowedContent: true});
                 		     CKEDITOR.replace('paritionframetext',{language: 'html',height:300,width:800, allowedContent: true});
                 		     CKEDITOR.replace('paneltext',{language: 'html',height:300,width:800, allowedContent: true});
                 		     CKEDITOR.replace('windowcellingtext',{language: 'html',height:300,width:800, allowedContent: true});
@@ -517,77 +691,407 @@ var obj={};
                 		     },
              	 	 		close: function (e, u) {
              	 	 			if(btn==1){
-             	 	 				DestroyCKEditorInstances('fpvctext');
-            	 	 					 $('form[name="fpvc"]')[0].reset();
-            	 	 					 $('#fpvc').hide();
-      	 		          			 $("#selectStages").validationEngine('hideAll'); 
+             	 	 				$('form[name="general"]')[0].reset();
+	                        		DestroyCKEditorInstances1('generaltext');
+             	 	 				$('form[name="fpvc"]')[0].reset();
+		                        		DestroyCKEditorInstances2('fpvctext');
+		                        		$('form[name="paritionFrame"]')[0].reset();
+	                        		 DestroyCKEditorInstances3('paritionframetext');
+	                        		 $('form[name="panel"]')[0].reset();
+		                        		 DestroyCKEditorInstances4('paneltext');
+		                        		$('form[name="windowCelling"]')[0].reset();
+	                        		 DestroyCKEditorInstances5('windowcellingtext');
+	                        		$('form[name="moulding"]')[0].reset();
+		                        		 DestroyCKEditorInstances6('mouldingtext');
+		                        		$('form[name="seatBerth"]')[0].reset();
+		                        		DestroyCKEditorInstances7('seatBerthtext');
+		                        		$('form[name="lavatory"]')[0].reset();
+		                        		DestroyCKEditorInstances8('lavatorytext');
+		                        		$('form[name="plumbing"]')[0].reset();
+	                        		 DestroyCKEditorInstances9('plumbingtext');
+	                        		 $('form[name="airBrake"]')[0].reset();
+		        	 	 			 	DestroyCKEditorInstances10('airbraketext');
+		        	 	 				$('form[name="coachLowering"]')[0].reset();
+	        	 	 			 		DestroyCKEditorInstances11('coachloweringtext');
+	        	 	 			 		$('form[name="paint"]')[0].reset();
+	        	 	 			 		DestroyCKEditorInstances12('painttext');
+	        	 	 			 		$('form[name="coachCleaning"]')[0].reset();
+	        	 	 			 		DestroyCKEditorInstances13('coachcleaningtext');
+	        	 	 			 		$("#general").hide();
+	                                     $(this).dialog('close');
              	 	 			}
              	 	 			else if(btn==2){
-             	 	 				DestroyCKEditorInstances('paritionframetext'); 
-             	 	 				$('form[name="paritionFrame"]')[0].reset();
-                   	 	 			$('#paritionFrame').hide();
-                   	 	 			$("#selectStages").validationEngine('hideAll'); 
-                    	 	 		}
-             	 	 			else if(btn==3){
-             	 	 				DestroyCKEditorInstances('paneltext');
-             	 	 				$('form[name="panel"]')[0].reset();
-                  	 	 			$('#panel').hide();
-                  	 	 			$("#selectStages").validationEngine('hideAll'); 
-                   	 	 		}
-             	 	 			else if(btn==4){
-             	 	 				DestroyCKEditorInstances('windowcellingtext');
-             	 	 				$('form[name="windowCelling"]')[0].reset();
-                 	 	 			$('#windowCelling').hide();
-                 	 	 			$("#selectStages").validationEngine('hideAll'); 
-                  	 	 		}
-             	 	 			else if(btn==5){
-             	 	 				DestroyCKEditorInstances('mouldingtext'); 	 
-             	 	 				$('form[name="moulding"]')[0].reset();
-                	 	 			$('#moulding').hide();
-                	 	 			$("#selectStages").validationEngine('hideAll'); 
-                 	 	 		}
-             	 	 			else if(btn==6){
-             	 	 				DestroyCKEditorInstances('seatBerthtext'); 
-             	 	 				$('form[name="seatBerth"]')[0].reset();
-               	 	 				 $('#seatBerth').hide();
-               	 	 				 $("#selectStages").validationEngine('hideAll'); 
-                	 	 			}
-             	 	 			else if(btn==7){
-             	 	 				DestroyCKEditorInstances('lavatorytext');
-             	 	 				$('form[name="lavatory"]')[0].reset();
-              	 	 			 	$('#lavatory').hide();
-              	 	 			 	$("#selectStages").validationEngine('hideAll'); 
-               	 	 			}
-             	 	 			else if(btn==8){
-             	 	 				DestroyCKEditorInstances('plumbingtext');
-             	 	 			 	 $('form[name="plumbing"]')[0].reset();
-             	 	 			 	$('#plumbing').hide();
-             	 	 			 	$("#selectStages").validationEngine('hideAll'); 
-              	 	 			}
-             	 	 			else if(btn==9){
-            	 	 			 	 	 
-             	 	 				DestroyCKEditorInstances('airbraketext');
-             	 	 				$('form[name="airBrake"]')[0].reset();
-            	 	 			 		$('#airBrake').hide();
-            	 	 				 	$("#selectStages").validationEngine('hideAll'); 
+             	 	 				$('form[name="general"]')[0].reset();
+	                        		DestroyCKEditorInstances1('generaltext');
+             	 	 				$('form[name="fpvc"]')[0].reset();
+		                        		DestroyCKEditorInstances2('fpvctext');
+		                        		$('form[name="paritionFrame"]')[0].reset();
+	                        		 DestroyCKEditorInstances3('paritionframetext');
+	                        		 $('form[name="panel"]')[0].reset();
+		                        		 DestroyCKEditorInstances4('paneltext');
+		                        		$('form[name="windowCelling"]')[0].reset();
+	                        		 DestroyCKEditorInstances5('windowcellingtext');
+	                        		$('form[name="moulding"]')[0].reset();
+		                        		 DestroyCKEditorInstances6('mouldingtext');
+		                        		$('form[name="seatBerth"]')[0].reset();
+		                        		DestroyCKEditorInstances7('seatBerthtext');
+		                        		$('form[name="lavatory"]')[0].reset();
+		                        		DestroyCKEditorInstances8('lavatorytext');
+		                        		$('form[name="plumbing"]')[0].reset();
+	                        		 DestroyCKEditorInstances9('plumbingtext');
+	                        		 $('form[name="airBrake"]')[0].reset();
+		        	 	 			 	DestroyCKEditorInstances10('airbraketext');
+		        	 	 				$('form[name="coachLowering"]')[0].reset();
+	        	 	 			 		DestroyCKEditorInstances11('coachloweringtext');
+	        	 	 			 		$('form[name="paint"]')[0].reset();
+	        	 	 			 		DestroyCKEditorInstances12('painttext');
+	        	 	 			 		$('form[name="coachCleaning"]')[0].reset();
+	        	 	 			 		DestroyCKEditorInstances13('coachcleaningtext');
+		                        		$("#fpvc").hide();
+                                     $(this).dialog('close');
+      	 		          			/*  $("#selectStages").validationEngine('hideAll');  */
              	 	 			}
+             	 	 			else if(btn==3){
+             	 	 				$('form[name="general"]')[0].reset();
+	                        		DestroyCKEditorInstances1('generaltext');
+             	 	 				$('form[name="fpvc"]')[0].reset();
+		                        		DestroyCKEditorInstances2('fpvctext');
+		                        		$('form[name="paritionFrame"]')[0].reset();
+	                        		 DestroyCKEditorInstances3('paritionframetext');
+	                        		 $('form[name="panel"]')[0].reset();
+		                        		 DestroyCKEditorInstances4('paneltext');
+		                        		$('form[name="windowCelling"]')[0].reset();
+	                        		 DestroyCKEditorInstances5('windowcellingtext');
+	                        		$('form[name="moulding"]')[0].reset();
+		                        		 DestroyCKEditorInstances6('mouldingtext');
+		                        		$('form[name="seatBerth"]')[0].reset();
+		                        		DestroyCKEditorInstances7('seatBerthtext');
+		                        		$('form[name="lavatory"]')[0].reset();
+		                        		DestroyCKEditorInstances8('lavatorytext');
+		                        		$('form[name="plumbing"]')[0].reset();
+	                        		 DestroyCKEditorInstances9('plumbingtext');
+	                        		 $('form[name="airBrake"]')[0].reset();
+		        	 	 			 	DestroyCKEditorInstances10('airbraketext');
+		        	 	 				$('form[name="coachLowering"]')[0].reset();
+	        	 	 			 		DestroyCKEditorInstances11('coachloweringtext');
+	        	 	 			 		$('form[name="paint"]')[0].reset();
+	        	 	 			 		DestroyCKEditorInstances12('painttext');
+	        	 	 			 		$('form[name="coachCleaning"]')[0].reset();
+	        	 	 			 		DestroyCKEditorInstances13('coachcleaningtext');
+		                        		$("#paritionFrame").hide();
+                                     $(this).dialog('close');
+                   	 	 			/* $("#selectStages").validationEngine('hideAll'); */ 
+                    	 	 		}
+             	 	 			else if(btn==4){
+             	 	 				$('form[name="general"]')[0].reset();
+	                        		DestroyCKEditorInstances1('generaltext');
+             	 	 				$('form[name="fpvc"]')[0].reset();
+		                        		DestroyCKEditorInstances2('fpvctext');
+		                        		$('form[name="paritionFrame"]')[0].reset();
+	                        		 DestroyCKEditorInstances3('paritionframetext');
+	                        		 $('form[name="panel"]')[0].reset();
+		                        		 DestroyCKEditorInstances4('paneltext');
+		                        		$('form[name="windowCelling"]')[0].reset();
+	                        		 DestroyCKEditorInstances5('windowcellingtext');
+	                        		$('form[name="moulding"]')[0].reset();
+		                        		 DestroyCKEditorInstances6('mouldingtext');
+		                        		$('form[name="seatBerth"]')[0].reset();
+		                        		DestroyCKEditorInstances7('seatBerthtext');
+		                        		$('form[name="lavatory"]')[0].reset();
+		                        		DestroyCKEditorInstances8('lavatorytext');
+		                        		$('form[name="plumbing"]')[0].reset();
+	                        		 DestroyCKEditorInstances9('plumbingtext');
+	                        		 $('form[name="airBrake"]')[0].reset();
+		        	 	 			 	DestroyCKEditorInstances10('airbraketext');
+		        	 	 				$('form[name="coachLowering"]')[0].reset();
+	        	 	 			 		DestroyCKEditorInstances11('coachloweringtext');
+	        	 	 			 		$('form[name="paint"]')[0].reset();
+	        	 	 			 		DestroyCKEditorInstances12('painttext');
+	        	 	 			 		$('form[name="coachCleaning"]')[0].reset();
+	        	 	 			 		DestroyCKEditorInstances13('coachcleaningtext');
+	        	 	 			 		$("#panel").hide();
+                                     $(this).dialog('close');
+                  	 	 			/* $("#selectStages").validationEngine('hideAll'); */ 
+                   	 	 		}
+             	 	 			else if(btn==5){
+             	 	 				$('form[name="general"]')[0].reset();
+	                        		DestroyCKEditorInstances1('generaltext');
+             	 	 				$('form[name="fpvc"]')[0].reset();
+		                        		DestroyCKEditorInstances2('fpvctext');
+		                        		$('form[name="paritionFrame"]')[0].reset();
+	                        		 DestroyCKEditorInstances3('paritionframetext');
+	                        		 $('form[name="panel"]')[0].reset();
+		                        		 DestroyCKEditorInstances4('paneltext');
+		                        		$('form[name="windowCelling"]')[0].reset();
+	                        		 DestroyCKEditorInstances5('windowcellingtext');
+	                        		$('form[name="moulding"]')[0].reset();
+		                        		 DestroyCKEditorInstances6('mouldingtext');
+		                        		$('form[name="seatBerth"]')[0].reset();
+		                        		DestroyCKEditorInstances7('seatBerthtext');
+		                        		$('form[name="lavatory"]')[0].reset();
+		                        		DestroyCKEditorInstances8('lavatorytext');
+		                        		$('form[name="plumbing"]')[0].reset();
+	                        		 DestroyCKEditorInstances9('plumbingtext');
+	                        		 $('form[name="airBrake"]')[0].reset();
+		        	 	 			 	DestroyCKEditorInstances10('airbraketext');
+		        	 	 				$('form[name="coachLowering"]')[0].reset();
+	        	 	 			 		DestroyCKEditorInstances11('coachloweringtext');
+	        	 	 			 		$('form[name="paint"]')[0].reset();
+	        	 	 			 		DestroyCKEditorInstances12('painttext');
+	        	 	 			 		$('form[name="coachCleaning"]')[0].reset();
+	        	 	 			 		DestroyCKEditorInstances13('coachcleaningtext');
+		                        		$("#windowCelling").hide();
+                                     $(this).dialog('close');
+                 	 	 			/* $("#selectStages").validationEngine('hideAll'); */ 
+                  	 	 		}
+             	 	 			else if(btn==6){
+             	 	 				$('form[name="general"]')[0].reset();
+	                        		DestroyCKEditorInstances1('generaltext');
+             	 	 				$('form[name="fpvc"]')[0].reset();
+		                        		DestroyCKEditorInstances2('fpvctext');
+		                        		$('form[name="paritionFrame"]')[0].reset();
+	                        		 DestroyCKEditorInstances3('paritionframetext');
+	                        		 $('form[name="panel"]')[0].reset();
+		                        		 DestroyCKEditorInstances4('paneltext');
+		                        		$('form[name="windowCelling"]')[0].reset();
+	                        		 DestroyCKEditorInstances5('windowcellingtext');
+	                        		$('form[name="moulding"]')[0].reset();
+		                        		 DestroyCKEditorInstances6('mouldingtext');
+		                        		$('form[name="seatBerth"]')[0].reset();
+		                        		DestroyCKEditorInstances7('seatBerthtext');
+		                        		$('form[name="lavatory"]')[0].reset();
+		                        		DestroyCKEditorInstances8('lavatorytext');
+		                        		$('form[name="plumbing"]')[0].reset();
+	                        		 DestroyCKEditorInstances9('plumbingtext');
+	                        		 $('form[name="airBrake"]')[0].reset();
+		        	 	 			 	DestroyCKEditorInstances10('airbraketext');
+		        	 	 				$('form[name="coachLowering"]')[0].reset();
+	        	 	 			 		DestroyCKEditorInstances11('coachloweringtext');
+	        	 	 			 		$('form[name="paint"]')[0].reset();
+	        	 	 			 		DestroyCKEditorInstances12('painttext');
+	        	 	 			 		$('form[name="coachCleaning"]')[0].reset();
+	        	 	 			 		DestroyCKEditorInstances13('coachcleaningtext');
+		                        		$("#moulding").hide();
+                                     $(this).dialog('close');
+                	 	 			/* $("#selectStages").validationEngine('hideAll'); */ 
+                 	 	 		}
+             	 	 			else if(btn==7){
+             	 	 				$('form[name="general"]')[0].reset();
+	                        		DestroyCKEditorInstances1('generaltext');
+             	 	 				$('form[name="fpvc"]')[0].reset();
+		                        		DestroyCKEditorInstances2('fpvctext');
+		                        		$('form[name="paritionFrame"]')[0].reset();
+	                        		 DestroyCKEditorInstances3('paritionframetext');
+	                        		 $('form[name="panel"]')[0].reset();
+		                        		 DestroyCKEditorInstances4('paneltext');
+		                        		$('form[name="windowCelling"]')[0].reset();
+	                        		 DestroyCKEditorInstances5('windowcellingtext');
+	                        		$('form[name="moulding"]')[0].reset();
+		                        		 DestroyCKEditorInstances6('mouldingtext');
+		                        		$('form[name="seatBerth"]')[0].reset();
+		                        		DestroyCKEditorInstances7('seatBerthtext');
+		                        		$('form[name="lavatory"]')[0].reset();
+		                        		DestroyCKEditorInstances8('lavatorytext');
+		                        		$('form[name="plumbing"]')[0].reset();
+	                        		 DestroyCKEditorInstances9('plumbingtext');
+	                        		 $('form[name="airBrake"]')[0].reset();
+		        	 	 			 	DestroyCKEditorInstances10('airbraketext');
+		        	 	 				$('form[name="coachLowering"]')[0].reset();
+	        	 	 			 		DestroyCKEditorInstances11('coachloweringtext');
+	        	 	 			 		$('form[name="paint"]')[0].reset();
+	        	 	 			 		DestroyCKEditorInstances12('painttext');
+	        	 	 			 		$('form[name="coachCleaning"]')[0].reset();
+	        	 	 			 		DestroyCKEditorInstances13('coachcleaningtext');
+		                        		$("#seatBerth").hide();
+                                     $(this).dialog('close');
+               	 	 				/*  $("#selectStages").validationEngine('hideAll'); */ 
+                	 	 			}
+             	 	 			else if(btn==8){
+             	 	 				$('form[name="general"]')[0].reset();
+	                        		DestroyCKEditorInstances1('generaltext');
+             	 	 				$('form[name="fpvc"]')[0].reset();
+		                        		DestroyCKEditorInstances2('fpvctext');
+		                        		$('form[name="paritionFrame"]')[0].reset();
+	                        		 DestroyCKEditorInstances3('paritionframetext');
+	                        		 $('form[name="panel"]')[0].reset();
+		                        		 DestroyCKEditorInstances4('paneltext');
+		                        		$('form[name="windowCelling"]')[0].reset();
+	                        		 DestroyCKEditorInstances5('windowcellingtext');
+	                        		$('form[name="moulding"]')[0].reset();
+		                        		 DestroyCKEditorInstances6('mouldingtext');
+		                        		$('form[name="seatBerth"]')[0].reset();
+		                        		DestroyCKEditorInstances7('seatBerthtext');
+		                        		$('form[name="lavatory"]')[0].reset();
+		                        		DestroyCKEditorInstances8('lavatorytext');
+		                        		$('form[name="plumbing"]')[0].reset();
+	                        		 DestroyCKEditorInstances9('plumbingtext');
+	                        		 $('form[name="airBrake"]')[0].reset();
+		        	 	 			 	DestroyCKEditorInstances10('airbraketext');
+		        	 	 				$('form[name="coachLowering"]')[0].reset();
+	        	 	 			 		DestroyCKEditorInstances11('coachloweringtext');
+	        	 	 			 		$('form[name="paint"]')[0].reset();
+	        	 	 			 		DestroyCKEditorInstances12('painttext');
+	        	 	 			 		$('form[name="coachCleaning"]')[0].reset();
+	        	 	 			 		DestroyCKEditorInstances13('coachcleaningtext');
+		                        		$("#lavatory").hide();
+                                     $(this).dialog('close');
+              	 	 			 	/* $("#selectStages").validationEngine('hideAll');  */
+               	 	 			}
+             	 	 			else if(btn==9){
+             	 	 				$('form[name="general"]')[0].reset();
+	                        		DestroyCKEditorInstances1('generaltext');
+             	 	 				$('form[name="fpvc"]')[0].reset();
+		                        		DestroyCKEditorInstances2('fpvctext');
+		                        		$('form[name="paritionFrame"]')[0].reset();
+	                        		 DestroyCKEditorInstances3('paritionframetext');
+	                        		 $('form[name="panel"]')[0].reset();
+		                        		 DestroyCKEditorInstances4('paneltext');
+		                        		$('form[name="windowCelling"]')[0].reset();
+	                        		 DestroyCKEditorInstances5('windowcellingtext');
+	                        		$('form[name="moulding"]')[0].reset();
+		                        		 DestroyCKEditorInstances6('mouldingtext');
+		                        		$('form[name="seatBerth"]')[0].reset();
+		                        		DestroyCKEditorInstances7('seatBerthtext');
+		                        		$('form[name="lavatory"]')[0].reset();
+		                        		DestroyCKEditorInstances8('lavatorytext');
+		                        		$('form[name="plumbing"]')[0].reset();
+	                        		 DestroyCKEditorInstances9('plumbingtext');
+	                        		 $('form[name="airBrake"]')[0].reset();
+		        	 	 			 	DestroyCKEditorInstances10('airbraketext');
+		        	 	 				$('form[name="coachLowering"]')[0].reset();
+	        	 	 			 		DestroyCKEditorInstances11('coachloweringtext');
+	        	 	 			 		$('form[name="paint"]')[0].reset();
+	        	 	 			 		DestroyCKEditorInstances12('painttext');
+	        	 	 			 		$('form[name="coachCleaning"]')[0].reset();
+	        	 	 			 		DestroyCKEditorInstances13('coachcleaningtext');
+		                        		$("#plumbingtext").hide();
+                                     $(this).dialog('close');
+             	 	 			 	/* $("#selectStages").validationEngine('hideAll'); */ 
+              	 	 			}
              	 	 			else if(btn==10){
-             	 	 				DestroyCKEditorInstances('coachloweringtext');	
-             	 	 				$('form[name="coachLowering"]')[0].reset();
-            	 	 			 		$('#coachLowering').hide();
-            	 	 				 	$("#selectStages").validationEngine('hideAll'); 
+            	 	 			 	 	 
+             	 	 				$('form[name="general"]')[0].reset();
+	                        		DestroyCKEditorInstances1('generaltext');
+             	 	 				$('form[name="fpvc"]')[0].reset();
+		                        		DestroyCKEditorInstances2('fpvctext');
+		                        		$('form[name="paritionFrame"]')[0].reset();
+	                        		 DestroyCKEditorInstances3('paritionframetext');
+	                        		 $('form[name="panel"]')[0].reset();
+		                        		 DestroyCKEditorInstances4('paneltext');
+		                        		$('form[name="windowCelling"]')[0].reset();
+	                        		 DestroyCKEditorInstances5('windowcellingtext');
+	                        		$('form[name="moulding"]')[0].reset();
+		                        		 DestroyCKEditorInstances6('mouldingtext');
+		                        		$('form[name="seatBerth"]')[0].reset();
+		                        		DestroyCKEditorInstances7('seatBerthtext');
+		                        		$('form[name="lavatory"]')[0].reset();
+		                        		DestroyCKEditorInstances8('lavatorytext');
+		                        		$('form[name="plumbing"]')[0].reset();
+	                        		 DestroyCKEditorInstances9('plumbingtext');
+	                        		 $('form[name="airBrake"]')[0].reset();
+		        	 	 			 	DestroyCKEditorInstances10('airbraketext');
+		        	 	 				$('form[name="coachLowering"]')[0].reset();
+	        	 	 			 		DestroyCKEditorInstances11('coachloweringtext');
+	        	 	 			 		$('form[name="paint"]')[0].reset();
+	        	 	 			 		DestroyCKEditorInstances12('painttext');
+	        	 	 			 		$('form[name="coachCleaning"]')[0].reset();
+	        	 	 			 		DestroyCKEditorInstances13('coachcleaningtext');
+		                        		$("#airBrake").hide();
+                                     $(this).dialog('close');
+            	 	 				 	/* $("#selectStages").validationEngine('hideAll'); */ 
              	 	 			}
              	 	 			else if(btn==11){
-             	 	 				DestroyCKEditorInstances('painttext');	
-             	 	 				$('form[name="paint"]')[0].reset();
-            	 	 			 		$('#paint').hide();
-            	 		 			 	$("#selectStages").validationEngine('hideAll'); 
+             	 	 				$('form[name="general"]')[0].reset();
+	                        		DestroyCKEditorInstances1('generaltext');
+             	 	 				$('form[name="fpvc"]')[0].reset();
+		                        		DestroyCKEditorInstances2('fpvctext');
+		                        		$('form[name="paritionFrame"]')[0].reset();
+	                        		 DestroyCKEditorInstances3('paritionframetext');
+	                        		 $('form[name="panel"]')[0].reset();
+		                        		 DestroyCKEditorInstances4('paneltext');
+		                        		$('form[name="windowCelling"]')[0].reset();
+	                        		 DestroyCKEditorInstances5('windowcellingtext');
+	                        		$('form[name="moulding"]')[0].reset();
+		                        		 DestroyCKEditorInstances6('mouldingtext');
+		                        		$('form[name="seatBerth"]')[0].reset();
+		                        		DestroyCKEditorInstances7('seatBerthtext');
+		                        		$('form[name="lavatory"]')[0].reset();
+		                        		DestroyCKEditorInstances8('lavatorytext');
+		                        		$('form[name="plumbing"]')[0].reset();
+	                        		 DestroyCKEditorInstances9('plumbingtext');
+	                        		 $('form[name="airBrake"]')[0].reset();
+		        	 	 			 	DestroyCKEditorInstances10('airbraketext');
+		        	 	 				$('form[name="coachLowering"]')[0].reset();
+	        	 	 			 		DestroyCKEditorInstances11('coachloweringtext');
+	        	 	 			 		$('form[name="paint"]')[0].reset();
+	        	 	 			 		DestroyCKEditorInstances12('painttext');
+	        	 	 			 		$('form[name="coachCleaning"]')[0].reset();
+	        	 	 			 		DestroyCKEditorInstances13('coachcleaningtext');
+		                        		$("#coachLowering").hide();
+                                     $(this).dialog('close');
+            	 	 				 	/* $("#selectStages").validationEngine('hideAll');  */
              	 	 			}
              	 	 			else if(btn==12){
-             	 	 				DestroyCKEditorInstances('coachcleaningtext');	 
-             	 	 				$('form[name="coachCleaning"]')[0].reset();
-            	 	 			 		$('#coachCleaning').hide();
-            	 		 			 	$("#selectStages").validationEngine('hideAll'); 
+             	 	 				$('form[name="general"]')[0].reset();
+	                        		DestroyCKEditorInstances1('generaltext');
+             	 	 				$('form[name="fpvc"]')[0].reset();
+		                        		DestroyCKEditorInstances2('fpvctext');
+		                        		$('form[name="paritionFrame"]')[0].reset();
+	                        		 DestroyCKEditorInstances3('paritionframetext');
+	                        		 $('form[name="panel"]')[0].reset();
+		                        		 DestroyCKEditorInstances4('paneltext');
+		                        		$('form[name="windowCelling"]')[0].reset();
+	                        		 DestroyCKEditorInstances5('windowcellingtext');
+	                        		$('form[name="moulding"]')[0].reset();
+		                        		 DestroyCKEditorInstances6('mouldingtext');
+		                        		$('form[name="seatBerth"]')[0].reset();
+		                        		DestroyCKEditorInstances7('seatBerthtext');
+		                        		$('form[name="lavatory"]')[0].reset();
+		                        		DestroyCKEditorInstances8('lavatorytext');
+		                        		$('form[name="plumbing"]')[0].reset();
+	                        		 DestroyCKEditorInstances9('plumbingtext');
+	                        		 $('form[name="airBrake"]')[0].reset();
+		        	 	 			 	DestroyCKEditorInstances10('airbraketext');
+		        	 	 				$('form[name="coachLowering"]')[0].reset();
+	        	 	 			 		DestroyCKEditorInstances11('coachloweringtext');
+	        	 	 			 		$('form[name="paint"]')[0].reset();
+	        	 	 			 		DestroyCKEditorInstances12('painttext');
+	        	 	 			 		$('form[name="coachCleaning"]')[0].reset();
+	        	 	 			 		DestroyCKEditorInstances13('coachcleaningtext');
+		                        		$("#paint").hide();
+                                     $(this).dialog('close');
+            	 		 			 	/* $("#selectStages").validationEngine('hideAll');  */
+             	 	 			}
+             	 	 			else if(btn==13){
+             	 	 				$('form[name="general"]')[0].reset();
+	                        		DestroyCKEditorInstances1('generaltext');
+             	 	 				$('form[name="fpvc"]')[0].reset();
+		                        		DestroyCKEditorInstances2('fpvctext');
+		                        		$('form[name="paritionFrame"]')[0].reset();
+	                        		 DestroyCKEditorInstances3('paritionframetext');
+	                        		 $('form[name="panel"]')[0].reset();
+		                        		 DestroyCKEditorInstances4('paneltext');
+		                        		$('form[name="windowCelling"]')[0].reset();
+	                        		 DestroyCKEditorInstances5('windowcellingtext');
+	                        		$('form[name="moulding"]')[0].reset();
+		                        		 DestroyCKEditorInstances6('mouldingtext');
+		                        		$('form[name="seatBerth"]')[0].reset();
+		                        		DestroyCKEditorInstances7('seatBerthtext');
+		                        		$('form[name="lavatory"]')[0].reset();
+		                        		DestroyCKEditorInstances8('lavatorytext');
+		                        		$('form[name="plumbing"]')[0].reset();
+	                        		 DestroyCKEditorInstances9('plumbingtext');
+	                        		 $('form[name="airBrake"]')[0].reset();
+		        	 	 			 	DestroyCKEditorInstances10('airbraketext');
+		        	 	 				$('form[name="coachLowering"]')[0].reset();
+	        	 	 			 		DestroyCKEditorInstances11('coachloweringtext');
+	        	 	 			 		$('form[name="paint"]')[0].reset();
+	        	 	 			 		DestroyCKEditorInstances12('painttext');
+	        	 	 			 		$('form[name="coachCleaning"]')[0].reset();
+	        	 	 			 		DestroyCKEditorInstances13('coachcleaningtext');
+	        	 	 			 		$("#coachCleaning").hide();
+	                                     $(this).dialog('close');
+	            	 		 			 	/* $("#selectStages").validationEngine('hideAll');  */
              	 	 			}
              	 	 			
              	 	 			
@@ -598,9 +1102,56 @@ var obj={};
                                     text: "Submit",
                                      id: "my-button-submit",
                                      click:function () {
-                                     	
-                                 	if(btn==1){
-     									
+                                    	 if(btn==1){
+                                    		 if ($('#shiftOfTesting').validationEngine('validate')) {
+                                              	
+                                                 return false;
+                                             }
+         	  								if ($('#docDate').validationEngine('validate')) {
+         									                                    	
+         		                                return false;
+         		                            }
+         									if ($('#dateOfTesting').validationEngine('validate')) {
+         														
+         									    return false;
+         									}
+                                          	var c=confirm("Do you want to submit data!!");
+                                          	if(c==false){return false;}
+                                           	
+                                          	//alert(CKEDITOR.instances.fpvctext.getData()) ;  // retieve value of ckeditor
+                                         	//alert(CKEDITOR.instances['fpvctext'].getData());// another way to retieve data
+                                         	  	   
+                                          		    	   
+                                         	$.ajax({
+                         						url : "saveGeneralText",  //action-name as defined in struts.xml
+                         						dataType: 'json', 
+                         						data : {
+                         							furnishingAssetId: record.furnishingAssetId,
+                         							textGeneral: CKEDITOR.instances['generaltext'].getData(),
+                         							docDate:$('#docDate').val(),
+                        							dateOfTesting:$('#dateOfTesting').val(),
+                        							shiftOfTesting:$('#shiftOfTesting').val(),
+                         						},
+                         						
+                         						type : 'POST',
+                         						async : false,
+                                 	 		})
+                         						.done(function( msg ) {
+                         							$('#docDate').val(''),
+                        							$('#dateOfTesting').val(''),
+                        							$('#shiftOfTesting').val(''),
+                         							$('#generaltext').val(''),
+                         							$('#FurnishingProductionTableContainer').jtable('load');
+              								  })
+               								.error(function (msg){
+               									
+               									alert("Error Fetching Data");
+               								});
+                                          	$("#general").hide();
+                                          	
+                                          	}
+                                     else if(btn==2){
+                                    	 
                                  	var c=confirm("Do you want to submit data!!");
                                  	if(c==false){return false;}
                                   	
@@ -609,10 +1160,11 @@ var obj={};
                                 	  	   
                                  		    	   
                                 	$.ajax({
-                						url : "saveFpvc",  //action-name as defined in struts.xml
+                						url : "saveFpvcText",  //action-name as defined in struts.xml
                 						dataType: 'json', 
                 						data : {
                 							furnishingAssetId: record.furnishingAssetId,
+                							
                 							textFpvc: CKEDITOR.instances['fpvctext'].getData(),
                 						},
                 						
@@ -631,7 +1183,7 @@ var obj={};
                                  	$("#fpvc").hide();
                                  	
                                  	}
-                                 	else if(btn==2){
+                                 	else if(btn==3){
                                  		var c=confirm("Do you want to submit data!!");
                                      	if(c==false){return false;}
                                       
@@ -660,7 +1212,7 @@ var obj={};
                                      	$("#paritionFrame").hide();
                                      	
                                  	}
-                                 	  else if(btn==3){
+                                 	  else if(btn==4){
                                  		var c=confirm("Do you want to submit data!!");
                                      	if(c==false){return false;}
                                      	//alert(CKEDITOR.instances['paneltext'].getData());
@@ -689,7 +1241,7 @@ var obj={};
           								});
                                      	$("#panel").hide();
                                  	}  
-                                 	  else if(btn==4){
+                                 	  else if(btn==5){
                                  		  var c=confirm("Do you want to submit data!!");
                                        	if(c==false){return false;}
                                         
@@ -717,7 +1269,7 @@ var obj={};
             								});
                                      	$("#windowCelling").hide();
                                  	  }
-                                 	  else if(btn==5){
+                                 	  else if(btn==6){
                                  		  var c=confirm("Do you want to submit data!!");
                                        	if(c==false){return false;}
                                         
@@ -746,7 +1298,7 @@ var obj={};
             								});
                                        	$("#moulding").hide();
                                  	  }
-                                 	  else if(btn==6){
+                                 	  else if(btn==7){
                                  		  var c=confirm("Do you want to submit data!!");
                                        	if(c==false){return false;}
                                         
@@ -774,7 +1326,7 @@ var obj={};
             								});
                                      	$("#seatBerth").hide();
                                  	  }
-                                 	   else if(btn==7){
+                                 	   else if(btn==8){
                                  		  var c=confirm("Do you want to submit data!!");
                                        	if(c==false){return false;}
                                         
@@ -802,7 +1354,7 @@ var obj={};
             								});
                                        	$("#lavatory").hide();
                                  	  }
-                                 	  else if(btn==8){
+                                 	  else if(btn==9){
                                  		  var c=confirm("Do you want to submit data!!");
                                        	if(c==false){return false;}
                                         
@@ -830,7 +1382,7 @@ var obj={};
             								});
                                        	$("#plumbing").hide();
                                  	  }
-                                 	  else if(btn==9){
+                                 	  else if(btn==10){
                                  		  var c=confirm("Do you want to submit data!!");
                                        	if(c==false){return false;}
                                         
@@ -858,7 +1410,7 @@ var obj={};
             								});
                                        	$("#airBrake").hide();
                                        } 
-                                 	  else if(btn==10){
+                                 	  else if(btn==11){
                                  		  var c=confirm("Do you want to submit data!!");
                                        	if(c==false){return false;}
                                         
@@ -889,7 +1441,7 @@ var obj={};
             								});
                                        	$("#coachLowering").hide();
                                        }
-                                 	  else if(btn==11){
+                                 	  else if(btn==12){
                                  		  var c=confirm("Do you want to submit data!!");
                                        	if(c==false){return false;}
                                         
@@ -918,7 +1470,7 @@ var obj={};
             								});
                                        	$("#paint").hide();
                                        }
-                                 	  else if(btn==12){
+                                 	  else if(btn==13){
                                  		  var c=confirm("Do you want to submit data!!");
                                        	if(c==false){return false;}
                                         
@@ -937,7 +1489,7 @@ var obj={};
                        						.done(function( msg ) {
                        							
                        							$('#coachcleaningtext').val(''),
-                       								
+                       							$('#selectStages').dialog('close'),	
                        							$('#FurnishingProductionTableContainer').jtable('load');
             								  })
             								.error(function (msg){
@@ -954,75 +1506,405 @@ var obj={};
                                  },
      		                        Close: function () {
      		                        	if(btn==1){
-     		                        		DestroyCKEditorInstances1('fpvctext');
-     		                        		$('form[name="fpvc"]')[0].reset();
-     		                        		$(this).hide();
+     	             	 	 				$('form[name="general"]')[0].reset();
+     		                        		DestroyCKEditorInstances1('generaltext');
+     	             	 	 				$('form[name="fpvc"]')[0].reset();
+     			                        		DestroyCKEditorInstances2('fpvctext');
+     			                        		$('form[name="paritionFrame"]')[0].reset();
+     		                        		 DestroyCKEditorInstances3('paritionframetext');
+     		                        		 $('form[name="panel"]')[0].reset();
+     			                        		 DestroyCKEditorInstances4('paneltext');
+     			                        		$('form[name="windowCelling"]')[0].reset();
+     		                        		 DestroyCKEditorInstances5('windowcellingtext');
+     		                        		$('form[name="moulding"]')[0].reset();
+     			                        		 DestroyCKEditorInstances6('mouldingtext');
+     			                        		$('form[name="seatBerth"]')[0].reset();
+     			                        		DestroyCKEditorInstances7('seatBerthtext');
+     			                        		$('form[name="lavatory"]')[0].reset();
+     			                        		DestroyCKEditorInstances8('lavatorytext');
+     			                        		$('form[name="plumbing"]')[0].reset();
+     		                        		 DestroyCKEditorInstances9('plumbingtext');
+     		                        		 $('form[name="airBrake"]')[0].reset();
+     			        	 	 			 	DestroyCKEditorInstances10('airbraketext');
+     			        	 	 				$('form[name="coachLowering"]')[0].reset();
+     		        	 	 			 		DestroyCKEditorInstances11('coachloweringtext');
+     		        	 	 			 		$('form[name="paint"]')[0].reset();
+     		        	 	 			 		DestroyCKEditorInstances12('painttext');
+     		        	 	 			 		$('form[name="coachCleaning"]')[0].reset();
+     		        	 	 			 		DestroyCKEditorInstances13('coachcleaningtext');
+     		        	 	 			 		$("#general").hide();
+     		                                     $(this).dialog('close');
+     	             	 	 			}
+     		                        	else if(btn==2){
+     		                        		  
+     		                        		$('form[name="general"]')[0].reset();
+     		                        		DestroyCKEditorInstances1('generaltext');
+     	             	 	 				$('form[name="fpvc"]')[0].reset();
+     			                        		DestroyCKEditorInstances2('fpvctext');
+     			                        		$('form[name="paritionFrame"]')[0].reset();
+     		                        		 DestroyCKEditorInstances3('paritionframetext');
+     		                        		 $('form[name="panel"]')[0].reset();
+     			                        		 DestroyCKEditorInstances4('paneltext');
+     			                        		$('form[name="windowCelling"]')[0].reset();
+     		                        		 DestroyCKEditorInstances5('windowcellingtext');
+     		                        		$('form[name="moulding"]')[0].reset();
+     			                        		 DestroyCKEditorInstances6('mouldingtext');
+     			                        		$('form[name="seatBerth"]')[0].reset();
+     			                        		DestroyCKEditorInstances7('seatBerthtext');
+     			                        		$('form[name="lavatory"]')[0].reset();
+     			                        		DestroyCKEditorInstances8('lavatorytext');
+     			                        		$('form[name="plumbing"]')[0].reset();
+     		                        		 DestroyCKEditorInstances9('plumbingtext');
+     		                        		 $('form[name="airBrake"]')[0].reset();
+     			        	 	 			 	DestroyCKEditorInstances10('airbraketext');
+     			        	 	 				$('form[name="coachLowering"]')[0].reset();
+     		        	 	 			 		DestroyCKEditorInstances11('coachloweringtext');
+     		        	 	 			 		$('form[name="paint"]')[0].reset();
+     		        	 	 			 		DestroyCKEditorInstances12('painttext');
+     		        	 	 			 		$('form[name="coachCleaning"]')[0].reset();
+     		        	 	 			 		DestroyCKEditorInstances13('coachcleaningtext');
+     		                        		$("#fpvc").hide();
                                              $(this).dialog('close');
      		                        	}
-     		                        	else if(btn==2){
-     		                        		DestroyCKEditorInstances2('paritionframetext');
-     		                        		$('form[name="paritionFrame"]')[0].reset();
-     		              	 	 			$(this).hide();
+     		                        	else if(btn==3){
+     		                        		
+     		                        		$('form[name="general"]')[0].reset();
+     		                        		DestroyCKEditorInstances1('generaltext');
+     	             	 	 				$('form[name="fpvc"]')[0].reset();
+     			                        		DestroyCKEditorInstances2('fpvctext');
+     			                        		$('form[name="paritionFrame"]')[0].reset();
+     		                        		 DestroyCKEditorInstances3('paritionframetext');
+     		                        		 $('form[name="panel"]')[0].reset();
+     			                        		 DestroyCKEditorInstances4('paneltext');
+     			                        		$('form[name="windowCelling"]')[0].reset();
+     		                        		 DestroyCKEditorInstances5('windowcellingtext');
+     		                        		$('form[name="moulding"]')[0].reset();
+     			                        		 DestroyCKEditorInstances6('mouldingtext');
+     			                        		$('form[name="seatBerth"]')[0].reset();
+     			                        		DestroyCKEditorInstances7('seatBerthtext');
+     			                        		$('form[name="lavatory"]')[0].reset();
+     			                        		DestroyCKEditorInstances8('lavatorytext');
+     			                        		$('form[name="plumbing"]')[0].reset();
+     		                        		 DestroyCKEditorInstances9('plumbingtext');
+     		                        		 $('form[name="airBrake"]')[0].reset();
+     			        	 	 			 	DestroyCKEditorInstances10('airbraketext');
+     			        	 	 				$('form[name="coachLowering"]')[0].reset();
+     		        	 	 			 		DestroyCKEditorInstances11('coachloweringtext');
+     		        	 	 			 		$('form[name="paint"]')[0].reset();
+     		        	 	 			 		DestroyCKEditorInstances12('painttext');
+     		        	 	 			 		$('form[name="coachCleaning"]')[0].reset();
+     		        	 	 			 		DestroyCKEditorInstances13('coachcleaningtext');
+     		                        		$("#paritionFrame").hide();
       			              	 	 		$(this).dialog('close');
      		        	 		         }
-     		                        	else if(btn==3){
-     		                        		DestroyCKEditorInstances3('paneltext'); 
-     		                        		$('form[name="panel"]')[0].reset();
-     		             	 	 			$(this).hide();
+     		                        	else if(btn==4){
+     		                        		  
+     		                        		$('form[name="general"]')[0].reset();
+     		                        		DestroyCKEditorInstances1('generaltext');
+     	             	 	 				$('form[name="fpvc"]')[0].reset();
+     			                        		DestroyCKEditorInstances2('fpvctext');
+     			                        		$('form[name="paritionFrame"]')[0].reset();
+     		                        		 DestroyCKEditorInstances3('paritionframetext');
+     		                        		 $('form[name="panel"]')[0].reset();
+     			                        		 DestroyCKEditorInstances4('paneltext');
+     			                        		$('form[name="windowCelling"]')[0].reset();
+     		                        		 DestroyCKEditorInstances5('windowcellingtext');
+     		                        		$('form[name="moulding"]')[0].reset();
+     			                        		 DestroyCKEditorInstances6('mouldingtext');
+     			                        		$('form[name="seatBerth"]')[0].reset();
+     			                        		DestroyCKEditorInstances7('seatBerthtext');
+     			                        		$('form[name="lavatory"]')[0].reset();
+     			                        		DestroyCKEditorInstances8('lavatorytext');
+     			                        		$('form[name="plumbing"]')[0].reset();
+     		                        		 DestroyCKEditorInstances9('plumbingtext');
+     		                        		 $('form[name="airBrake"]')[0].reset();
+     			        	 	 			 	DestroyCKEditorInstances10('airbraketext');
+     			        	 	 				$('form[name="coachLowering"]')[0].reset();
+     		        	 	 			 		DestroyCKEditorInstances11('coachloweringtext');
+     		        	 	 			 		$('form[name="paint"]')[0].reset();
+     		        	 	 			 		DestroyCKEditorInstances12('painttext');
+     		        	 	 			 		$('form[name="coachCleaning"]')[0].reset();
+     		        	 	 			 		DestroyCKEditorInstances13('coachcleaningtext');
+     		                        		$("#panel").hide();
      		             	 	 			$(this).dialog('close');
      		                        	}
-     		                        	else if(btn==4){
-     		                        		DestroyCKEditorInstances4('windowcellingtext');
-     		                        		$('form[name="windowCelling"]')[0].reset();
-     		            	 	 			$(this).hide();
+     		                        	else if(btn==5){
+     		                        		 
+     		                        		$('form[name="general"]')[0].reset();
+     		                        		DestroyCKEditorInstances1('generaltext');
+     	             	 	 				$('form[name="fpvc"]')[0].reset();
+     			                        		DestroyCKEditorInstances2('fpvctext');
+     			                        		$('form[name="paritionFrame"]')[0].reset();
+     		                        		 DestroyCKEditorInstances3('paritionframetext');
+     		                        		 $('form[name="panel"]')[0].reset();
+     			                        		 DestroyCKEditorInstances4('paneltext');
+     			                        		$('form[name="windowCelling"]')[0].reset();
+     		                        		 DestroyCKEditorInstances5('windowcellingtext');
+     		                        		$('form[name="moulding"]')[0].reset();
+     			                        		 DestroyCKEditorInstances6('mouldingtext');
+     			                        		$('form[name="seatBerth"]')[0].reset();
+     			                        		DestroyCKEditorInstances7('seatBerthtext');
+     			                        		$('form[name="lavatory"]')[0].reset();
+     			                        		DestroyCKEditorInstances8('lavatorytext');
+     			                        		$('form[name="plumbing"]')[0].reset();
+     		                        		 DestroyCKEditorInstances9('plumbingtext');
+     		                        		 $('form[name="airBrake"]')[0].reset();
+     			        	 	 			 	DestroyCKEditorInstances10('airbraketext');
+     			        	 	 				$('form[name="coachLowering"]')[0].reset();
+     		        	 	 			 		DestroyCKEditorInstances11('coachloweringtext');
+     		        	 	 			 		$('form[name="paint"]')[0].reset();
+     		        	 	 			 		DestroyCKEditorInstances12('painttext');
+     		        	 	 			 		$('form[name="coachCleaning"]')[0].reset();
+     		        	 	 			 		DestroyCKEditorInstances13('coachcleaningtext');
+     		                        		$("#windowCelling").hide();
         		            	 	 		$(this).dialog('close');
      		             	 	 		}
-     		                        	else if(btn==5){
-     		                        		DestroyCKEditorInstances5('mouldingtext');
+     		                        	else if(btn==6){
+     		                        		  
+     		                        		$('form[name="general"]')[0].reset();
+     		                        		DestroyCKEditorInstances1('generaltext');
+     	             	 	 				$('form[name="fpvc"]')[0].reset();
+     			                        		DestroyCKEditorInstances2('fpvctext');
+     			                        		$('form[name="paritionFrame"]')[0].reset();
+     		                        		 DestroyCKEditorInstances3('paritionframetext');
+     		                        		 $('form[name="panel"]')[0].reset();
+     			                        		 DestroyCKEditorInstances4('paneltext');
+     			                        		$('form[name="windowCelling"]')[0].reset();
+     		                        		 DestroyCKEditorInstances5('windowcellingtext');
      		                        		$('form[name="moulding"]')[0].reset();
-     		           	 	 				$(this).hide();
+     			                        		 DestroyCKEditorInstances6('mouldingtext');
+     			                        		$('form[name="seatBerth"]')[0].reset();
+     			                        		DestroyCKEditorInstances7('seatBerthtext');
+     			                        		$('form[name="lavatory"]')[0].reset();
+     			                        		DestroyCKEditorInstances8('lavatorytext');
+     			                        		$('form[name="plumbing"]')[0].reset();
+     		                        		 DestroyCKEditorInstances9('plumbingtext');
+     		                        		 $('form[name="airBrake"]')[0].reset();
+     			        	 	 			 	DestroyCKEditorInstances10('airbraketext');
+     			        	 	 				$('form[name="coachLowering"]')[0].reset();
+     		        	 	 			 		DestroyCKEditorInstances11('coachloweringtext');
+     		        	 	 			 		$('form[name="paint"]')[0].reset();
+     		        	 	 			 		DestroyCKEditorInstances12('painttext');
+     		        	 	 			 		$('form[name="coachCleaning"]')[0].reset();
+     		        	 	 			 		DestroyCKEditorInstances13('coachcleaningtext');
+     		                        		$("#moulding").hide();
      		           	 			 	    $(this).dialog('close');
      		            	 	 		}
-     		                        	else if(btn==6){
-     		                        		DestroyCKEditorInstances6('seatBerthtext');  
-     		                        		$('form[name="seatBerth"]')[0].reset();
-   		  		          	 	 			 $(this).hide();
+     		                        	else if(btn==7){
+     		                        		   
+     		                        		$('form[name="general"]')[0].reset();
+     		                        		DestroyCKEditorInstances1('generaltext');
+     	             	 	 				$('form[name="fpvc"]')[0].reset();
+     			                        		DestroyCKEditorInstances2('fpvctext');
+     			                        		$('form[name="paritionFrame"]')[0].reset();
+     		                        		 DestroyCKEditorInstances3('paritionframetext');
+     		                        		 $('form[name="panel"]')[0].reset();
+     			                        		 DestroyCKEditorInstances4('paneltext');
+     			                        		$('form[name="windowCelling"]')[0].reset();
+     		                        		 DestroyCKEditorInstances5('windowcellingtext');
+     		                        		$('form[name="moulding"]')[0].reset();
+     			                        		 DestroyCKEditorInstances6('mouldingtext');
+     			                        		$('form[name="seatBerth"]')[0].reset();
+     			                        		DestroyCKEditorInstances7('seatBerthtext');
+     			                        		$('form[name="lavatory"]')[0].reset();
+     			                        		DestroyCKEditorInstances8('lavatorytext');
+     			                        		$('form[name="plumbing"]')[0].reset();
+     		                        		 DestroyCKEditorInstances9('plumbingtext');
+     		                        		 $('form[name="airBrake"]')[0].reset();
+     			        	 	 			 	DestroyCKEditorInstances10('airbraketext');
+     			        	 	 				$('form[name="coachLowering"]')[0].reset();
+     		        	 	 			 		DestroyCKEditorInstances11('coachloweringtext');
+     		        	 	 			 		$('form[name="paint"]')[0].reset();
+     		        	 	 			 		DestroyCKEditorInstances12('painttext');
+     		        	 	 			 		$('form[name="coachCleaning"]')[0].reset();
+     		        	 	 			 		DestroyCKEditorInstances13('coachcleaningtext');
+     		                        		$("#seatBerth").hide();
      		          	 	 			 	 $(this).dialog('close');
      		           	 	 			}
-     		                        	else if(btn==7){
-     		                        		DestroyCKEditorInstances7('lavatorytext'); 
-     		                        		$('form[name="lavatory"]')[0].reset();
-     		         	 	 			 	$(this).hide();
+     		                        	else if(btn==8){
+     		                        		   
+     		                        		$('form[name="general"]')[0].reset();
+     		                        		DestroyCKEditorInstances1('generaltext');
+     	             	 	 				$('form[name="fpvc"]')[0].reset();
+     			                        		DestroyCKEditorInstances2('fpvctext');
+     			                        		$('form[name="paritionFrame"]')[0].reset();
+     		                        		 DestroyCKEditorInstances3('paritionframetext');
+     		                        		 $('form[name="panel"]')[0].reset();
+     			                        		 DestroyCKEditorInstances4('paneltext');
+     			                        		$('form[name="windowCelling"]')[0].reset();
+     		                        		 DestroyCKEditorInstances5('windowcellingtext');
+     		                        		$('form[name="moulding"]')[0].reset();
+     			                        		 DestroyCKEditorInstances6('mouldingtext');
+     			                        		$('form[name="seatBerth"]')[0].reset();
+     			                        		DestroyCKEditorInstances7('seatBerthtext');
+     			                        		$('form[name="lavatory"]')[0].reset();
+     			                        		DestroyCKEditorInstances8('lavatorytext');
+     			                        		$('form[name="plumbing"]')[0].reset();
+     		                        		 DestroyCKEditorInstances9('plumbingtext');
+     		                        		 $('form[name="airBrake"]')[0].reset();
+     			        	 	 			 	DestroyCKEditorInstances10('airbraketext');
+     			        	 	 				$('form[name="coachLowering"]')[0].reset();
+     		        	 	 			 		DestroyCKEditorInstances11('coachloweringtext');
+     		        	 	 			 		$('form[name="paint"]')[0].reset();
+     		        	 	 			 		DestroyCKEditorInstances12('painttext');
+     		        	 	 			 		$('form[name="coachCleaning"]')[0].reset();
+     		        	 	 			 		DestroyCKEditorInstances13('coachcleaningtext');
+     		                        		$("#lavatory").hide();
      		         	 	 			  	 $(this).dialog('close');
      		          	 	 			}
-     		                        	else if(btn==8){
-     		                        		DestroyCKEditorInstances8('plumbingtext'); 
-     		                        		$('form[name="plumbing"]')[0].reset();
-     		        	 	 			 	$(this).hide();
+     		                        	else if(btn==9){
+     		                        		  
+     		                        		$('form[name="general"]')[0].reset();
+     		                        		DestroyCKEditorInstances1('generaltext');
+     	             	 	 				$('form[name="fpvc"]')[0].reset();
+     			                        		DestroyCKEditorInstances2('fpvctext');
+     			                        		$('form[name="paritionFrame"]')[0].reset();
+     		                        		 DestroyCKEditorInstances3('paritionframetext');
+     		                        		 $('form[name="panel"]')[0].reset();
+     			                        		 DestroyCKEditorInstances4('paneltext');
+     			                        		$('form[name="windowCelling"]')[0].reset();
+     		                        		 DestroyCKEditorInstances5('windowcellingtext');
+     		                        		$('form[name="moulding"]')[0].reset();
+     			                        		 DestroyCKEditorInstances6('mouldingtext');
+     			                        		$('form[name="seatBerth"]')[0].reset();
+     			                        		DestroyCKEditorInstances7('seatBerthtext');
+     			                        		$('form[name="lavatory"]')[0].reset();
+     			                        		DestroyCKEditorInstances8('lavatorytext');
+     			                        		$('form[name="plumbing"]')[0].reset();
+     		                        		 DestroyCKEditorInstances9('plumbingtext');
+     		                        		 $('form[name="airBrake"]')[0].reset();
+     			        	 	 			 	DestroyCKEditorInstances10('airbraketext');
+     			        	 	 				$('form[name="coachLowering"]')[0].reset();
+     		        	 	 			 		DestroyCKEditorInstances11('coachloweringtext');
+     		        	 	 			 		$('form[name="paint"]')[0].reset();
+     		        	 	 			 		DestroyCKEditorInstances12('painttext');
+     		        	 	 			 		$('form[name="coachCleaning"]')[0].reset();
+     		        	 	 			 		DestroyCKEditorInstances13('coachcleaningtext');
+     		                        		$("#plumbing").hide();
      		        	 	 			 	 $(this).dialog('close');
      		         	 	 			}
-     		        	 	 			else if(btn==9){
-     		        	 	 				DestroyCKEditorInstances9('airbraketext'); 
-     		        	 	 				$('form[name="airBrake"]')[0].reset();
-     		       	 	 			 		$(this).hide();
-     		       	 	 			 		 $(this).dialog('close');
-     		       	 	 			 	}
      		        	 	 			else if(btn==10){
-     		        	 	 				DestroyCKEditorInstances10('coachloweringtext'); 
-     		        	 	 				$('form[name="coachLowering"]')[0].reset();
-     		       	 	 			 	$(this).hide();
+     		        	 	 				  
+     		        	 	 				$('form[name="general"]')[0].reset();
+     		                        		DestroyCKEditorInstances1('generaltext');
+     	             	 	 				$('form[name="fpvc"]')[0].reset();
+     			                        		DestroyCKEditorInstances2('fpvctext');
+     			                        		$('form[name="paritionFrame"]')[0].reset();
+     		                        		 DestroyCKEditorInstances3('paritionframetext');
+     		                        		 $('form[name="panel"]')[0].reset();
+     			                        		 DestroyCKEditorInstances4('paneltext');
+     			                        		$('form[name="windowCelling"]')[0].reset();
+     		                        		 DestroyCKEditorInstances5('windowcellingtext');
+     		                        		$('form[name="moulding"]')[0].reset();
+     			                        		 DestroyCKEditorInstances6('mouldingtext');
+     			                        		$('form[name="seatBerth"]')[0].reset();
+     			                        		DestroyCKEditorInstances7('seatBerthtext');
+     			                        		$('form[name="lavatory"]')[0].reset();
+     			                        		DestroyCKEditorInstances8('lavatorytext');
+     			                        		$('form[name="plumbing"]')[0].reset();
+     		                        		 DestroyCKEditorInstances9('plumbingtext');
+     		                        		 $('form[name="airBrake"]')[0].reset();
+     			        	 	 			 	DestroyCKEditorInstances10('airbraketext');
+     			        	 	 				$('form[name="coachLowering"]')[0].reset();
+     		        	 	 			 		DestroyCKEditorInstances11('coachloweringtext');
+     		        	 	 			 		$('form[name="paint"]')[0].reset();
+     		        	 	 			 		DestroyCKEditorInstances12('painttext');
+     		        	 	 			 		$('form[name="coachCleaning"]')[0].reset();
+     		        	 	 			 		DestroyCKEditorInstances13('coachcleaningtext');
+     		        	 	 				$("#airBrake").hide();
      		       	 	 			 		 $(this).dialog('close');
      		       	 	 			 	}
      		        	 	 			else if(btn==11){
-     		        	 	 				DestroyCKEditorInstances11('painttext');	 
-     		        	 	 				$('form[name="paint"]')[0].reset();
-     		       	 	 			 	$(this).hide();
+     		        	 	 				 
+     		        	 	 				$('form[name="general"]')[0].reset();
+     		                        		DestroyCKEditorInstances1('generaltext');
+     	             	 	 				$('form[name="fpvc"]')[0].reset();
+     			                        		DestroyCKEditorInstances2('fpvctext');
+     			                        		$('form[name="paritionFrame"]')[0].reset();
+     		                        		 DestroyCKEditorInstances3('paritionframetext');
+     		                        		 $('form[name="panel"]')[0].reset();
+     			                        		 DestroyCKEditorInstances4('paneltext');
+     			                        		$('form[name="windowCelling"]')[0].reset();
+     		                        		 DestroyCKEditorInstances5('windowcellingtext');
+     		                        		$('form[name="moulding"]')[0].reset();
+     			                        		 DestroyCKEditorInstances6('mouldingtext');
+     			                        		$('form[name="seatBerth"]')[0].reset();
+     			                        		DestroyCKEditorInstances7('seatBerthtext');
+     			                        		$('form[name="lavatory"]')[0].reset();
+     			                        		DestroyCKEditorInstances8('lavatorytext');
+     			                        		$('form[name="plumbing"]')[0].reset();
+     		                        		 DestroyCKEditorInstances9('plumbingtext');
+     		                        		 $('form[name="airBrake"]')[0].reset();
+     			        	 	 			 	DestroyCKEditorInstances10('airbraketext');
+     			        	 	 				$('form[name="coachLowering"]')[0].reset();
+     		        	 	 			 		DestroyCKEditorInstances11('coachloweringtext');
+     		        	 	 			 		$('form[name="paint"]')[0].reset();
+     		        	 	 			 		DestroyCKEditorInstances12('painttext');
+     		        	 	 			 		$('form[name="coachCleaning"]')[0].reset();
+     		        	 	 			 		DestroyCKEditorInstances13('coachcleaningtext');
+     		        	 	 				$("#coachLowering").hide();
      		       	 	 			 		 $(this).dialog('close');
      		       	 	 			 	}
      		        	 	 			else if(btn==12){
-     		        	 	 				DestroyCKEditorInstances12('coachcleaningtext');	  
-     		        	 	 				$('form[name="coachCleaning"]')[0].reset();
-     		       	 	 			 	$(this).hide();
+     		        	 	 				 	 
+     		        	 	 				$('form[name="general"]')[0].reset();
+     		                        		DestroyCKEditorInstances1('generaltext');
+     	             	 	 				$('form[name="fpvc"]')[0].reset();
+     			                        		DestroyCKEditorInstances2('fpvctext');
+     			                        		$('form[name="paritionFrame"]')[0].reset();
+     		                        		 DestroyCKEditorInstances3('paritionframetext');
+     		                        		 $('form[name="panel"]')[0].reset();
+     			                        		 DestroyCKEditorInstances4('paneltext');
+     			                        		$('form[name="windowCelling"]')[0].reset();
+     		                        		 DestroyCKEditorInstances5('windowcellingtext');
+     		                        		$('form[name="moulding"]')[0].reset();
+     			                        		 DestroyCKEditorInstances6('mouldingtext');
+     			                        		$('form[name="seatBerth"]')[0].reset();
+     			                        		DestroyCKEditorInstances7('seatBerthtext');
+     			                        		$('form[name="lavatory"]')[0].reset();
+     			                        		DestroyCKEditorInstances8('lavatorytext');
+     			                        		$('form[name="plumbing"]')[0].reset();
+     		                        		 DestroyCKEditorInstances9('plumbingtext');
+     		                        		 $('form[name="airBrake"]')[0].reset();
+     			        	 	 			 	DestroyCKEditorInstances10('airbraketext');
+     			        	 	 				$('form[name="coachLowering"]')[0].reset();
+     		        	 	 			 		DestroyCKEditorInstances11('coachloweringtext');
+     		        	 	 			 		$('form[name="paint"]')[0].reset();
+     		        	 	 			 		DestroyCKEditorInstances12('painttext');
+     		        	 	 			 		$('form[name="coachCleaning"]')[0].reset();
+     		        	 	 			 		DestroyCKEditorInstances13('coachcleaningtext');
+     		        	 	 				$("#paint").hide();
+     		       	 	 			 		 $(this).dialog('close');
+     		       	 	 			 	}
+     		        	 	 			else if(btn==13){
+     		        	 	 				  
+     		        	 	 				$('form[name="general"]')[0].reset();
+     		                        		DestroyCKEditorInstances1('generaltext');
+     	             	 	 				$('form[name="fpvc"]')[0].reset();
+     			                        		DestroyCKEditorInstances2('fpvctext');
+     			                        		$('form[name="paritionFrame"]')[0].reset();
+     		                        		 DestroyCKEditorInstances3('paritionframetext');
+     		                        		 $('form[name="panel"]')[0].reset();
+     			                        		 DestroyCKEditorInstances4('paneltext');
+     			                        		$('form[name="windowCelling"]')[0].reset();
+     		                        		 DestroyCKEditorInstances5('windowcellingtext');
+     		                        		$('form[name="moulding"]')[0].reset();
+     			                        		 DestroyCKEditorInstances6('mouldingtext');
+     			                        		$('form[name="seatBerth"]')[0].reset();
+     			                        		DestroyCKEditorInstances7('seatBerthtext');
+     			                        		$('form[name="lavatory"]')[0].reset();
+     			                        		DestroyCKEditorInstances8('lavatorytext');
+     			                        		$('form[name="plumbing"]')[0].reset();
+     		                        		 DestroyCKEditorInstances9('plumbingtext');
+     		                        		 $('form[name="airBrake"]')[0].reset();
+     			        	 	 			 	DestroyCKEditorInstances10('airbraketext');
+     			        	 	 				$('form[name="coachLowering"]')[0].reset();
+     		        	 	 			 		DestroyCKEditorInstances11('coachloweringtext');
+     		        	 	 			 		$('form[name="paint"]')[0].reset();
+     		        	 	 			 		DestroyCKEditorInstances12('painttext');
+     		        	 	 			 		$('form[name="coachCleaning"]')[0].reset();
+     		        	 	 			 		DestroyCKEditorInstances13('coachcleaningtext');
+     		        	 	 				$("#coachCleaning").hide();
      		       	 	 			 		 $(this).dialog('close');
      		        	 	 			}
      		        	 	 			
@@ -1617,7 +2499,59 @@ var obj={};
 	</script>
 	
 	<script>
-	
+	function myFunction(zone)
+	{
+		
+		var zoneValue = zone ;
+		if(zoneValue!="")
+			
+			{
+		$("#bookedDiv").removeAttr('disabled');
+		//alert(zoneValue);
+		 $.ajax({                    
+             url: 'getDiv',    
+             type: 'post', // performing a POST request
+             async: false,
+             
+             dataType: 'json',
+             data : {
+             zone: zoneValue,
+               }                    
+            })
+            .done(function( msg ) {
+           
+            if(msg.divList!=null)
+              {
+          
+            $('#bookedDiv')
+                           .find('option')
+                           .remove()
+                           .end();
+
+            $('#bookedDiv').append(
+                    '<option value="">Select</option>');
+                        for ( var i = 0; i < msg.divList.length; i++) {
+                       
+                        $('#bookedDiv').append(
+                        '<option value=' + msg.divList[i] + '>'
+                        + msg.divList[i]
+                        + '</option>');
+                       
+                        }
+              }
+           
+             })
+            .error(function (msg){
+            alert("Error Saving Data");
+            })
+             ;
+                     
+               
+		
+		
+		
+			}
+	}
 	function search(id)
 	{
 		//alert("am called, id="+id +""+JSON.stringify(shellArray));
@@ -1640,22 +2574,61 @@ var obj={};
 		
 		$('#datepickerExit').datepicker('option', 'minDate', date);
 	}
+	 function open1(event) {
+	     CKEDITOR.replace('generaltext',{language: 'html',height:300,width:800, allowedContent: true});
+	     }
+	function open2(event) {
+	     CKEDITOR.replace('fpvctext',{language: 'html',height:300,width:800, allowedContent: true});
+	     }
+	 function open3(event) {
+		 CKEDITOR.replace('paritionframetext',{language: 'html',height:300,width:800, allowedContent: true});
+	     
+	 }
+	function open4(event) {
+	 CKEDITOR.replace('paneltext',{language: 'html',height:300,width:800, allowedContent: true});
+	    
+	 }
+	function open5(event) {
+	 CKEDITOR.replace('windowcellingtext',{language: 'html',height:300,width:800, allowedContent: true});
+	    
+	 }
+	function open6(event) {
+	 CKEDITOR.replace('mouldingtext',{language: 'html',height:300,width:800, allowedContent: true});
+	    
+	 }
+	function open7(event) {
+	 CKEDITOR.replace('seatBerthtext',{language: 'html',height:300,width:800, allowedContent: true});
+	    
+	 }
+	function open8(event) {
+	 CKEDITOR.replace('lavatorytext',{language: 'html',height:300,width:800, allowedContent: true});
+	    
+	 }
+	function open9(event) {
+	 CKEDITOR.replace('plumbingtext',{language: 'html',height:300,width:800, allowedContent: true});
+	    
+	 }
+	function open10(event) {
+	 CKEDITOR.replace('airbraketext',{language: 'html',height:300,width:800, allowedContent: true});
+    
+	 }
+	function open11(event) {
+	 CKEDITOR.replace('coachloweringtext',{language: 'html',height:300,width:800, allowedContent: true});
+	    
+	 }
+	function open12(event) {
+	 CKEDITOR.replace('painttext',{language: 'html',height:300,width:800, allowedContent: true});
+	    
+	 }
+	function open13(event) {
+	 CKEDITOR.replace('coachcleaningtext', {language: 'html',height:300,width:800, allowedContent: true} );
+
+	 }
 	
 	
 	function openCity(evt, cityName) {   // function openCity
 		
-		/* 	$.ajax({
- 			url : "setObjectForCrossCheck",  //action-name as defined in struts.xml
-			dataType: 'json', 
-			async:false,
-			data : {
-				furnishingAssetId :furnishingId,
-			},
-			success:function(data)
-			{
-				obj=data.crossCheckinTrans; 	//set value in obj	
-			}
- 		});  */
+		
 		var i, tabcontent, tablinks;
 		  btn=evt.target.id;
 		  tabcontent = document.getElementsByClassName("tabcontent");
@@ -1678,196 +2651,65 @@ var obj={};
 	             record = $(this).data('record');
 	             });
 		 		
-		 		/*  $.ajax({
-			 			url : "setObjectForCrossCheck",  //action-name as defined in struts.xml
-						dataType: 'json', 
-						async:false,
-						data : {
-							furnishingAssetId: record.furnishingAssetId,
-						},
-						success:function(data)
-						{
-							obj=data.crossCheckinTrans; 	//set value in obj	
-						}
-			 		}); */
-		 		if(btn==1){
-    				 $.ajax({
-    						url : "showExistingDataOfQCI",  //action-name as defined in struts.xml
-    						dataType: 'json', 
-    						async:false,
-    						data : {
-    							furnishingAssetId: record.furnishingAssetId,
-    						},
-    						success:function(data)
-    						{ 	
-    							$('#docNo').val(data.formDocNoOCI),	
-    							$('#docRevNo').val(data.formRevNoQCI),
-    							$('#coachNo').val(data.coachNumber),
-    							$('#furnishingNoQCI').val(data.furnishingNo),
-    							$('#shellNo').val(data.shellNumber),
-    							$('#bogiePp').val(data.bogieNopp),
-    							$('#bogieNpp').val(data.bogieNoNpp),
-    							$('#bookedRly').val(data.bookedRly),
-    							$('#bookedDiv').val(data.bookedDiv)
-    							 $('#fpvctext').val(obj.textFpvc);						
-    						}
-    				  });
+		 		
+		 		if(btn==1){	
+   				 	 $("#general").show();
+   				 	 open1(event);			
+   				}
+		 		else if(btn==2){
     				 $("#fpvc").show();
-    				/*  if(obj!=null)
-        				 {
-        				 if(obj.textFpvc!=null)
-            				 {
-        					 var cfm=confirm("Data for F & PVC is already updated. Do you want to verify data?");
-        					 if(cfm==false){return false;}
-        					 //$('#fpvctext').val(obj.textFpvc);
-        					 
-        
-                    		     
-
-                    		  
-        					
-            				 }
-        				 }   */ 
-    				
-    				    }
-    			else if(btn==2){
-    				$("#paritionFrame").show();
-   				/*  if(obj!=null)
-       				 {
-       				 if(obj.textParitionFrame!=null)
-           				 {
-       					 var cfm=confirm("Data for Partition Frame is already updated. Do you want to verify data?");
-       					 if(cfm==false){return false;}
-       					 $('#paritionframetext').val(obj.textParitionFrame);
-           				 }
-       				 } */
-    			} 
+    				 open1(event);
+    			}
     			else if(btn==3){
-    				$("#panel").show();
-   				/*  if(obj!=null)
-       				 {
-       				 if(obj.textPanel!=null)
-           				 {
-       					 var cfm=confirm("Data for Panel Frame is already updated. Do you want to verify data?");
-       					 if(cfm==false){return false;}
-       					 $('#text3').val(obj.textPanel);
-           				 }
-       			 }*/ 	
-    			}
+    				$("#paritionFrame").show();
+    				open3(event);
+    			} 
     			else if(btn==4){
-    				$("#windowCelling").show();
-   				/*  if(obj!=null)
-       				 {
-       				 if(obj.textWindowCelling!=null)
-           				 {
-       					 var cfm=confirm("Data for Window & Celling is already updated. Do you want to verify data?");
-       					 if(cfm==false){return false;}
-       					 $('#text4').val(obj.textWindowCelling);
-           				 }
-       				 }*/
-     			}
-    			else if(btn==5){
-    				$("#moulding").show();
-   				 /* if(obj!=null)
-       				 {
-       				 if(obj.textMoulding!=null)
-           				 {
-       					 var cfm=confirm("Data for Moulding is already updated. Do you want to verify data?");
-       					 if(cfm==false){return false;}
-       					 $('#text5').val(obj.textMoulding);
-           				 }
-       				 } */
+    				$("#panel").show();	
+    				open4(event);
     			}
+    			else if(btn==5){
+    				$("#windowCelling").show();  				
+    				open5(event);
+     			}
     			else if(btn==6){
-    				$("#seatBerth").show();
-   				/*  if(obj!=null)
-       				 {
-       				 if(obj.textSeatBerth!=null)
-           				 {
-       					 var cfm=confirm("Data for Seat & Berth is already updated. Do you want to verify data?");
-       					 if(cfm==false){return false;}
-       					 $('#text6').val(obj.textSeatBerth);
-           				 }
-       				 } */
+    				$("#moulding").show();
+    				open6(event);
     			}
     			else if(btn==7){
-    				$("#seatBerth").show();
-   				 /* if(obj!=null)
-       				 {
-       				 if(obj.textLavatory!=null)
-           				 {
-       					 var cfm=confirm("Data for Lavatory is already updated. Do you want to verify data?");
-       					 if(cfm==false){return false;}
-       					 $('#text7').val(obj.textLavatory);
-           				 }
-       				 } */
+    				$("#seatBerth").show();    				
+    				open7(event);
     			}
     			else if(btn==8){
-    				$("#plumbing").show();
-   				/*  if(obj!=null)
-       				 {
-       				 if(obj.textPlumbing!=null)
-           				 {
-       					 var cfm=confirm("Data for Plumbing is already updated. Do you want to verify data?");
-       					 if(cfm==false){return false;}
-       					 $('#text8').val(obj.textPlumbing);
-           				 }
-       				 } */
+    				$("#seatBerth").show();
+    				open8(event);
     			}
     			else if(btn==9){
-    				$("#airBrake").show();
-   				 /* if(obj!=null)
-       				 {
-       				 if(obj.textAirBrake!=null)
-           				 {
-       					 var cfm=confirm("Data for Air Brake is already updated. Do you want to verify data?");
-       					 if(cfm==false){return false;}
-       					 $('#text9').val(obj.textAirBrake);
-           				 }
-       				 } */
+    				$("#plumbing").show();
+    				open9(event);
     			}
     			else if(btn==10){
-    				$("#coachLowering").show();
-   				 /* /* if(obj!=null)
-       				 {
-       				 if(obj.textCoachLowering!=null)
-           				 {
-       					 var cfm=confirm("Data for Coach Lowering is already updated. Do you want to verify data?");
-       					 if(cfm==false){return false;}
-       					 $('#text10').val(obj.textCoachLowering);
-           				 }
-       				 } */ 
+    				$("#airBrake").show();
+    				open10(event);
     			}
     			else if(btn==11){
-    				$("#paint").show();
-   				 /* if(obj!=null)
-       				 {
-       				 if(obj.textPaint!=null)
-           				 {
-       					 var cfm=confirm("Data for Coach Paint is already updated. Do you want to verify data?");
-       					 if(cfm==false){return false;}
-       					 $('#text11').val(obj.textPaint);
-           				 }
-       				 } */
+    				$("#coachLowering").show();
+    				open11(event);
     			}
     			else if(btn==12){
+    				$("#paint").show();
+    				open12(event);
+    			}
+    			else if(btn==13){
     				$("#coachCleaning").show();
-   				 /* if(obj!=null)
-       				 {
-       				 if(obj.textCoachCleaning!=null)
-           				 {
-       					 var cfm=confirm("Data for Coach Cleaning is already updated. Do you want to verify data?");
-       					 if(cfm==false){return false;}
-       					 $('#text12').val(obj.textCoachCleaning);
-           				 }
-       				 } */
+    				open13(event);
     			}  //end of else block
     			
 		 	 }	
 		 	 
 	}
-	
-		 		             
+		 	 
+	 		             
 			
 	
 	

@@ -66,10 +66,10 @@ public class ShellSideWallSipTran  implements java.io.Serializable{
 	private Integer distanceAnglehoneyprtSidewallMiddlearea2;
 	private Integer distanceAnglehoneyprtSidewallMiddlearea3;
 	private Integer distanceAnglehoneyprtSidewallMiddlearea4;
-	private String detailsOfModification;
-	private String detailsOfTrialItem;
+	private String sideWallDetailsOfModification;
+	private String sideWallDetailsOfTrialItem;
 	private String shellSidewallTestingStatus;
-	private String remarks;
+	private String sideWallRemarks;
 	private String entryBy;
 	private Date entryTime;
 	
@@ -78,40 +78,33 @@ public class ShellSideWallSipTran  implements java.io.Serializable{
 		
 	}
 
-	public String getSidewallSipDocNo() {
-		return sidewallSipDocNo;
-	}
-
-	public void setSidewallSipDocNo(String sidewallSipDocNo) {
-		this.sidewallSipDocNo = sidewallSipDocNo;
-	}
-
+	
 	public ShellSideWallSipTran(Integer shellAssetId, String sidewallSipDocNo, String sidewallSipShift,
 			String sidewallType, Date sidewallSipDate, String drawingNo, String wiNo, String frameWorkBy,
 			String frameJigRoboticsBo, String spotWeldingBy, String spotWeldingJigRoboticsBo, String interlockJointBy,
 			String interlockJointJigRoboticsBo, String sidewallCarlineMakeLh, String sidewallCarlineMakeRh,
-			 String observationItemAsPerDrawingFlag,
-			String observationComplianceWiFlag, String observationWeldingThoatLengthFlag,
-			String observationSheetJointLaserFlag, Integer observationSidewallSheetTorque,
-			String observationSidewallFrameWorkFlag, String observationSidewallConditionSpotWeldingFlag,
-			String observationHorizontalVerticalJointWeldingFlag, String observationRoofFlangeJointFlag,
-			Integer sidewallSheetLengthLh, Integer sidewallSheetLengthRh, Integer sidewallSheetWidth,
-			Integer sidewallHeightVerticalmemberRoofflange, String spotWeldingCarlinearchFlag,
-			String brazingCarlineSidewallFlag, String windowProfileFlag, String pullBoxDistance,
-			String windowSealLeakageFlag, String windowSealAngleFlag, Integer distanceCarlinetopVerticalmember,
-			Integer lengthSidewallCarlineLh, Integer lengthSidewallCarlineRh, String carlineLeakageFlag,
-			String horizontalVerticalWeldingGrindingFlag, String distanceBackpieceVerticalmemberTransverse,
-			String distanceBackpieceVerticalmemberSingle, Integer roofFlangeLength, Integer widthHatchedDoor,
-			Integer distanceBerthchannelVerticalchannelLowerLh, Integer distanceBerthchannelVerticalchannelMiddleLh,
-			Integer distanceBerthchannelVerticalchannelUpperLh, Integer distanceBerthchannelVerticalchannelLowerRh,
-			Integer distanceBerthchannelVerticalchannelUpperRh, Integer distanceWindowcenterAnglewindowsupport,
-			Integer distanceWindowedgeChannel, Integer heightCarline, Integer lengthSmallcarline,
-			Integer angleLowerluggageBottomsidewall, Integer distanceAnglehoneyprtSidewallDoorside1,
-			Integer distanceAnglehoneyprtSidewallDoorside2, Integer distanceAnglehoneyprtSidewallDoorside3,
-			Integer distanceAnglehoneyprtSidewallDoorside4, Integer distanceAnglehoneyprtSidewallMiddlearea1,
-			Integer distanceAnglehoneyprtSidewallMiddlearea2, Integer distanceAnglehoneyprtSidewallMiddlearea3,
-			Integer distanceAnglehoneyprtSidewallMiddlearea4, String detailsOfModification, String detailsOfTrialItem,
-			String remarks,String shellSidewallTestingStatus, String entryBy, Date entryTime) {
+			String observationItemAsPerDrawingFlag, String observationComplianceWiFlag,
+			String observationWeldingThoatLengthFlag, String observationSheetJointLaserFlag,
+			Integer observationSidewallSheetTorque, String observationSidewallFrameWorkFlag,
+			String observationSidewallConditionSpotWeldingFlag, String observationHorizontalVerticalJointWeldingFlag,
+			String observationRoofFlangeJointFlag, Integer sidewallSheetLengthLh, Integer sidewallSheetLengthRh,
+			Integer sidewallSheetWidth, Integer sidewallHeightVerticalmemberRoofflange,
+			String spotWeldingCarlinearchFlag, String brazingCarlineSidewallFlag, String windowProfileFlag,
+			String pullBoxDistance, String windowSealLeakageFlag, String windowSealAngleFlag,
+			Integer distanceCarlinetopVerticalmember, Integer lengthSidewallCarlineLh, Integer lengthSidewallCarlineRh,
+			String carlineLeakageFlag, String horizontalVerticalWeldingGrindingFlag,
+			String distanceBackpieceVerticalmemberTransverse, String distanceBackpieceVerticalmemberSingle,
+			Integer roofFlangeLength, Integer widthHatchedDoor, Integer distanceBerthchannelVerticalchannelLowerLh,
+			Integer distanceBerthchannelVerticalchannelMiddleLh, Integer distanceBerthchannelVerticalchannelUpperLh,
+			Integer distanceBerthchannelVerticalchannelLowerRh, Integer distanceBerthchannelVerticalchannelUpperRh,
+			Integer distanceWindowcenterAnglewindowsupport, Integer distanceWindowedgeChannel, Integer heightCarline,
+			Integer lengthSmallcarline, Integer angleLowerluggageBottomsidewall,
+			Integer distanceAnglehoneyprtSidewallDoorside1, Integer distanceAnglehoneyprtSidewallDoorside2,
+			Integer distanceAnglehoneyprtSidewallDoorside3, Integer distanceAnglehoneyprtSidewallDoorside4,
+			Integer distanceAnglehoneyprtSidewallMiddlearea1, Integer distanceAnglehoneyprtSidewallMiddlearea2,
+			Integer distanceAnglehoneyprtSidewallMiddlearea3, Integer distanceAnglehoneyprtSidewallMiddlearea4,
+			String sideWallDetailsOfModification, String sideWallDetailsOfTrialItem, String shellSidewallTestingStatus,
+			String sideWallRemarks, String entryBy, Date entryTime) {
 		super();
 		this.shellAssetId = shellAssetId;
 		this.sidewallSipDocNo = sidewallSipDocNo;
@@ -128,8 +121,6 @@ public class ShellSideWallSipTran  implements java.io.Serializable{
 		this.interlockJointJigRoboticsBo = interlockJointJigRoboticsBo;
 		this.sidewallCarlineMakeLh = sidewallCarlineMakeLh;
 		this.sidewallCarlineMakeRh = sidewallCarlineMakeRh;
-	//	this.sidewallMakeNoLh = sidewallMakeNoLh;
-		//this.sidewallMakeNoRh = sidewallMakeNoRh;
 		this.observationItemAsPerDrawingFlag = observationItemAsPerDrawingFlag;
 		this.observationComplianceWiFlag = observationComplianceWiFlag;
 		this.observationWeldingThoatLengthFlag = observationWeldingThoatLengthFlag;
@@ -176,14 +167,22 @@ public class ShellSideWallSipTran  implements java.io.Serializable{
 		this.distanceAnglehoneyprtSidewallMiddlearea2 = distanceAnglehoneyprtSidewallMiddlearea2;
 		this.distanceAnglehoneyprtSidewallMiddlearea3 = distanceAnglehoneyprtSidewallMiddlearea3;
 		this.distanceAnglehoneyprtSidewallMiddlearea4 = distanceAnglehoneyprtSidewallMiddlearea4;
-		this.detailsOfModification = detailsOfModification;
-		this.detailsOfTrialItem = detailsOfTrialItem;
-		this.shellSidewallTestingStatus=shellSidewallTestingStatus;
-		this.remarks = remarks;
+		this.sideWallDetailsOfModification = sideWallDetailsOfModification;
+		this.sideWallDetailsOfTrialItem = sideWallDetailsOfTrialItem;
+		this.shellSidewallTestingStatus = shellSidewallTestingStatus;
+		this.sideWallRemarks = sideWallRemarks;
 		this.entryBy = entryBy;
 		this.entryTime = entryTime;
 	}
 
+
+	public String getSidewallSipDocNo() {
+		return sidewallSipDocNo;
+	}
+
+	public void setSidewallSipDocNo(String sidewallSipDocNo) {
+		this.sidewallSipDocNo = sidewallSipDocNo;
+	}
 
 	public Integer getShellAssetId() {
 		return shellAssetId;
@@ -218,21 +217,29 @@ public class ShellSideWallSipTran  implements java.io.Serializable{
 		this.sidewallSipDate = sidewallSipDate;
 	}
 
+	
+
+	
+
 	public String getDrawingNo() {
 		return drawingNo;
 	}
+
 
 	public void setDrawingNo(String drawingNo) {
 		this.drawingNo = drawingNo;
 	}
 
+
 	public String getWiNo() {
 		return wiNo;
 	}
 
+
 	public void setWiNo(String wiNo) {
 		this.wiNo = wiNo;
 	}
+
 
 	public String getFrameWorkBy() {
 		return frameWorkBy;
@@ -678,33 +685,35 @@ public class ShellSideWallSipTran  implements java.io.Serializable{
 		this.distanceAnglehoneyprtSidewallMiddlearea4 = distanceAnglehoneyprtSidewallMiddlearea4;
 	}
 
-	public String getDetailsOfModification() {
-		return detailsOfModification;
-	}
-
-	public void setDetailsOfModification(String detailsOfModification) {
-		this.detailsOfModification = detailsOfModification;
-	}
-
-	
-
-	public String getDetailsOfTrialItem() {
-		return detailsOfTrialItem;
+	public String getSideWallDetailsOfModification() {
+		return sideWallDetailsOfModification;
 	}
 
 
-	public void setDetailsOfTrialItem(String detailsOfTrialItem) {
-		this.detailsOfTrialItem = detailsOfTrialItem;
+	public void setSideWallDetailsOfModification(String sideWallDetailsOfModification) {
+		this.sideWallDetailsOfModification = sideWallDetailsOfModification;
 	}
 
 
-	public String getRemarks() {
-		return remarks;
+	public String getSideWallDetailsOfTrialItem() {
+		return sideWallDetailsOfTrialItem;
 	}
 
-	public void setRemarks(String remarks) {
-		this.remarks = remarks;
+
+	public void setSideWallDetailsOfTrialItem(String sideWallDetailsOfTrialItem) {
+		this.sideWallDetailsOfTrialItem = sideWallDetailsOfTrialItem;
 	}
+
+
+	public String getSideWallRemarks() {
+		return sideWallRemarks;
+	}
+
+
+	public void setSideWallRemarks(String sideWallRemarks) {
+		this.sideWallRemarks = sideWallRemarks;
+	}
+
 
 	public String getShellSidewallTestingStatus() {
 		return shellSidewallTestingStatus;

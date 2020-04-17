@@ -477,6 +477,10 @@
 		<put-attribute name="title" value="Coach for Quality Check" />
 		<put-attribute name="body" value="/performCrossCheckInCoach.jsp"/>
 </definition>
+<definition name="/generateRollingStockCertificate.tiles" extends="baseLayout">
+		<put-attribute name="title" value="Coach for Quality Check" />
+		<put-attribute name="body" value="/generateRollingStockCertificate.jsp"/>
+</definition>
 
 <definition name="/qualityControlSip.tiles" extends="baseLayout">
   <put-attribute name="title" value="Qulaity Control Inspection" />

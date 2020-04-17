@@ -501,6 +501,7 @@ String roles=loginUser.getRoles();
  		<li><s:a href="issue-qcra-testing-in-coach?stageId=5">Issue QCRA</s:a></li> 
  		<li><s:a href="issue-cross-check-testing-in-coach?stageId=5">Issue Cross Check</s:a></li>
  		<li><s:a href="coach-available-for-quality?stageId=5">Verify Furnishing Component</s:a></li>
+ 		<li><s:a href="generate-rolling-stock-certificate?stageId=5">Generate RSC</s:a></li>
  		<li class="dropdown-submenu">
 		    		<a  tabindex="-2" href="#">Reports
  					<span class="glyphicon glyphicon-arrow-right"></span></a>

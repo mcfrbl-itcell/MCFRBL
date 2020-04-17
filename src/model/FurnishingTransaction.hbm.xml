@@ -284,5 +284,9 @@
         <property name="dispatchMemoDate" type="date">
                <column name="dispatch_memo_date"/> 
         </property>
+        <property name="rscFlag" type="java.lang.Integer">
+               <column name="rsc_flag"/> 
+        </property>
+        
     </class>
 </hibernate-mapping>
