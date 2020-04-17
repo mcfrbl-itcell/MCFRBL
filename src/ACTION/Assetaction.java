@@ -28,13 +28,14 @@ private static final long serialVersionUID = 1L;
     private Integer seating_capacity;
 	private Integer sleeping_capacity;
 	private Integer luggage_capacity;
+	private String assetCategory;
 	private String jtSorting;//for sorting
 	private String jtStartIndex;
 	private String jtPageSize;
 	private int totalRecordCount;
-	private Integer max_length_body;
-	private Integer max_width_body;
-	private Integer max_height_rail_level;
+	private String max_length_body;
+	private String max_width_body;
+	private String max_height_rail_level;
 
 	
 
@@ -189,27 +190,28 @@ private static final long serialVersionUID = 1L;
 		return serialVersionUID;
 	}
 
-	public Integer getMax_length_body() {
+	
+	public String getMax_length_body() {
 		return max_length_body;
 	}
 
-	public void setMax_length_body(Integer max_length_body) {
+	public void setMax_length_body(String max_length_body) {
 		this.max_length_body = max_length_body;
 	}
 
-	public Integer getMax_width_body() {
+	public String getMax_width_body() {
 		return max_width_body;
 	}
 
-	public void setMax_width_body(Integer max_width_body) {
+	public void setMax_width_body(String max_width_body) {
 		this.max_width_body = max_width_body;
 	}
 
-	public Integer getMax_height_rail_level() {
+	public String getMax_height_rail_level() {
 		return max_height_rail_level;
 	}
 
-	public void setMax_height_rail_level(Integer max_height_rail_level) {
+	public void setMax_height_rail_level(String max_height_rail_level) {
 		this.max_height_rail_level = max_height_rail_level;
 	}
 
@@ -218,7 +220,7 @@ private static final long serialVersionUID = 1L;
 			Map session_map= ActionContext.getContext().getSession();
 			int startPageIndex=Integer.parseInt(jtStartIndex);
 			int numRecordsPerPage=Integer.parseInt(jtPageSize);
-			setRecords(getDao().getAllasset_master(jtSorting, startPageIndex, numRecordsPerPage));
+			setRecords(getDao().getAllasset_master(jtSorting,assetCategory, startPageIndex, numRecordsPerPage));
 			totalRecordCount= (Integer) session_map.get("holding_count");
 			session_map.remove("holding_count");
 			System.out.println("Records = "+getRecords());
@@ -276,10 +278,42 @@ private static final long serialVersionUID = 1L;
 		record.setSeating_capacity(seating_capacity);
 		record.setSleeping_capacity(sleeping_capacity);
 		record.setLuggage_capacity(luggage_capacity);
-		record.setMax_length_body(max_length_body);
-		record.setMax_width_body(max_width_body);
-		record.setMax_height_rail_level(max_height_rail_level);
 		
+		if(max_length_body!=null)
+		{
+			if(!"".equals(max_length_body))
+			{
+				
+			Float max_length_bodyAsFloat= new Float(max_length_body);
+			
+			record.setMax_length_body(max_length_bodyAsFloat);
+		}
+		
+		}
+		
+		if(max_width_body!=null)
+		{
+			if(!"".equals(max_width_body))
+			{
+				
+			Float max_width_bodyAsFloat= new Float(max_width_body);
+			
+			record.setMax_width_body(max_width_bodyAsFloat);
+		}
+		
+		}
+		
+		if(max_height_rail_level!=null)
+		{
+			if(!"".equals(max_height_rail_level))
+			{
+				
+			Float max_height_rail_levelAsFloat= new Float(max_height_rail_level);
+			
+			record.setMax_height_rail_level(max_height_rail_levelAsFloat);
+		}
+		
+		}
 	
 		try {
 						
@@ -318,9 +352,41 @@ private static final long serialVersionUID = 1L;
 			record.setSeating_capacity(seating_capacity);
 			record.setSleeping_capacity(sleeping_capacity);
 			record.setLuggage_capacity(luggage_capacity);
-			record.setMax_length_body(max_length_body);
-			record.setMax_width_body(max_width_body);
-			record.setMax_height_rail_level(max_height_rail_level);
+			if(max_length_body!=null)
+			{
+				if(!"".equals(max_length_body))
+				{
+					
+				Float max_length_bodyAsFloat= new Float(max_length_body);
+				
+				record.setMax_length_body(max_length_bodyAsFloat);
+			}
+			
+			}
+			
+			if(max_width_body!=null)
+			{
+				if(!"".equals(max_width_body))
+				{
+					
+				Float max_width_bodyAsFloat= new Float(max_width_body);
+				
+				record.setMax_width_body(max_width_bodyAsFloat);
+			}
+			
+			}
+			
+			if(max_height_rail_level!=null)
+			{
+				if(!"".equals(max_height_rail_level))
+				{
+					
+				Float max_height_rail_levelAsFloat= new Float(max_height_rail_level);
+				
+				record.setMax_height_rail_level(max_height_rail_levelAsFloat);
+			}
+			
+			}
 
 	
 		try {
@@ -346,4 +412,13 @@ private static final long serialVersionUID = 1L;
 		}
 		return ActionSupport.SUCCESS;
 	}
+
+	public String getAssetCategory() {
+		return assetCategory;
+	}
+
+	public void setAssetCategory(String assetCategory) {
+		this.assetCategory = assetCategory;
+	}
+	
 }

@@ -1427,7 +1427,7 @@
 			<result name="success" type="tiles">/furnishingShopProduction.tiles</result>
 		</action>
 		
-		<action name="asset-master">
+		<action name="asset-master" class="struts.action.master.AssetType" method="getCategory">
 			<result name="success" type="tiles">/assetMaster.tiles</result>
 		</action>
 		<action name="asset-master-feature-warranty">
@@ -1604,6 +1604,9 @@
 		<action name="bogie-shop-help">
 			<result name="success" type="tiles">/bogieShopHelp.tiles</result>
 		</action>
+		<action name="furnishing-shop-help">
+			<result name="success" type="tiles">/furnishingShopHelp.tiles</result>
+		</action>
 		<action name="emp-master-help">
 			<result name="success" type="tiles">/empMasterHelp.tiles</result>
 		</action>
@@ -1772,14 +1775,9 @@
 		 <action name="bogie-report" >
 			<result name="success" type="tiles">/BogieReport.tiles</result>
 		</action> 
-		
-		 
-		
-		
+	
 <!-- 	    </package> -->
-	    
-
-		
+	
 <!-- 		<package name="default1" extends="json-default"> -->
 		
 		    <action name="getStages" class="struts.action.master.StageAction" method="getStages">          			

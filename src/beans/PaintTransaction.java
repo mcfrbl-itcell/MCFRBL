@@ -37,20 +37,24 @@ public class PaintTransaction implements java.io.Serializable{
 	private String testingClearanceMemoDocNo;
 	private String testingClearanceMemoStatus;
 	private String testingClearanceMemoRemark;
+	private String paintType;
+	private String paintMake;
+	private String applicationBy;
+	private String avgGlossValue;
 	/* Manoj code end here on 09.01.2020 */
 
 public PaintTransaction()
 {
 	
 }
-
 public PaintTransaction(Integer paintAssetId, String stageId, String previousStageId, Integer shellAssetId,
 			Date assemblyStartDate, Date assemblyEndDate, Date assemblyDispatchDate, String colorScheme, String remarks,
 			String exitRemarks, String lateReason, Date expectedExitDate, String transEntryBy, String transEntryTime,
 			Integer asignedFlag, Date receiptAtNextStage, String shellType, String furnishingNumber, String coachType,
 			Integer intrPaintSipFlag, Integer intrPaintFinalFlag, Integer extrPaintSipFlag, Integer extrPaintFinalFlag,
 			Integer testingClearanceMemoFlag, Date testingClearanceMemoDate, String testingClearanceMemoDocNo,
-			String testingClearanceMemoStatus, String testingClearanceMemoRemark) {
+			String testingClearanceMemoStatus, String testingClearanceMemoRemark, String paintType, String paintMake,
+			String applicationBy, String avgGlossValue) {
 		super();
 		this.paintAssetId = paintAssetId;
 		this.stageId = stageId;
@@ -80,6 +84,10 @@ public PaintTransaction(Integer paintAssetId, String stageId, String previousSta
 		this.testingClearanceMemoDocNo = testingClearanceMemoDocNo;
 		this.testingClearanceMemoStatus = testingClearanceMemoStatus;
 		this.testingClearanceMemoRemark = testingClearanceMemoRemark;
+		this.paintType = paintType;
+		this.paintMake = paintMake;
+		this.applicationBy = applicationBy;
+		this.avgGlossValue = avgGlossValue;
 	}
 
 
@@ -309,6 +317,29 @@ public String getCoachType() {
 public void setCoachType(String coachType) {
 	this.coachType = coachType;
 }
-
+public String getPaintType() {
+	return paintType;
+}
+public void setPaintType(String paintType) {
+	this.paintType = paintType;
+}
+public String getPaintMake() {
+	return paintMake;
+}
+public void setPaintMake(String paintMake) {
+	this.paintMake = paintMake;
+}
+public String getApplicationBy() {
+	return applicationBy;
+}
+public void setApplicationBy(String applicationBy) {
+	this.applicationBy = applicationBy;
+}
+public String getAvgGlossValue() {
+	return avgGlossValue;
+}
+public void setAvgGlossValue(String avgGlossValue) {
+	this.avgGlossValue = avgGlossValue;
+}
 
 }

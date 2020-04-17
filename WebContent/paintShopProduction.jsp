@@ -14,8 +14,6 @@
 <title></title>
 <% String contextpath=request.getContextPath();
 String stageID= request.getParameter("stageId");
-
- 
 %>
 
 <script src="<%=contextpath %>/js/jquery-2.1.4.min.js" type="text/javascript"></script>
@@ -440,13 +438,7 @@ var shellArray=[];
 	                                    },
 	                    	        modal: true
     	    });
-                    	 		
-                    	 		
-                    	 		
-                    	 		
-                    	 		
-                    	 		    
-            			    	   return true;
+                          return true;
                     	 		    
                     	 			  
                     	 		  }//ending else               	  
@@ -570,6 +562,32 @@ var shellArray=[];
                     edit:true,
                     create:true
 					},
+					paintType:{
+                     title:'Paint Type',
+                     width:'5%',
+                     edit:true,
+                     create:true
+						},
+						paintMake:{
+		                title:'Paint Make',
+		                options:['VIBGYOR','GS Industries','Nerolec','Berger','Emprise Pvt Ltd','Others'],
+		                width:'5%',
+		                edit:true,
+		                create:true
+						},
+						applicationBy:{
+			                title:'Applicable By',
+			                width:'10%',
+			                options:['MCF','CONTRACTOR', 'SUPPLY & APPLY'],
+			                edit:true,
+			                create:true
+							},
+							avgGlossValue:{
+								title:'Avg Gloss Value',
+				                width:'8%',
+				                edit:true,
+				                create:true
+								},
 				remarks: {
 				   title: 'Remarks',
 				   width : '10%',

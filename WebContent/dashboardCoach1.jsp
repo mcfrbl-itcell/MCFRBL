@@ -1,4 +1,3 @@
-
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -17,12 +16,8 @@
 
 <%@ page import="newdashboard.model.MachineBreakdown"%>
 <%@ page import="newdashboard.model.BeltHolding"%>
-
 <%@ page import="ACTION.NewDashboardAction" %>
-
-
 <%@ taglib uri="/struts-tags" prefix="s" %>
-
 
 <%
 
@@ -71,7 +66,6 @@ ArrayList<BeltHolding> bhlist = new ArrayList<BeltHolding>();
 		mblist = (ArrayList<MachineBreakdown>)request.getAttribute("mblist");
 	 	
 	 	bhlist = (ArrayList<BeltHolding>)request.getAttribute("bhlist");
-	 	
 
 	 	/* WORKDAY */
 	 	
@@ -268,20 +262,12 @@ break_desc = request.getAttribute("break_desc").toString();
 String belt_desc = null;
 
 belt_desc = request.getAttribute("belt_desc").toString();
-
-
-
-	
-
-%>
-
-<% String contextpath=request.getContextPath();%>
+String contextpath=request.getContextPath();
+ %>
 <html>
 
 <head>
-
 <style>
-
 body { padding-right: 0 !important }
 
 .modal-open{overflow:auto;padding-right:0 !important;}
@@ -314,30 +300,11 @@ font-weight: bold;
 
 }
 
-
 </style>
-
-<%-- <style>
-#chartdiv {
-  width: 100%;
-  height: 500px;
-}
-
-</style> --%>
-
-
 
 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Work Days</title>
-
-<%-- <link href="<%=contextpath %>/css/bootstrap.min.css" rel="stylesheet" type="text/css" /> --%>
-
-<%-- <link rel="stylesheet" href="<%=contextpath %>/newdashboard/bootstrap.min.css"> --%>
-
-
-
-
 
 
 <script src="<%=contextpath %>/newdashboard/chart-all.js"></script>
@@ -346,35 +313,19 @@ font-weight: bold;
 <script src="<%=contextpath %>/newdashboard/chartjs-plugin-datalabels.js"></script>
 	
 <script src="<%=contextpath %>/newdashboard/apexcharts.js"></script>
+<script src="<%=contextpath %>/newdashboard/html2pdf.bundle.min.js"></script>
 
-
-
+<%-- 
 <script src="https://www.amcharts.com/lib/4/core.js"></script>
 <script src="https://www.amcharts.com/lib/4/charts.js"></script>
 <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
 
-
+ --%>
 <script src="<%=contextpath %>/newdashboard/jquery.min.js"></script>
   <script src="<%=contextpath %>/newdashboard/bootstrap.min.js"></script>
-
-
-<script src="<%=contextpath %>/newdashboard/html2pdf.bundle.min.js"></script>
-
-
-		<script src="<%=contextpath %>/newdashboard/jquery-3.3.1.js"></script>	
-   		<script src="<%=contextpath %>/newdashboard/jquery.dataTables.min.js"></script>
- 		<link rel="stylesheet" href="<%=contextpath %>/newdashboard/jquery.dataTables.min.css">
-	
 </head>
-
-
 <body>
-
-<div class="container-fluid" id="printAll">
-
-
 <!-- ROW 1 -->
-
 <div class="row" id="row1">
 <div class="col-sm-3">
 
@@ -626,7 +577,7 @@ font-weight: bold;
           <!-- <h5><b><i>Machine Breakdown Details Table</i></b></h5> -->
 		<div class="table-responsive">
 			<table id="MBTable" class="table table-bordered tablesorter table-condensed">
-					<thead>
+				
 					<tr>
 						<th id="tdWorkDayNew1" class="text-uppercase">Machine SR No.</th>
 						<th id="tdWorkDayNew2" class="text-uppercase">Machine Description</th>
@@ -634,8 +585,7 @@ font-weight: bold;
 						
 						
 					</tr> 
-					</thead>
-					<tbody>
+				
 					<c:forEach items="${mblist}" var="mb">
 					<tr>
 						<td style="font-weight:bold;" id="tdWorkDayNew1">${mb.machine_sr_no}</td>
@@ -643,7 +593,7 @@ font-weight: bold;
 						<td style="font-weight:bold;" id="tdWorkDayNew1">${mb.breakdown_date}</td>
 					</tr>
 					</c:forEach>
-					</tbody>
+				
 			</table>
 		</div>
         </div>
@@ -670,16 +620,15 @@ font-weight: bold;
           <!-- <p>Some text in the modal.</p> -->
           <!-- <h5><b><i>Belt Holding Details Table</i></b></h5> -->
 		<div class="table-responsive">
-			<table id="BHTable" class="table table-bordered tablesorter">
-					<thead>
+			<table id="MBTable" class="table table-bordered tablesorter">
+				
 					<tr>
 						<th id="tdWorkDayNew1" class="text-uppercase">Shop</th>
 						<th id="tdWorkDayNew2" class="text-uppercase">Unified PL No.</th>
 						<th id="tdWorkDayNew1" class="text-uppercase">PL Description</th>
 						<th id="tdWorkDayNew2" class="text-uppercase">Coach Affected</th>
 					</tr> 
-					</thead>
-					<tbody>
+				
 					<c:forEach items="${bhlist}" var="bh">
 					<tr>
 						<td style="font-weight:bold;" id="tdWorkDayNew1">${bh.shop}</td>
@@ -689,7 +638,6 @@ font-weight: bold;
 						
 					</tr>
 					</c:forEach>
-					</tbody>
 				
 			</table>
 		</div>
@@ -954,26 +902,14 @@ font-weight: bold;
     </script>
 
 
- <script>
-
-$(document).ready(function() {
-    $('#BHTable').DataTable( {
-        "pagingType": "full_numbers",
-        "lengthMenu": [[3, 5, 10, -1], [3, 5, 10, "All"]]
-    } );
-} );
-</script> 
-
-
- <script>
+<!-- <script>
 
 $(document).ready(function() {
     $('#MBTable').DataTable( {
-        "pagingType": "full_numbers",
-        "lengthMenu": [[3, 5, 10, -1], [3, 5, 10, "All"]]
+        "pagingType": "full_numbers"
     } );
 } );
-</script> 
+</script> -->
 
 
 <script>
@@ -2451,56 +2387,10 @@ series2.columns.template.tooltipText = "GDP grow in {category} (2017): [bold]{va
 
 }); // end am4core.ready()
 </script>
-	
-<!-- <script>
 
-$('#downloadPdf').click(function(event) {
-	  // get size of report page
-	  var reportPageHeight = $('#printAll').innerHeight();
-	  var reportPageWidth = $('#printAll').innerWidth();
-	  
-	  // create a new canvas object that we will populate with all other canvas objects
-	  var pdfCanvas = $('<canvas />').attr({
-	    id: "canvaspdf",
-	    width: reportPageWidth,
-	    height: reportPageHeight
-	  });
-	  
-	  // keep track canvas position
-	  var pdfctx = $(pdfCanvas)[0].getContext();
-	  var pdfctxX = 0;
-	  var pdfctxY = 0;
-	  var buffer = 100;
-	  
-	  // for each chart.js chart
-	  $("canvas").each(function(index) {
-	    // get the chart height/width
-	    var canvasHeight = $(this).innerHeight();
-	    var canvasWidth = $(this).innerWidth();
-	    
-	    // draw the chart into the new canvas
-	    pdfctx.drawImage($(this)[0], pdfctxX, pdfctxY, canvasWidth, canvasHeight);
-	    pdfctxX += canvasWidth + buffer;
-	    
-	    // our report page is in a grid pattern so replicate that in the new canvas
-	    if (index % 2 === 1) {
-	      pdfctxX = 0;
-	      pdfctxY += canvasHeight + buffer;
-	    }
-	  });
-	  
-	  // create new pdf and add our new canvas as an image
-	  var pdf = new jsPDF('l', 'pt', [reportPageWidth, reportPageHeight]);
-	  pdf.addImage($(pdfCanvas)[0], 'PNG', 0, 0);
-	  
-	  // download the pdf
-	  pdf.save('dashboard.pdf');
-	});
-
-</script>	
- -->	
 	
-</div>
+
 </body>
+
 
 </html>

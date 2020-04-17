@@ -29,6 +29,9 @@
 <definition name="/bogieShopHelp.tiles" extends="baseLayout">
         <put-attribute name="body" value="/bogieShopHelp.jsp"/>
 </definition>
+<definition name="/furnishingShopHelp.tiles" extends="baseLayout">
+        <put-attribute name="body" value="/furnishingShopHelp.jsp"/>
+</definition>
 
 <definition name="/empMasterHelp.tiles" extends="baseLayout">
         <put-attribute name="body" value="/empMasterHelp.jsp"/>
@@ -548,7 +551,7 @@
 	</definition>
 	
 <definition name="/newdashboard.tiles" extends="baseLayout">
-        <put-attribute name="body" value="/dashboardCoach.jsp" />
+        <put-attribute name="body" value="/dashboardCoach.jsp"/>
 </definition>	
 <definition name="/bogieTraceability.tiles" extends="baseLayout">
         <put-attribute name="body" value= "/bogie_traceability.jsp"/>

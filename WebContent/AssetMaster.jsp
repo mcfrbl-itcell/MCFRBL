@@ -22,12 +22,20 @@
 <script>
 var srno=0;
 $(document).ready(function() {
+	$("#assetList").append('<option value="All" selected>All</option>');
+	<c:forEach var="a" items="${assetTypes}">
+	var o = new Option("${a}","${a}" );
+	$("#shopList").append(o);
+	//retrieve supplier code
+	</c:forEach>
+
 	
 	$('#AssetmasterTableContainer').jtable({
-		title : 'Coach List',
+		title : 'Asset List',
 		paging:true,
 		animationsEnabled : true,
 		sorting: true,
+		defaultSorting:'asset_type ASC',
 		selecting: true,
 		multiSorting: true,
 		actions : {
@@ -87,9 +95,8 @@ $(document).ready(function() {
 				list:true
 				
 			},
-			
 			tare_weight: {
-				title : 'Tare Weight',
+				title : 'Tare Weight (Tones)',
 				width : '10%',
 				inputClass: 'validate[custom[number]]',
 				edit : true,
@@ -104,7 +111,7 @@ $(document).ready(function() {
 				list: true
 			},
 			sleeping_capacity: {
-				title : 'Sleaping Capacity',
+				title : 'Sleeping Capacity',
 				width : '12%',
 				inputClass: 'validate[custom[integer]]',
 				edit : true,
@@ -118,23 +125,23 @@ $(document).ready(function() {
 				list: true
 			},
 			max_length_body: {
-				title : 'Length Over Body',
+				title : 'Length Over Body (MM)',
 				width : '12%',
-				inputClass: 'validate[custom[integer]]',
+				inputClass: 'validate[custom[number]]',
 				edit : true,
 				list: true
 			},
 			max_width_body: {
-				title : 'Width Over Body',
+				title : 'Width Over Body (MM)',
 				width : '12%',
-				inputClass: 'validate[custom[integer]]',
+				inputClass: 'validate[custom[number]]',
 				edit : true,
 				list: true
 			},
 			max_height_rail_level: {
-				title : 'Height Rail Level',
+				title : 'Height Rail Level (MM)',
 				width : '12%',
-				inputClass: 'validate[custom[integer]]',
+				inputClass: 'validate[custom[number]]',
 				edit : true,
 				list: true
 			},
@@ -172,13 +179,25 @@ $(document).ready(function() {
 		
 	});
 	
-	$('#AssetmasterTableContainer').jtable('load');
+	//$('#AssetmasterTableContainer').jtable('load');
+	$('#LoadRecordsButton').click(function (e) {
+        e.preventDefault(); 
+	$('#AssetmasterTableContainer').jtable('load', {assetCategory: $('#assetList').val()   });
+	});
+	$('#LoadRecordsButton').click();
 
 }); 
 
 
 </script>
 <body>
+  <div class="filtering">
+ 	<form>
+        <b>Select Asset Type</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<select id="assetList" ></select>&nbsp;&nbsp;&nbsp;
+		<button type="submit" id="LoadRecordsButton">Load records</button>
+		 </form>
+	</div>
 	<div
 		style="width: 98%; margin-right: 1%; margin-left: 1%; text-align: center;">
 		

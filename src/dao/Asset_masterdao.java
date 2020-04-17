@@ -4,6 +4,7 @@ import java.util.Map;
 
 import org.hibernate.Criteria;
 import org.hibernate.Session;
+import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
 
 import com.opensymphony.xwork2.ActionContext;
@@ -15,7 +16,7 @@ public class Asset_masterdao {
 	
 
 @SuppressWarnings("unchecked")
-public List<Asset_master> getAllasset_master(String jtSorting, Integer startPageIndex, Integer numRecordsPerPage) {
+public List<Asset_master> getAllasset_master(String jtSorting,String assetCategory, Integer startPageIndex, Integer numRecordsPerPage) {
 		Session session =  null;
 		List<Asset_master> list = null;
 	
@@ -23,12 +24,27 @@ public List<Asset_master> getAllasset_master(String jtSorting, Integer startPage
 			session = HibernateConfig.getSession();
 		//	session.beginTransaction();
 			Criteria c = session.createCriteria(Asset_master.class);
+			if(!assetCategory.equals("All"))
+			{
+				c.add(Restrictions.eq("asset_type", assetCategory));
+			}
 			 Integer total_rec_count=c.list().size();
 			 Map session_map=ActionContext.getContext().getSession();
 			 session_map.put("holding_count", total_rec_count);
 			 c.setFirstResult(startPageIndex);
 			 c.setMaxResults(numRecordsPerPage);
-
+			 String[] temp;
+	         String delimiter = " ";
+	         /* given string will be split by the argument delimiter provided. */
+	         temp = jtSorting.split(delimiter);
+	 if(jtSorting.endsWith("ASC"))
+		         {
+		        	 c.addOrder(Order.asc(temp[0]));
+		         }
+		         else if(jtSorting.endsWith("DESC"))
+		         {
+		        	 c.addOrder(Order.desc(temp[0]));	 
+		         }
 			list=c.list();
 		}
 		catch(Exception ex){

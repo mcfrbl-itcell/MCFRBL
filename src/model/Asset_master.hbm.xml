@@ -35,13 +35,13 @@
 			<column name="luggage_capacity"></column>
 		</property>
 		
-		<property name="max_length_body" type="java.lang.Integer">
+		<property name="max_length_body" type="java.lang.Float">
 			<column name="max_length_body"></column>
 		</property>
-		<property name="max_width_body" type="java.lang.Integer">
+		<property name="max_width_body" type="java.lang.Float">
 			<column name="max_width_body"></column>
 		</property>
-		<property name="max_height_rail_level" type="java.lang.Integer">
+		<property name="max_height_rail_level" type="java.lang.Float">
 			<column name="max_height_rail_level"></column>
 		</property>
 		

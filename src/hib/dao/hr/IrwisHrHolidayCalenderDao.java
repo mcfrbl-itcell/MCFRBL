@@ -804,6 +804,7 @@ public List<IrwisHrPubhodyM> getHolidayCodesAndNames() {
 	try {
 		 session.beginTransaction();
 		 Criteria critToFetchHody = session.createCriteria(IrwisHrPubhodyM.class);
+		 critToFetchHody.addOrder(Order.asc("hodyDesc"));
 	     List<IrwisHrPubhodyM> irwisHrPltcalMHodyDatesList=critToFetchHody.list();
 	     return irwisHrPltcalMHodyDatesList;
 	           

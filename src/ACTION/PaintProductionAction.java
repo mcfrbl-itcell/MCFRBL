@@ -44,6 +44,10 @@ public class PaintProductionAction extends ActionSupport{
 	private String assemblyStartDate;
 	private String expectedExitDate;
 	private String colorScheme;
+	private String paintType;
+	private String paintMake;
+	private String applicationBy;
+	private String avgGlossValue;
 	private String remarks;
 	private String datefrom;
 	private String dateto;
@@ -251,7 +255,10 @@ public class PaintProductionAction extends ActionSupport{
 			
 				record.setTransEntryBy(userID);
 				record.setTransEntryTime(sdf.format(timestamp));
-			
+				record.setPaintType(paintType);
+				record.setPaintMake(paintMake);
+				record.setApplicationBy(applicationBy);
+				record.setAvgGlossValue(avgGlossValue);			
 			dao.updatePaintProgress(record);  //code here
 			setResult("OK");
 		} 
@@ -385,6 +392,30 @@ public class PaintProductionAction extends ActionSupport{
 	}
 	public void setTotalRecordCount(int totalRecordCount) {
 		this.totalRecordCount = totalRecordCount;
+	}
+	public String getPaintType() {
+		return paintType;
+	}
+	public void setPaintType(String paintType) {
+		this.paintType = paintType;
+	}
+	public String getPaintMake() {
+		return paintMake;
+	}
+	public void setPaintMake(String paintMake) {
+		this.paintMake = paintMake;
+	}
+	public String getApplicationBy() {
+		return applicationBy;
+	}
+	public void setApplicationBy(String applicationBy) {
+		this.applicationBy = applicationBy;
+	}
+	public String getAvgGlossValue() {
+		return avgGlossValue;
+	}
+	public void setAvgGlossValue(String avgGlossValue) {
+		this.avgGlossValue = avgGlossValue;
 	}
 
 	

@@ -12,16 +12,16 @@ private static final long serialVersionUID = 1L;
 	Integer seating_capacity;
 	Integer sleeping_capacity;
 	Integer luggage_capacity;
-	Integer max_length_body;
-	Integer max_width_body;
-	Integer max_height_rail_level;
+	Float max_length_body;
+	Float max_width_body;
+	Float max_height_rail_level;
 	
 	public Asset_master(){
 		//default Constructor
 	}
 		public Asset_master(String asset_subtype, String asset_type, String asset_subtype_description,
 			String asset_subtype_class, Float tare_weight, Integer seating_capacity, Integer sleeping_capacity,
-			Integer luggage_capacity, Integer max_length_body, Integer max_width_body, Integer max_height_rail_level) {
+			Integer luggage_capacity, Float max_length_body, Float max_width_body, Float max_height_rail_level) {
 		super();
 		this.asset_subtype = asset_subtype;
 		this.asset_type = asset_type;
@@ -101,27 +101,23 @@ private static final long serialVersionUID = 1L;
 	public void setLuggage_capacity(Integer luggage_capacity) {
 		this.luggage_capacity = luggage_capacity;
 	}
-	public Integer getMax_length_body() {
+	public Float getMax_length_body() {
 		return max_length_body;
 	}
-	public void setMax_length_body(Integer max_length_body) {
+	public void setMax_length_body(Float max_length_body) {
 		this.max_length_body = max_length_body;
 	}
-	public Integer getMax_width_body() {
+	public Float getMax_width_body() {
 		return max_width_body;
 	}
-	public void setMax_width_body(Integer max_width_body) {
+	public void setMax_width_body(Float max_width_body) {
 		this.max_width_body = max_width_body;
 	}
-	public Integer getMax_height_rail_level() {
+	public Float getMax_height_rail_level() {
 		return max_height_rail_level;
 	}
-	public void setMax_height_rail_level(Integer max_height_rail_level) {
+	public void setMax_height_rail_level(Float max_height_rail_level) {
 		this.max_height_rail_level = max_height_rail_level;
 	}
-    
-	
-	
-
 	
 }

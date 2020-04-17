@@ -106,12 +106,22 @@
             <column name="testing_clearance_memo_status" length="30" />
         </property>
           
-        
         <property name="testingClearanceMemoRemark" type="string">
             <column name="testing_clearance_memo_remark" length="500" />
         </property>
         
-        
+        <property name="paintType" type="string">
+            <column name="paint_type" length="15" />
+        </property>
+        <property name="paintMake" type="string">
+            <column name="paint_make" length="25" />
+        </property>
+        <property name="applicationBy" type="string">
+            <column name="application_by" length="30" />
+        </property>
+        <property name="avgGlossValue" type="string">
+            <column name="avg_gloss_value" length="20" />
+        </property>
         
         
         

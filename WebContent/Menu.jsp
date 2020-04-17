@@ -431,6 +431,7 @@ String roles=loginUser.getRoles();
  		<a tabindex="-1" href="#">Furnishing Shop
  		<span class="glyphicon glyphicon-shopping-cart"></span></a> 
  		<ul class="dropdown-menu"> 
+ 		    <li><s:a href="furnishing-shop-help">User Manual</s:a></li>
  		     <li><s:a href="shell-defect-log-entry">Shell Defect Log Entry</s:a></li>
  			<li><s:a href="shell-receipt-at-furnishing">Receipt Shell at Furnishing</s:a></li> 
  			<li><s:a href="shell-available-at-furnishing?stageId=5">Shell Available at Furnishing</s:a></li> 
